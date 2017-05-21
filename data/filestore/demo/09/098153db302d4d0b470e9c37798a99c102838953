@@ -1,0 +1,41 @@
+
+.o_chat_window.o_thread_less .o_chat_search_input {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 5px;
+}
+.o_chat_window.o_thread_less .o_chat_search_input > span {
+  -ms-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.o_chat_window.o_thread_less .o_chat_search_input > input {
+  margin-left: 5px;
+  -ms-flex: 1 1 100%;
+  -moz-flex: 1 1 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+.o_chat_window.o_thread_less .o_mail_thread {
+  background-color: lightgray;
+}
+.o_chat_window.o_thread_less .o_chat_composer {
+  display: none;
+}
+.o_chat_window .o_chat_composer .o_composer {
+  border-top: 1px solid lightgray;
+}
+.o_chat_window .o_chat_composer .o_composer .o_composer_input textarea {
+  display: block;
+  padding: 5px;
+}
+.o_chat_window .o_chat_composer .o_composer_attachments_list,
+.o_chat_window .o_chat_composer .o_composer_buttons {
+  display: none;
+}

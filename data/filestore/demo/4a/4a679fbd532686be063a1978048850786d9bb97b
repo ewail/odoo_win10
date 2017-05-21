@@ -1,0 +1,31 @@
+
+.o_chatter {
+  width: 100%;
+}
+.o_chatter .o_chat_composer {
+  margin-top: 10px;
+}
+.o_chatter .o_chat_composer .o_chatter_composer_info {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #a8a8a8;
+  font-style: italic;
+}
+.o_chatter .o_chat_composer .o_composer {
+  margin-top: 10px;
+}
+.o_chatter .o_chat_composer .o_composer .o_composer_input {
+  width: 100%;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  resize: vertical;
+  margin-bottom: 5px;
+}
+.o_chatter .o_mail_thread {
+  margin-top: 10px;
+}
+.o_chatter .o_mail_thread .o_spinner {
+  text-align: center;
+  font-size: large;
+}

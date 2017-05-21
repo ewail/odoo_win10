@@ -1,0 +1,85 @@
+
+@media (min-width: 768px) {
+  .o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record {
+    min-width: 450px;
+  }
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .oe_kanban_action_button {
+  margin-bottom: 5px;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_card_settings {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-top: 1px solid;
+  border-color: #e2e2e0;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_dashboard_star {
+  font-size: 12px;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_dashboard_star.fa-star-o {
+  color: #a8a8a8;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_dashboard_star.fa-star-o:hover {
+  color: gold;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_dashboard_star.fa-star {
+  color: gold;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_card_content {
+  margin-bottom: 75px;
+  min-height: 120px;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_graph_section {
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_graph_section .o_graph_linechart > svg {
+  height: 75px;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_graph_section .o_graph_linechart > svg g.nv-x.nv-axis {
+  transform: translateY(50px);
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_graph_section .o_graph_linechart > svg g.nv-x.nv-axis g.nv-axisMaxMin {
+  display: none;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_graph_section .o_graph_linechart > svg g.nv-x.nv-axis g.tick.major line {
+  display: none;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_graph_section .o_graph_linechart > svg g.nv-linesWrap g.nv-group.nv-series-0 {
+  fill-opacity: 0.3 !important;
+  fill: #7c7bad !important;
+  stroke: #7c7bad !important;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_graph_section .o_graph_linechart > svg g.nv-linesWrap g.nv-group.nv-series-0 .nv-point {
+  visibility: hidden;
+  r: 3;
+  stroke: #7c7bad !important;
+  fill: white;
+  stroke-width: 2;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_graph_section .o_graph_linechart > svg g.nv-linesWrap g.nv-group.nv-series-0 .nv-point:nth-child(5n+1) {
+  visibility: visible;
+  fill-opacity: .95 !important;
+  stroke-opacity: .95 !important;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_graph_section .o_graph_barchart > svg {
+  height: 75px;
+  overflow: visible;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_graph_section .o_graph_barchart > svg g.nv-barsWrap g.nv-group.nv-series-0 g.past {
+  opacity: 0.5;
+  fill: #7c7bad !important;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_kanban_graph_section .o_graph_barchart > svg g.nv-barsWrap g.nv-group.nv-series-0 g.future {
+  opacity: 0.5;
+  fill: #7c7bad !important;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban .o_kanban_record .o_invisible .o_kanban_graph_section {
+  display: none;
+}
+.o_kanban_view.o_kanban_dashboard.o_account_kanban.o_kanban_grouped .o_kanban_record {
+  min-width: inherit;
+}

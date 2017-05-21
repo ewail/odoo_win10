@@ -1,0 +1,107 @@
+
+.li-a-padding {
+  padding: 3px 25px;
+}
+.ui-autocomplete {
+  background-image: none;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 13px;
+  padding: 5px 0px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
+}
+.ui-autocomplete .ui-menu-item {
+  padding: 0;
+}
+.ui-autocomplete .ui-menu-item > a {
+  display: block;
+  color: #333333;
+  padding: 3px 25px;
+}
+.ui-autocomplete .ui-menu-item.ui-state-focus {
+  background-image: none;
+  background-color: #7c7bad;
+  border: none;
+  font-weight: normal;
+  margin: 0;
+}
+.ui-autocomplete .ui-menu-item.o_m2o_dropdown_option {
+  padding-left: 20px;
+}
+.ui-autocomplete .ui-menu-item.o_m2o_dropdown_option > a {
+  color: #7c7bad;
+}
+.dropdown-menu .o_inline_dropdown {
+  position: relative;
+}
+.dropdown-menu .o_inline_dropdown > .dropdown-menu {
+  top: 0;
+  left: 100%;
+}
+.dropdown-menu .o_inline_dropdown:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown-menu-mixin .open .dropdown-menu > li {
+  position: relative;
+}
+.dropdown-menu-mixin .open .dropdown-menu > li > a {
+  padding: 3px 25px;
+}
+.dropdown-menu-mixin .open .dropdown-menu > li > a:focus,
+.dropdown-menu-mixin .open .dropdown-menu > li > a:active,
+.dropdown-menu-mixin .open .dropdown-menu > li > a:focus:active {
+  outline: none;
+}
+.dropdown-menu-mixin .open .dropdown-menu > li.dropdown-header {
+  padding: 3px 25px;
+  color: #4c4c4c;
+}
+@media (max-width: 767px) {
+  .dropdown-menu-mixin .open .dropdown-menu > li.dropdown-header {
+    color: white;
+    text-decoration: underline;
+  }
+}
+.open .dropdown-menu > li {
+  position: relative;
+}
+.open .dropdown-menu > li > a {
+  padding: 3px 25px;
+}
+.open .dropdown-menu > li > a:focus,
+.open .dropdown-menu > li > a:active,
+.open .dropdown-menu > li > a:focus:active {
+  outline: none;
+}
+.open .dropdown-menu > li.dropdown-header {
+  padding: 3px 25px;
+  color: #4c4c4c;
+}
+@media (max-width: 767px) {
+  .open .dropdown-menu > li.dropdown-header {
+    color: white;
+    text-decoration: underline;
+  }
+}
+.navbar-nav .open .dropdown-menu > li {
+  position: relative;
+}
+.navbar-nav .open .dropdown-menu > li > a {
+  padding: 3px 25px;
+}
+.navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar-nav .open .dropdown-menu > li > a:active,
+.navbar-nav .open .dropdown-menu > li > a:focus:active {
+  outline: none;
+}
+.navbar-nav .open .dropdown-menu > li.dropdown-header {
+  padding: 3px 25px;
+  color: #4c4c4c;
+}
+@media (max-width: 767px) {
+  .navbar-nav .open .dropdown-menu > li.dropdown-header {
+    color: white;
+    text-decoration: underline;
+  }
+}

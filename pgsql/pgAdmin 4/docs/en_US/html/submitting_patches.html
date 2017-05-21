@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Submitting Patches &#8212; pgAdmin 4 1.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Code Overview" href="code_overview.html" />
+    <link rel="prev" title="pgAdmin Project Contributions" href="contributions.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="code_overview.html" title="Code Overview"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="contributions.html" title="pgAdmin Project Contributions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pgAdmin 4 1.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="contributions.html" accesskey="U">pgAdmin Project Contributions</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="submitting-patches">
+<span id="id1"></span><h1>Submitting Patches<a class="headerlink" href="#submitting-patches" title="Permalink to this headline">¶</a></h1>
+<p>Before developing a patch for pgAdmin you should always contact the developers
+on the mailing list <a class="reference external" href="mailto:pgadmin-hackers&#37;&#52;&#48;postgresql&#46;org">pgadmin-hackers<span>&#64;</span>postgresql<span>&#46;</span>org</a> to discuss your
+plans. This ensures that others know if you&#8217;re fixing a bug and can then avoid
+duplicating your work, and in the case of large patches, gives the community
+the chance to discuss and refine your ideas before investing too much time
+writing code that may later be rejected.</p>
+<p>You should always develop patches against a checkout of the source code from the
+GIT source code repository, and not a release tarball. This ensures that you&#8217;re
+working with the latest code on the branch and makes it easier to generate
+patches correctly. You can checkout the source code with a command like:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git clone git://git.postgresql.org/git/pgadmin4.git
+</pre></div>
+</div>
+<p>Once you&#8217;ve made the changes you wish to make, commit them to a private
+development branch in your local repository. Then create a patch containing the
+changes in your development branch against the upstream branch on which your
+work is based. For example, if your current branch contains your changes, you
+might run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git diff origin/master &gt; my_cool_feature.diff
+</pre></div>
+</div>
+<p>to create a patch between your development branch and the public master branch.</p>
+<p>Once you have your patch, check it thoroughly to ensure it meets the pgAdmin
+<a class="reference internal" href="coding_standards.html"><span class="doc">Coding Standards</span></a>, and review it against the <a class="reference internal" href="code_review.html"><span class="doc">Code Review Notes</span></a> to minimise
+the chances of it being rejected. Once you&#8217;re happy with your work, mail it
+as an attachment to the mailing list <a class="reference external" href="mailto:pgadmin-hackers&#37;&#52;&#48;postgresql&#46;org">pgadmin-hackers<span>&#64;</span>postgresql<span>&#46;</span>org</a>.
+Please ensure you include a full description of what the patch does,
+as well as the rationale for any important design decisions.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to a Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing_cluster_objects.html">Managing Cluster Level Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing_database_objects.html">Managing Database Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modifying_tables.html">Creating or Modifying a Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="management_basics.html">Management Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backup_and_restore.html">Backup and Restore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_tools.html">Developer Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">pgAdmin Deployment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contributions.html">pgAdmin Project Contributions</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Submitting Patches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_overview.html">Code Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coding_standards.html">Coding Standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_review.html">Code Review Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translations.html">Translations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pgagent.html">pgAgent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licence.html">Licence</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="code_overview.html" title="Code Overview"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="contributions.html" title="pgAdmin Project Contributions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pgAdmin 4 1.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="contributions.html" >pgAdmin Project Contributions</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013 - 2017, The pgAdmin Development Team.
+    </div>
+  </body>
+</html>

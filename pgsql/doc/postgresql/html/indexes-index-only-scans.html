@@ -1,0 +1,455 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Index-Only Scans</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Indexes"
+HREF="indexes.html"><LINK
+REL="PREVIOUS"
+TITLE="Indexes and Collations"
+HREF="indexes-collations.html"><LINK
+REL="NEXT"
+TITLE="Examining Index Usage"
+HREF="indexes-examine.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="Indexes and Collations"
+HREF="indexes-collations.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="indexes.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 11. Indexes</TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="Examining Index Usage"
+HREF="indexes-examine.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="INDEXES-INDEX-ONLY-SCANS"
+>11.11. Index-Only Scans</A
+></H1
+><P
+>   All indexes in <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> are <I
+CLASS="FIRSTTERM"
+>secondary</I
+>
+   indexes, meaning that each index is stored separately from the table's
+   main data area (which is called the table's <I
+CLASS="FIRSTTERM"
+>heap</I
+>
+   in <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> terminology).  This means that in an
+   ordinary index scan, each row retrieval requires fetching data from both
+   the index and the heap.  Furthermore, while the index entries that match a
+   given indexable <TT
+CLASS="LITERAL"
+>WHERE</TT
+> condition are usually close together in
+   the index, the table rows they reference might be anywhere in the heap.
+   The heap-access portion of an index scan thus involves a lot of random
+   access into the heap, which can be slow, particularly on traditional
+   rotating media.  (As described in <A
+HREF="indexes-bitmap-scans.html"
+>Section 11.5</A
+>,
+   bitmap scans try to alleviate this cost by doing the heap accesses in
+   sorted order, but that only goes so far.)
+  </P
+><P
+>   To solve this performance problem, <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+>
+   supports <I
+CLASS="FIRSTTERM"
+>index-only scans</I
+>, which can answer queries from an
+   index alone without any heap access.  The basic idea is to return values
+   directly out of each index entry instead of consulting the associated heap
+   entry.  There are two fundamental restrictions on when this method can be
+   used:
+
+   <P
+></P
+></P><OL
+TYPE="1"
+><LI
+><P
+>      The index type must support index-only scans.  B-tree indexes always
+      do.  GiST and SP-GiST indexes support index-only scans for some
+      operator classes but not others.  Other index types have no support.
+      The underlying requirement is that the index must physically store, or
+      else be able to reconstruct, the original data value for each index
+      entry.  As a counterexample, GIN indexes cannot support index-only
+      scans because each index entry typically holds only part of the
+      original data value.
+     </P
+></LI
+><LI
+><P
+>      The query must reference only columns stored in the index.  For
+      example, given an index on columns <TT
+CLASS="LITERAL"
+>x</TT
+> and <TT
+CLASS="LITERAL"
+>y</TT
+> of a
+      table that also has a column <TT
+CLASS="LITERAL"
+>z</TT
+>, these queries could use
+      index-only scans:
+</P><PRE
+CLASS="PROGRAMLISTING"
+>SELECT x, y FROM tab WHERE x = 'key';
+SELECT x FROM tab WHERE x = 'key' AND y &lt; 42;</PRE
+><P>
+      but these queries could not:
+</P><PRE
+CLASS="PROGRAMLISTING"
+>SELECT x, z FROM tab WHERE x = 'key';
+SELECT x FROM tab WHERE x = 'key' AND z &lt; 42;</PRE
+><P>
+      (Expression indexes and partial indexes complicate this rule,
+      as discussed below.)
+     </P
+></LI
+></OL
+><P>
+  </P
+><P
+>   If these two fundamental requirements are met, then all the data values
+   required by the query are available from the index, so an index-only scan
+   is physically possible.  But there is an additional requirement for any
+   table scan in <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+>: it must verify that each
+   retrieved row be <SPAN
+CLASS="QUOTE"
+>"visible"</SPAN
+> to the query's MVCC snapshot, as
+   discussed in <A
+HREF="mvcc.html"
+>Chapter 13</A
+>.  Visibility information is not stored
+   in index entries, only in heap entries; so at first glance it would seem
+   that every row retrieval would require a heap access anyway.  And this is
+   indeed the case, if the table row has been modified recently.  However,
+   for seldom-changing data there is a way around this
+   problem.  <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> tracks, for each page in a table's
+   heap, whether all rows stored in that page are old enough to be visible to
+   all current and future transactions.  This information is stored in a bit
+   in the table's <I
+CLASS="FIRSTTERM"
+>visibility map</I
+>.  An index-only scan, after
+   finding a candidate index entry, checks the visibility map bit for the
+   corresponding heap page.  If it's set, the row is known visible and so the
+   data can be returned with no further work.  If it's not set, the heap
+   entry must be visited to find out whether it's visible, so no performance
+   advantage is gained over a standard index scan.  Even in the successful
+   case, this approach trades visibility map accesses for heap accesses; but
+   since the visibility map is four orders of magnitude smaller than the heap
+   it describes, far less physical I/O is needed to access it.  In most
+   situations the visibility map remains cached in memory all the time.
+  </P
+><P
+>   In short, while an index-only scan is possible given the two fundamental
+   requirements, it will be a win only if a significant fraction of the
+   table's heap pages have their all-visible map bits set.  But tables in
+   which a large fraction of the rows are unchanging are common enough to
+   make this type of scan very useful in practice.
+  </P
+><P
+>   To make effective use of the index-only scan feature, you might choose to
+   create indexes in which only the leading columns are meant to
+   match <TT
+CLASS="LITERAL"
+>WHERE</TT
+> clauses, while the trailing columns
+   hold <SPAN
+CLASS="QUOTE"
+>"payload"</SPAN
+> data to be returned by a query.  For example, if
+   you commonly run queries like
+</P><PRE
+CLASS="PROGRAMLISTING"
+>SELECT y FROM tab WHERE x = 'key';</PRE
+><P>
+   the traditional approach to speeding up such queries would be to create an
+   index on <TT
+CLASS="LITERAL"
+>x</TT
+> only.  However, an index on <TT
+CLASS="LITERAL"
+>(x, y)</TT
+>
+   would offer the possibility of implementing this query as an index-only
+   scan.  As previously discussed, such an index would be larger and hence
+   more expensive than an index on <TT
+CLASS="LITERAL"
+>x</TT
+> alone, so this is attractive
+   only if the table is known to be mostly static.  Note it's important that
+   the index be declared on <TT
+CLASS="LITERAL"
+>(x, y)</TT
+> not <TT
+CLASS="LITERAL"
+>(y, x)</TT
+>, as for
+   most index types (particularly B-trees) searches that do not constrain the
+   leading index columns are not very efficient.
+  </P
+><P
+>   In principle, index-only scans can be used with expression indexes.
+   For example, given an index on <TT
+CLASS="LITERAL"
+>f(x)</TT
+> where <TT
+CLASS="LITERAL"
+>x</TT
+> is a
+   table column, it should be possible to execute
+</P><PRE
+CLASS="PROGRAMLISTING"
+>SELECT f(x) FROM tab WHERE f(x) &lt; 1;</PRE
+><P>
+   as an index-only scan; and this is very attractive if <TT
+CLASS="LITERAL"
+>f()</TT
+> is
+   an expensive-to-compute function.  However, <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+>'s
+   planner is currently not very smart about such cases.  It considers a
+   query to be potentially executable by index-only scan only when
+   all <SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>columns</I
+></SPAN
+> needed by the query are available from the index.
+   In this example, <TT
+CLASS="LITERAL"
+>x</TT
+> is not needed except in the
+   context <TT
+CLASS="LITERAL"
+>f(x)</TT
+>, but the planner does not notice that and
+   concludes that an index-only scan is not possible.  If an index-only scan
+   seems sufficiently worthwhile, this can be worked around by declaring the
+   index to be on <TT
+CLASS="LITERAL"
+>(f(x), x)</TT
+>, where the second column is not
+   expected to be used in practice but is just there to convince the planner
+   that an index-only scan is possible.  An additional caveat, if the goal is
+   to avoid recalculating <TT
+CLASS="LITERAL"
+>f(x)</TT
+>, is that the planner won't
+   necessarily match uses of <TT
+CLASS="LITERAL"
+>f(x)</TT
+> that aren't in
+   indexable <TT
+CLASS="LITERAL"
+>WHERE</TT
+> clauses to the index column.  It will usually
+   get this right in simple queries such as shown above, but not in queries
+   that involve joins.  These deficiencies may be remedied in future versions
+   of <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+>.
+  </P
+><P
+>   Partial indexes also have interesting interactions with index-only scans.
+   Consider the partial index shown in <A
+HREF="indexes-partial.html#INDEXES-PARTIAL-EX3"
+>Example 11-3</A
+>:
+</P><PRE
+CLASS="PROGRAMLISTING"
+>CREATE UNIQUE INDEX tests_success_constraint ON tests (subject, target)
+    WHERE success;</PRE
+><P>
+   In principle, we could do an index-only scan on this index to satisfy a
+   query like
+</P><PRE
+CLASS="PROGRAMLISTING"
+>SELECT target FROM tests WHERE subject = 'some-subject' AND success;</PRE
+><P>
+   But there's a problem: the <TT
+CLASS="LITERAL"
+>WHERE</TT
+> clause refers
+   to <TT
+CLASS="LITERAL"
+>success</TT
+> which is not available as a result column of the
+   index.  Nonetheless, an index-only scan is possible because the plan does
+   not need to recheck that part of the <TT
+CLASS="LITERAL"
+>WHERE</TT
+> clause at run time:
+   all entries found in the index necessarily have <TT
+CLASS="LITERAL"
+>success = true</TT
+>
+   so this need not be explicitly checked in the
+   plan.  <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> versions 9.6 and later will recognize
+   such cases and allow index-only scans to be generated, but older versions
+   will not.
+  </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="indexes-collations.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="indexes-examine.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Indexes and Collations</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="indexes.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Examining Index Usage</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

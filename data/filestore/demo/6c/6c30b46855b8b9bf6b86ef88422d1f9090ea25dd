@@ -1,0 +1,2245 @@
+
+body .modal.o_website_modal {
+  font-family: Roboto, 'Montserrat', "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.42857143;
+  color: #33363e;
+  background: 0;
+}
+body .modal.o_website_modal .text-muted {
+  color: #999999;
+}
+body .modal.o_website_modal h1,
+body .modal.o_website_modal h2,
+body .modal.o_website_modal h3,
+body .modal.o_website_modal h4,
+body .modal.o_website_modal h5,
+body .modal.o_website_modal h6,
+body .modal.o_website_modal .h1,
+body .modal.o_website_modal .h2,
+body .modal.o_website_modal .h3,
+body .modal.o_website_modal .h4,
+body .modal.o_website_modal .h5,
+body .modal.o_website_modal .h6 {
+  font-family: Roboto, 'Montserrat', "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.42857143;
+  color: #2c2c36;
+  font-weight: bold;
+}
+body .modal.o_website_modal .form-control {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border: 1px solid #d4d5d7;
+  color: #555;
+  background-color: #fff;
+  border-radius: 0;
+}
+body .modal.o_website_modal a:not(.o_btn_preview) {
+  color: #7c7bad;
+}
+body .modal.o_website_modal a:not(.o_btn_preview):focus,
+body .modal.o_website_modal a:not(.o_btn_preview):active,
+body .modal.o_website_modal a:not(.o_btn_preview):focus:active {
+  outline: none!important;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview) {
+  border-width: 1px;
+  font-weight: normal;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 0;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary {
+  color: white;
+  background-color: #7c7bad;
+  border-color: #6c6ba3;
+  text-transform: uppercase;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.focus {
+  color: white;
+  background-color: #5f5e97;
+  border-color: #373758;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:hover {
+  color: white;
+  background-color: #5f5e97;
+  border-color: #515081;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary {
+  color: white;
+  background-color: #5f5e97;
+  border-color: #515081;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.focus {
+  color: white;
+  background-color: #515081;
+  border-color: #373758;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.active {
+  background-color: #7c7bad;
+  border-color: #6c6ba3;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary .badge {
+  color: #7c7bad;
+  background-color: white;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.focus {
+  color: white;
+  background-color: #5f5e97;
+  border-color: #373758;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:hover {
+  color: white;
+  background-color: #5f5e97;
+  border-color: #515081;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary {
+  color: white;
+  background-color: #5f5e97;
+  border-color: #515081;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.focus {
+  color: white;
+  background-color: #515081;
+  border-color: #373758;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary.active {
+  background-color: #7c7bad;
+  border-color: #6c6ba3;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-primary .badge {
+  color: #7c7bad;
+  background-color: white;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default {
+  color: #7c7bad;
+  background-color: white;
+  border-color: #d4d5d7;
+  text-transform: uppercase;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.focus {
+  color: #7c7bad;
+  background-color: #e6e6e6;
+  border-color: #92949a;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:hover {
+  color: #7c7bad;
+  background-color: #e6e6e6;
+  border-color: #b4b6ba;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-default {
+  color: #7c7bad;
+  background-color: #e6e6e6;
+  border-color: #b4b6ba;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.focus {
+  color: #7c7bad;
+  background-color: #d4d4d4;
+  border-color: #92949a;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-default {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.active {
+  background-color: white;
+  border-color: #d4d5d7;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default .badge {
+  color: white;
+  background-color: #7c7bad;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.focus {
+  color: #7c7bad;
+  background-color: #e6e6e6;
+  border-color: #92949a;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:hover {
+  color: #7c7bad;
+  background-color: #e6e6e6;
+  border-color: #b4b6ba;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-default {
+  color: #7c7bad;
+  background-color: #e6e6e6;
+  border-color: #b4b6ba;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.focus {
+  color: #7c7bad;
+  background-color: #d4d4d4;
+  border-color: #92949a;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-default {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default.active {
+  background-color: white;
+  border-color: #d4d5d7;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-default .badge {
+  color: white;
+  background-color: #7c7bad;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.focus {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:hover {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-link {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.focus {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-link {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.active {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link .badge {
+  color: rgba(0, 0, 0, 0);
+  background-color: #7c7bad;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.focus {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:hover {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-link {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.focus {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-link {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link.active {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-link .badge {
+  color: rgba(0, 0, 0, 0);
+  background-color: #7c7bad;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success {
+  color: white;
+  background-color: #40ad67;
+  border-color: #399a5c;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.focus {
+  color: white;
+  background-color: #328851;
+  border-color: #173d25;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:hover {
+  color: white;
+  background-color: #328851;
+  border-color: #296e41;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-success {
+  color: white;
+  background-color: #328851;
+  border-color: #296e41;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.focus {
+  color: white;
+  background-color: #296e41;
+  border-color: #173d25;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-success {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.active {
+  background-color: #40ad67;
+  border-color: #399a5c;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success .badge {
+  color: #40ad67;
+  background-color: white;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.focus {
+  color: white;
+  background-color: #328851;
+  border-color: #173d25;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:hover {
+  color: white;
+  background-color: #328851;
+  border-color: #296e41;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-success {
+  color: white;
+  background-color: #328851;
+  border-color: #296e41;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.focus {
+  color: white;
+  background-color: #296e41;
+  border-color: #173d25;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-success {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success.active {
+  background-color: #40ad67;
+  border-color: #399a5c;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-success .badge {
+  color: #40ad67;
+  background-color: white;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info {
+  color: white;
+  background-color: #6999a8;
+  border-color: #5b8d9d;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.focus {
+  color: white;
+  background-color: #517e8d;
+  border-color: #2c444c;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:hover {
+  color: white;
+  background-color: #517e8d;
+  border-color: #446a76;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-info {
+  color: white;
+  background-color: #517e8d;
+  border-color: #446a76;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.focus {
+  color: white;
+  background-color: #446a76;
+  border-color: #2c444c;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-info {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.active {
+  background-color: #6999a8;
+  border-color: #5b8d9d;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info .badge {
+  color: #6999a8;
+  background-color: white;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.focus {
+  color: white;
+  background-color: #517e8d;
+  border-color: #2c444c;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:hover {
+  color: white;
+  background-color: #517e8d;
+  border-color: #446a76;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-info {
+  color: white;
+  background-color: #517e8d;
+  border-color: #446a76;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.focus {
+  color: white;
+  background-color: #446a76;
+  border-color: #2c444c;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-info {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info.active {
+  background-color: #6999a8;
+  border-color: #5b8d9d;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-info .badge {
+  color: #6999a8;
+  background-color: white;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning {
+  color: white;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.focus {
+  color: white;
+  background-color: #ec971f;
+  border-color: #985f0d;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:hover {
+  color: white;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning {
+  color: white;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.focus {
+  color: white;
+  background-color: #d58512;
+  border-color: #985f0d;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning .badge {
+  color: #f0ad4e;
+  background-color: white;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.focus {
+  color: white;
+  background-color: #ec971f;
+  border-color: #985f0d;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:hover {
+  color: white;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning {
+  color: white;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.focus {
+  color: white;
+  background-color: #d58512;
+  border-color: #985f0d;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-warning .badge {
+  color: #f0ad4e;
+  background-color: white;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger {
+  color: white;
+  background-color: #e6586c;
+  border-color: #e34258;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.focus {
+  color: white;
+  background-color: #df2c45;
+  border-color: #901527;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:hover {
+  color: white;
+  background-color: #df2c45;
+  border-color: #c91e36;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger {
+  color: white;
+  background-color: #df2c45;
+  border-color: #c91e36;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.focus {
+  color: white;
+  background-color: #c91e36;
+  border-color: #901527;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.active {
+  background-color: #e6586c;
+  border-color: #e34258;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger .badge {
+  color: #e6586c;
+  background-color: white;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.focus {
+  color: white;
+  background-color: #df2c45;
+  border-color: #901527;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:hover {
+  color: white;
+  background-color: #df2c45;
+  border-color: #c91e36;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger {
+  color: white;
+  background-color: #df2c45;
+  border-color: #c91e36;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:active:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.active:hover,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:active:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.active:focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:active.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.active.focus,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.focus {
+  color: white;
+  background-color: #c91e36;
+  border-color: #901527;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.active,
+.open > .dropdown-togglebody .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger {
+  background-image: none;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.disabled,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger[disabled],
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.disabled:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger[disabled]:hover,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:hover,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.disabled:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger[disabled]:focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.disabled.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger[disabled].focus,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.focus,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.disabled:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger[disabled]:active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger:active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.disabled.active,
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger[disabled].active,
+fieldset[disabled] body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger.active {
+  background-color: #e6586c;
+  border-color: #e34258;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-danger .badge {
+  color: #e6586c;
+  background-color: white;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 0;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 0;
+}
+body .modal.o_website_modal .btn:not(.o_btn_preview).btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 0;
+}
+body .modal.o_website_modal .well {
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #fbfbfd;
+  border: 1px solid #eaeaf5;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+body .modal.o_website_modal .modal-content {
+  border-radius: 0;
+  background-color: #fbfbfd;
+}
+body .modal.o_website_modal .modal-content .modal-body {
+  background-color: white;
+}
+body .modal.o_website_modal .modal-content .modal-footer {
+  text-align: left;
+}
+body .modal.o_website_modal .modal-content .modal-header .o_subtitle {
+  margin-left: 10px;
+}
+body .modal.o_website_modal .modal-content .modal-body .o_modal_header {
+  padding-top: 10px;
+  padding-right: 16px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+}
+body .modal.o_website_modal .modal-content .modal-body .o_modal_header:before,
+body .modal.o_website_modal .modal-content .modal-body .o_modal_header:after {
+  content: " ";
+  display: table;
+}
+body .modal.o_website_modal .modal-content .modal-body .o_modal_header:after {
+  clear: both;
+}
+body .modal.o_website_modal .modal-content .modal-body .o_modal_header:before,
+body .modal.o_website_modal .modal-content .modal-body .o_modal_header:after {
+  content: " ";
+  display: table;
+}
+body .modal.o_website_modal .modal-content .modal-body .o_modal_header:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  body .modal.o_website_modal .modal-dialog {
+    height: 100%;
+    padding: 30px 0;
+    margin: 0 auto;
+  }
+  body .modal.o_website_modal .modal-dialog .modal-content {
+    max-height: 100%;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    -moz-flex-flow: column nowrap;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+  }
+  body .modal.o_website_modal .modal-dialog .modal-content .modal-header,
+  body .modal.o_website_modal .modal-dialog .modal-content .modal-footer {
+    -ms-flex: 0 0 auto;
+    -moz-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+  body .modal.o_website_modal .modal-dialog .modal-content .modal-body {
+    overflow: auto;
+  }
+}
+body .modal.oe_mobile_preview {
+  text-align: center;
+}
+body .modal.oe_mobile_preview .modal-dialog {
+  display: inline-block;
+  width: auto;
+}
+body .modal.oe_mobile_preview .modal-dialog .close {
+  color: lightgray;
+  opacity: 1;
+  font-size: 25px;
+  font-weight: normal;
+}
+body .modal.oe_mobile_preview .modal-dialog .modal-content {
+  background-color: black!important;
+  border: 3px outset gray;
+  border-radius: 20px;
+}
+body .modal.oe_mobile_preview .modal-dialog .modal-content .modal-header {
+  border: none;
+  cursor: pointer;
+  font-family: Roboto, 'Montserrat', "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body .modal.oe_mobile_preview .modal-dialog .modal-content .modal-header h4 {
+  color: lightgray;
+  font-family: inherit;
+  font-weight: normal;
+}
+body .modal.oe_mobile_preview .modal-dialog .modal-content .modal-header h4 .fa {
+  margin-left: 15px;
+}
+body .modal.oe_mobile_preview .modal-dialog .modal-content .modal-body {
+  background-color: inherit!important;
+  border-radius: 20px;
+  padding: 15px;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 335px;
+  height: 530px;
+  -webkit-transition: all 400ms ease 0s;
+  -moz-transition: all 400ms ease 0s;
+  -o-transition: all 400ms ease 0s;
+  transition: all 400ms ease 0s;
+}
+body .modal.oe_mobile_preview .modal-dialog .modal-content .modal-body.o_invert_orientation {
+  width: 545px;
+  height: 320px;
+}
+body .modal.oe_mobile_preview .modal-dialog .modal-content .modal-body > iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+body .modal.oe_mobile_preview .modal-dialog .modal-content .modal-footer {
+  display: none;
+}
+body .modal#o_website_add_page_modal {
+  font-family: Roboto, 'Montserrat', "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body .modal#o_website_add_page_modal.in {
+  display: -ms-flexbox !important;
+  display: -moz-box !important;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+body .modal#o_website_add_page_modal .modal-dialog {
+  width: auto;
+  max-width: 60%;
+  max-height: 100%;
+}
+body .modal#o_website_add_page_modal .modal-dialog ul {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -moz-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body .modal#o_website_add_page_modal .modal-dialog ul li {
+  display: block;
+  opacity: 0;
+  -webkit-animation: fadeInDownSmall 1s forwards;
+  -o-animation: fadeInDownSmall 1s forwards;
+  animation: fadeInDownSmall 1s forwards;
+  margin: 2em 32px;
+  padding: 0 15px;
+}
+body .modal#o_website_add_page_modal .modal-dialog ul li a {
+  display: block;
+  font-size: 34px;
+  margin: auto;
+  text-align: center;
+}
+body .modal#o_website_add_page_modal .modal-dialog ul li a i {
+  width: 110px;
+  height: 110px;
+  border: 3px solid #434352;
+  border-radius: 100%;
+  line-height: 104px;
+  background-color: #2C2C36;
+  color: white;
+  -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  -moz-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  -o-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+body .modal#o_website_add_page_modal .modal-dialog ul li a p {
+  color: white;
+  margin-top: 0.7em;
+  font-size: 0.5em;
+}
+body .modal#o_website_add_page_modal .modal-dialog ul li a:hover,
+body .modal#o_website_add_page_modal .modal-dialog ul li a:focus {
+  text-decoration: none;
+}
+body .modal#o_website_add_page_modal .modal-dialog ul li a:hover i,
+body .modal#o_website_add_page_modal .modal-dialog ul li a:focus i {
+  border-color: #1cc1a9;
+  box-shadow: 0 0 10px rgba(28, 193, 169, 0.46);
+}
+body .modal#o_website_add_page_modal ~ .modal-backdrop {
+  opacity: 0.8;
+}
+body .modal.oe_seo_configuration li.oe_seo_preview_g {
+  line-height: 1.2;
+  font-size: small;
+  font-family: arial, sans-serif;
+}
+body .modal.oe_seo_configuration li.oe_seo_preview_g h3 {
+  font-size: medium;
+}
+body .modal.oe_seo_configuration li.oe_seo_preview_g .r {
+  margin: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body .modal.oe_seo_configuration li.oe_seo_preview_g .r a {
+  color: #1e0fbe;
+  text-decoration: underline;
+  text-transform: none;
+}
+body .modal.oe_seo_configuration li.oe_seo_preview_g .r a em {
+  font-style: normal !important;
+}
+body .modal.oe_seo_configuration li.oe_seo_preview_g .s {
+  color: #444;
+  max-width: 42em;
+}
+body .modal.oe_seo_configuration li.oe_seo_preview_g li.oe_seo_preview_g,
+body .modal.oe_seo_configuration li.oe_seo_preview_g li.oe_seo_preview_g .st {
+  line-height: 1.24;
+}
+body .modal.oe_seo_configuration li.oe_seo_preview_g li.oe_seo_preview_g .kv,
+body .modal.oe_seo_configuration li.oe_seo_preview_g li.oe_seo_preview_g .slp {
+  display: block;
+  margin-bottom: 1px;
+}
+body .modal.oe_seo_configuration li.oe_seo_preview_g li.oe_seo_preview_g .f {
+  color: #666;
+  margin-bottom: 1px;
+}
+body .modal.oe_seo_configuration li.oe_seo_preview_g li.oe_seo_preview_g .f cite {
+  color: #006621;
+  font-style: normal;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  body .modal.oe_seo_configuration .dl-horizontal dt {
+    min-width: 160px;
+    width: auto;
+  }
+}
+.oe_login_form,
+.oe_signup_form,
+.oe_reset_password_form {
+  max-width: 300px;
+  position: relative;
+  margin: 50px auto;
+}
+#theme_error {
+  background: #ffc;
+}
+#theme_customize_modal {
+  overflow: visible;
+  z-index: 1020;
+  display: block;
+}
+#theme_customize_modal .modal-dialog {
+  position: absolute;
+  top: 44px;
+  left: auto;
+  bottom: auto;
+  right: 10px;
+  width: auto;
+  margin: 0;
+  font-family: Roboto;
+}
+#theme_customize_modal .loading_backdrop {
+  display: none;
+}
+#theme_customize_modal.loading .loading_backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background: black;
+  opacity: 0.3;
+  z-index: 1;
+}
+#theme_customize_modal label {
+  display: block;
+  text-align: center;
+}
+#theme_customize_modal label > div,
+#theme_customize_modal label > img {
+  border: 1px solid #fff;
+  line-height: 30px;
+  font-size: 0.9em;
+  margin: 2px 4px;
+}
+#theme_customize_modal label.checked > div,
+#theme_customize_modal label.checked > img {
+  box-shadow: 2px 2px 3px #888;
+  border: 1px solid #666;
+}
+#theme_customize_modal label img {
+  width: 60px;
+  height: 35px;
+  margin: 2px;
+  border: 1px solid rgba(136, 136, 136, 0.5);
+}
+#theme_customize_modal label input {
+  display: none;
+}
+.o_ace_view_editor {
+  font-family: Roboto, 'Montserrat', "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.42857143;
+  color: #33363e;
+  position: absolute;
+  top: 34px;
+  left: auto;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1001;
+}
+.o_ace_view_editor .text-muted {
+  color: #999999;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview) {
+  border-width: 1px;
+  font-weight: normal;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 0;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary {
+  color: white;
+  background-color: #7c7bad;
+  border-color: #6c6ba3;
+  text-transform: uppercase;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.focus {
+  color: white;
+  background-color: #5f5e97;
+  border-color: #373758;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:hover {
+  color: white;
+  background-color: #5f5e97;
+  border-color: #515081;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary {
+  color: white;
+  background-color: #5f5e97;
+  border-color: #515081;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.focus {
+  color: white;
+  background-color: #515081;
+  border-color: #373758;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.active {
+  background-color: #7c7bad;
+  border-color: #6c6ba3;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary .badge {
+  color: #7c7bad;
+  background-color: white;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.focus {
+  color: white;
+  background-color: #5f5e97;
+  border-color: #373758;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:hover {
+  color: white;
+  background-color: #5f5e97;
+  border-color: #515081;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary {
+  color: white;
+  background-color: #5f5e97;
+  border-color: #515081;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.focus {
+  color: white;
+  background-color: #515081;
+  border-color: #373758;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary.active {
+  background-color: #7c7bad;
+  border-color: #6c6ba3;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-primary .badge {
+  color: #7c7bad;
+  background-color: white;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default {
+  color: #7c7bad;
+  background-color: white;
+  border-color: #d4d5d7;
+  text-transform: uppercase;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.focus {
+  color: #7c7bad;
+  background-color: #e6e6e6;
+  border-color: #92949a;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:hover {
+  color: #7c7bad;
+  background-color: #e6e6e6;
+  border-color: #b4b6ba;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-default {
+  color: #7c7bad;
+  background-color: #e6e6e6;
+  border-color: #b4b6ba;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.focus {
+  color: #7c7bad;
+  background-color: #d4d4d4;
+  border-color: #92949a;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-default {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-default,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-default:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-default:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-default.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-default:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-default.active {
+  background-color: white;
+  border-color: #d4d5d7;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default .badge {
+  color: white;
+  background-color: #7c7bad;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.focus {
+  color: #7c7bad;
+  background-color: #e6e6e6;
+  border-color: #92949a;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:hover {
+  color: #7c7bad;
+  background-color: #e6e6e6;
+  border-color: #b4b6ba;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-default {
+  color: #7c7bad;
+  background-color: #e6e6e6;
+  border-color: #b4b6ba;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.focus {
+  color: #7c7bad;
+  background-color: #d4d4d4;
+  border-color: #92949a;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-default {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-default,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-default:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-default:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-default.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-default:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-default.active {
+  background-color: white;
+  border-color: #d4d5d7;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-default .badge {
+  color: white;
+  background-color: #7c7bad;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.focus {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:hover {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-link {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.focus {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-link {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-link,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-link:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-link:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-link.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-link:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-link.active {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link .badge {
+  color: rgba(0, 0, 0, 0);
+  background-color: #7c7bad;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.focus {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:hover {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-link {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.focus {
+  color: #7c7bad;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-link {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-link,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-link:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-link:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-link.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-link:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-link.active {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-link .badge {
+  color: rgba(0, 0, 0, 0);
+  background-color: #7c7bad;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success {
+  color: white;
+  background-color: #40ad67;
+  border-color: #399a5c;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.focus {
+  color: white;
+  background-color: #328851;
+  border-color: #173d25;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:hover {
+  color: white;
+  background-color: #328851;
+  border-color: #296e41;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-success {
+  color: white;
+  background-color: #328851;
+  border-color: #296e41;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.focus {
+  color: white;
+  background-color: #296e41;
+  border-color: #173d25;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-success {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-success,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-success:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-success:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-success.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-success:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-success.active {
+  background-color: #40ad67;
+  border-color: #399a5c;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success .badge {
+  color: #40ad67;
+  background-color: white;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.focus {
+  color: white;
+  background-color: #328851;
+  border-color: #173d25;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:hover {
+  color: white;
+  background-color: #328851;
+  border-color: #296e41;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-success {
+  color: white;
+  background-color: #328851;
+  border-color: #296e41;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.focus {
+  color: white;
+  background-color: #296e41;
+  border-color: #173d25;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-success {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-success,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-success:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-success:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-success.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-success:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-success.active {
+  background-color: #40ad67;
+  border-color: #399a5c;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-success .badge {
+  color: #40ad67;
+  background-color: white;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info {
+  color: white;
+  background-color: #6999a8;
+  border-color: #5b8d9d;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.focus {
+  color: white;
+  background-color: #517e8d;
+  border-color: #2c444c;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:hover {
+  color: white;
+  background-color: #517e8d;
+  border-color: #446a76;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-info {
+  color: white;
+  background-color: #517e8d;
+  border-color: #446a76;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.focus {
+  color: white;
+  background-color: #446a76;
+  border-color: #2c444c;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-info {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-info,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-info:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-info:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-info.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-info:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-info.active {
+  background-color: #6999a8;
+  border-color: #5b8d9d;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info .badge {
+  color: #6999a8;
+  background-color: white;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.focus {
+  color: white;
+  background-color: #517e8d;
+  border-color: #2c444c;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:hover {
+  color: white;
+  background-color: #517e8d;
+  border-color: #446a76;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-info {
+  color: white;
+  background-color: #517e8d;
+  border-color: #446a76;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.focus {
+  color: white;
+  background-color: #446a76;
+  border-color: #2c444c;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-info {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-info,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-info:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-info:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-info.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-info:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-info.active {
+  background-color: #6999a8;
+  border-color: #5b8d9d;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-info .badge {
+  color: #6999a8;
+  background-color: white;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning {
+  color: white;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.focus {
+  color: white;
+  background-color: #ec971f;
+  border-color: #985f0d;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:hover {
+  color: white;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning {
+  color: white;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.focus {
+  color: white;
+  background-color: #d58512;
+  border-color: #985f0d;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning .badge {
+  color: #f0ad4e;
+  background-color: white;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.focus {
+  color: white;
+  background-color: #ec971f;
+  border-color: #985f0d;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:hover {
+  color: white;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning {
+  color: white;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.focus {
+  color: white;
+  background-color: #d58512;
+  border-color: #985f0d;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-warning .badge {
+  color: #f0ad4e;
+  background-color: white;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger {
+  color: white;
+  background-color: #e6586c;
+  border-color: #e34258;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.focus {
+  color: white;
+  background-color: #df2c45;
+  border-color: #901527;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:hover {
+  color: white;
+  background-color: #df2c45;
+  border-color: #c91e36;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger {
+  color: white;
+  background-color: #df2c45;
+  border-color: #c91e36;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.focus {
+  color: white;
+  background-color: #c91e36;
+  border-color: #901527;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.active {
+  background-color: #e6586c;
+  border-color: #e34258;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger .badge {
+  color: #e6586c;
+  background-color: white;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.focus {
+  color: white;
+  background-color: #df2c45;
+  border-color: #901527;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:hover {
+  color: white;
+  background-color: #df2c45;
+  border-color: #c91e36;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger {
+  color: white;
+  background-color: #df2c45;
+  border-color: #c91e36;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:active:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.active:hover,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:active:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.active:focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:active.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.active.focus,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.focus {
+  color: white;
+  background-color: #c91e36;
+  border-color: #901527;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.active,
+.open > .dropdown-toggle.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger {
+  background-image: none;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.disabled,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger[disabled],
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.disabled:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger[disabled]:hover,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:hover,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.disabled:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger[disabled]:focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.disabled.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger[disabled].focus,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.focus,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.disabled:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger[disabled]:active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.disabled.active,
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger[disabled].active,
+fieldset[disabled] .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger.active {
+  background-color: #e6586c;
+  border-color: #e34258;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-danger .badge {
+  color: #e6586c;
+  background-color: white;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 0;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 0;
+}
+.o_ace_view_editor .btn:not(.o_btn_preview).btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 0;
+}
+.o_ace_view_editor .form-control {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border: 1px solid #d4d5d7;
+  color: #555;
+  background-color: #fff;
+  border-radius: 0;
+}
+#PlannerDialog {
+  top: 44px;
+  box-shadow: 0 3px 9px #666666;
+}
+.tour .popover-navigation {
+  margin-left: 13px;
+  margin-bottom: 8px;
+}

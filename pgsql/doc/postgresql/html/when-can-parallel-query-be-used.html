@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>When Can Parallel Query Be Used?</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Parallel Query"
+HREF="parallel-query.html"><LINK
+REL="PREVIOUS"
+TITLE="How Parallel Query Works"
+HREF="how-parallel-query-works.html"><LINK
+REL="NEXT"
+TITLE="Parallel Plans"
+HREF="parallel-plans.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="How Parallel Query Works"
+HREF="how-parallel-query-works.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="parallel-query.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 15. Parallel Query</TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="Parallel Plans"
+HREF="parallel-plans.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="WHEN-CAN-PARALLEL-QUERY-BE-USED"
+>15.2. When Can Parallel Query Be Used?</A
+></H1
+><P
+>    There are several settings which can cause the query planner not to
+    generate a parallel query plan under any circumstances.  In order for
+    any parallel query plans whatsoever to be generated, the following
+    settings must be configured as indicated.
+  </P
+><P
+></P
+><UL
+><LI
+><P
+>        <A
+HREF="runtime-config-resource.html#GUC-MAX-PARALLEL-WORKERS-PER-GATHER"
+>max_parallel_workers_per_gather</A
+> must be set to a
+        value which is greater than zero. This is a special case of the more
+        general principle that no more workers should be used than the number
+        configured via <TT
+CLASS="VARNAME"
+>max_parallel_workers_per_gather</TT
+>.
+      </P
+></LI
+><LI
+><P
+>        <A
+HREF="runtime-config-resource.html#GUC-DYNAMIC-SHARED-MEMORY-TYPE"
+>dynamic_shared_memory_type</A
+> must be set to a
+        value other than <TT
+CLASS="LITERAL"
+>none</TT
+>.  Parallel query requires dynamic
+        shared memory in order to pass data between cooperating processes.
+      </P
+></LI
+></UL
+><P
+>    In addition, the system must not be running in single-user mode.  Since
+    the entire database system is running in single process in this situation,
+    no background workers will be available.
+  </P
+><P
+>    Even when it is in general possible for parallel query plans to be
+    generated, the planner will not generate them for a given query
+    if any of the following are true:
+  </P
+><P
+></P
+><UL
+><LI
+><P
+> 
+        The query writes any data or locks any database rows. If a query
+        contains a data-modifying operation either at the top level or within
+        a CTE, no parallel plans for that query will be generated. This is a
+        limitation of the current implementation which could be lifted in a
+        future release. 
+      </P
+></LI
+><LI
+><P
+>        The query might be suspended during execution. In any situation in
+        which the system thinks that partial or incremental execution might
+        occur, no parallel plan is generated. For example, a cursor created
+        using <A
+HREF="sql-declare.html"
+>DECLARE CURSOR</A
+> will never use
+        a parallel plan. Similarly, a PL/pgsql loop of the form
+        <TT
+CLASS="LITERAL"
+>FOR x IN query LOOP .. END LOOP</TT
+> will never use a
+        parallel plan, because the parallel query system is unable to verify
+        that the code in the loop is safe to execute while parallel query is
+        active. 
+      </P
+></LI
+><LI
+><P
+>        The query uses any function marked <TT
+CLASS="LITERAL"
+>PARALLEL UNSAFE</TT
+>.
+        Most system-defined functions are <TT
+CLASS="LITERAL"
+>PARALLEL SAFE</TT
+>,
+        but user-defined functions are marked <TT
+CLASS="LITERAL"
+>PARALLEL
+        UNSAFE</TT
+> by default. See the discussion of
+        <A
+HREF="parallel-safety.html"
+>Section 15.4</A
+>.
+      </P
+></LI
+><LI
+><P
+>        The query is running inside of another query that is already parallel.
+        For example, if a function called by a parallel query issues an SQL
+        query itself, that query will never use a parallel plan. This is a
+        limitation of the current implementation, but it may not be desirable
+        to remove this limitation, since it could result in a single query
+        using a very large number of processes. 
+      </P
+></LI
+><LI
+><P
+>        The transaction isolation level is serializable.  This is
+        a limitation of the current implementation.
+      </P
+></LI
+></UL
+><P
+>    Even when parallel query plan is generated for a particular query, there
+    are several circumstances under which it will be impossible to execute
+    that plan in parallel at execution time.  If this occurs, the leader
+    will execute the portion of the plan below the <TT
+CLASS="LITERAL"
+>Gather</TT
+>
+    node entirely by itself, almost as if the <TT
+CLASS="LITERAL"
+>Gather</TT
+> node were
+    not present.  This will happen if any of the following conditions are met:
+  </P
+><P
+></P
+><UL
+><LI
+><P
+> 
+        No background workers can be obtained because of the limitation that
+        the total number of background workers cannot exceed
+        <A
+HREF="runtime-config-resource.html#GUC-MAX-WORKER-PROCESSES"
+>max_worker_processes</A
+>.
+      </P
+></LI
+><LI
+><P
+> 
+        The client sends an Execute message with a non-zero fetch count.
+        See the discussion of the
+        <A
+HREF="protocol-flow.html#PROTOCOL-FLOW-EXT-QUERY"
+>extended query protocol</A
+>.
+        Since <A
+HREF="libpq.html"
+>libpq</A
+> currently provides no way to
+        send such a message, this can only occur when using a client that
+        does not rely on libpq.  If this is a frequent
+        occurrence, it may be a good idea to set
+        <A
+HREF="runtime-config-resource.html#GUC-MAX-PARALLEL-WORKERS-PER-GATHER"
+>max_parallel_workers_per_gather</A
+> in sessions
+        where it is likely, so as to avoid generating query plans that may
+        be suboptimal when run serially.
+      </P
+></LI
+><LI
+><P
+> 
+        A prepared statement is executed using a <TT
+CLASS="LITERAL"
+>CREATE TABLE .. AS
+        EXECUTE ..</TT
+> statement.  This construct converts what otherwise
+        would have been a read-only operation into a read-write operation,
+        making it ineligible for parallel query.
+      </P
+></LI
+><LI
+><P
+> 
+        The transaction isolation level is serializable.  This situation
+        does not normally arise, because parallel query plans are not
+        generated when the transaction isolation level is serializable.
+        However, it can happen if the transaction isolation level is changed to
+        serializable after the plan is generated and before it is executed.
+      </P
+></LI
+></UL
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="how-parallel-query-works.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="parallel-plans.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>How Parallel Query Works</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="parallel-query.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Parallel Plans</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

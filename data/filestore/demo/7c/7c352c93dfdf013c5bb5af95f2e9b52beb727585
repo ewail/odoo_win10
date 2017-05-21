@@ -1,0 +1,213 @@
+
+.o_mail_thread .o_thread_show_more {
+  text-align: center;
+}
+.o_mail_thread .o_thread_date_separator {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  border-bottom: solid #eeeeee 2px;
+  text-align: center;
+}
+.o_mail_thread .o_thread_date_separator .o_thread_date {
+  position: relative;
+  top: 10px;
+  margin: 0 auto;
+  padding: 0 10px;
+  font-weight: bold;
+  background: white;
+}
+.o_mail_thread .o_thread_new_messages_separator {
+  margin-bottom: 15px;
+  border-bottom: solid #abaaca 1px;
+  text-align: right;
+}
+.o_mail_thread .o_thread_new_messages_separator .o_thread_separator_label {
+  position: relative;
+  top: 8px;
+  padding: 0 10px;
+  background: white;
+  color: #abaaca;
+  font-size: smaller;
+}
+.o_mail_thread .o_thread_message {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 4px 16px;
+  margin-bottom: 0px;
+}
+.o_mail_thread .o_thread_message .o_thread_message_sidebar {
+  -ms-flex: 0 0 36px;
+  -moz-flex: 0 0 36px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 36px;
+  flex: 0 0 36px;
+  margin-right: 10px;
+  margin-top: 2px;
+  text-align: center;
+  font-size: smaller;
+}
+@media (max-width: 767px) {
+  .o_mail_thread .o_thread_message .o_thread_message_sidebar {
+    margin-top: 4px;
+    font-size: x-small;
+  }
+}
+.o_mail_thread .o_thread_message .o_thread_message_sidebar .o_thread_message_avatar {
+  max-width: 36px;
+}
+.o_mail_thread .o_thread_message .o_thread_message_sidebar .o_thread_message_side_date {
+  margin-left: -5px;
+}
+.o_mail_thread .o_thread_message .o_thread_message_sidebar .o_thread_message_star {
+  margin-right: -5px;
+}
+.o_mail_thread .o_thread_message .o_thread_message_sidebar .o_thread_message_side_date {
+  opacity: 0;
+}
+.o_mail_thread .o_thread_message i.o_thread_message_star,
+.o_mail_thread .o_thread_message i.o_thread_message_needaction,
+.o_mail_thread .o_thread_message i.o_thread_message_reply,
+.o_mail_thread .o_thread_message i.o_thread_message_email {
+  cursor: pointer;
+  opacity: 0;
+}
+.o_mail_thread .o_thread_message i.o_thread_message_star.fa-star,
+.o_mail_thread .o_thread_message i.o_thread_message_needaction.fa-star,
+.o_mail_thread .o_thread_message i.o_thread_message_reply.fa-star,
+.o_mail_thread .o_thread_message i.o_thread_message_email.fa-star {
+  opacity: 0.6;
+  color: gold;
+}
+.o_mail_thread .o_thread_message:hover .o_thread_message_side_date,
+.o_mail_thread .o_thread_message.o_thread_selected_message .o_thread_message_side_date {
+  opacity: 0.6;
+}
+.o_mail_thread .o_thread_message:hover i.o_thread_message_star,
+.o_mail_thread .o_thread_message.o_thread_selected_message i.o_thread_message_star,
+.o_mail_thread .o_thread_message:hover i.o_thread_message_needaction,
+.o_mail_thread .o_thread_message.o_thread_selected_message i.o_thread_message_needaction,
+.o_mail_thread .o_thread_message:hover i.o_thread_message_reply,
+.o_mail_thread .o_thread_message.o_thread_selected_message i.o_thread_message_reply,
+.o_mail_thread .o_thread_message:hover i.o_thread_message_email,
+.o_mail_thread .o_thread_message.o_thread_selected_message i.o_thread_message_email {
+  opacity: 0.6;
+}
+.o_mail_thread .o_thread_message:hover i.o_thread_message_star:hover,
+.o_mail_thread .o_thread_message.o_thread_selected_message i.o_thread_message_star:hover,
+.o_mail_thread .o_thread_message:hover i.o_thread_message_needaction:hover,
+.o_mail_thread .o_thread_message.o_thread_selected_message i.o_thread_message_needaction:hover,
+.o_mail_thread .o_thread_message:hover i.o_thread_message_reply:hover,
+.o_mail_thread .o_thread_message.o_thread_selected_message i.o_thread_message_reply:hover,
+.o_mail_thread .o_thread_message:hover i.o_thread_message_email:hover,
+.o_mail_thread .o_thread_message.o_thread_selected_message i.o_thread_message_email:hover {
+  opacity: 1;
+}
+.o_mail_thread .o_thread_message .o_mail_redirect {
+  cursor: pointer;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core {
+  -ms-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core.o_mail_note {
+  background-color: #eeeeee;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core .o_mail_subject {
+  font-style: italic;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core .o_mail_notification {
+  font-style: italic;
+  color: gray;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core [summary~=o_mail_notification] {
+  display: none;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core p {
+  margin: 0 0 9px;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core p:last-child {
+  margin-bottom: 0;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core a {
+  display: inline-block;
+  word-break: break-all;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core img {
+  max-width: 100%;
+  height: auto;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core .o_mail_body_long {
+  display: none;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core .o_mail_info {
+  margin-bottom: 2px;
+  color: #777777;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core .o_mail_info .o_mail_mailto,
+.o_mail_thread .o_thread_message .o_thread_message_core .o_mail_info .o_mail_mailto:hover {
+  color: #777777;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core .o_thread_message_star,
+.o_mail_thread .o_thread_message .o_thread_message_core .o_thread_message_needaction,
+.o_mail_thread .o_thread_message .o_thread_message_core .o_thread_message_reply,
+.o_mail_thread .o_thread_message .o_thread_message_core .o_thread_message_email {
+  padding: 4px;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core i.o_thread_message_email.o_thread_message_email_ready {
+  color: grey;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core i.o_thread_message_email.o_thread_message_email_exception {
+  color: red;
+  opacity: 1;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core i.o_thread_message_email.o_thread_message_email_bounce {
+  color: red;
+  opacity: 1;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core .o_thread_tooltip_container {
+  display: inline;
+  position: relative;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core .o_thread_tooltip_container .o_thread_tooltip_content {
+  top: 10px;
+  background: #eeeeee;
+  padding: 4px;
+  border: solid #eeeeee 1px;
+  border-radius: 5px;
+  color: gray;
+  width: 300px;
+  display: none;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.5s;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core .o_thread_tooltip_container .o_thread_tooltip_content i.fa-exclamation {
+  color: red;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core .o_thread_tooltip_container .o_thread_tooltip:hover + .o_thread_tooltip_content {
+  display: inline;
+  opacity: 1;
+}
+.o_mail_thread .o_thread_title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.o_mail_thread .o_mail_no_content {
+  padding-top: 0px;
+  padding-right: 16px;
+  padding-bottom: 0px;
+  padding-left: 16px;
+}
+.o_mail_thread .o_thread_message .o_thread_message_core .o_mail_read_more {
+  display: block;
+}

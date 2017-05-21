@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>pg_am</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="System Catalogs"
+HREF="catalogs.html"><LINK
+REL="PREVIOUS"
+TITLE="pg_aggregate"
+HREF="catalog-pg-aggregate.html"><LINK
+REL="NEXT"
+TITLE="pg_amop"
+HREF="catalog-pg-amop.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="pg_aggregate"
+HREF="catalog-pg-aggregate.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="catalogs.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 50. System Catalogs</TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="pg_amop"
+HREF="catalog-pg-amop.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="CATALOG-PG-AM"
+>50.3. <TT
+CLASS="STRUCTNAME"
+>pg_am</TT
+></A
+></H1
+><P
+>   The catalog <TT
+CLASS="STRUCTNAME"
+>pg_am</TT
+> stores information about
+   relation access methods.  There is one row for each access method supported
+   by the system.
+   Currently, only indexes have access methods.  The requirements for index
+   access methods are discussed in detail in <A
+HREF="indexam.html"
+>Chapter 59</A
+>.
+  </P
+><DIV
+CLASS="TABLE"
+><A
+NAME="AEN104745"
+></A
+><P
+><B
+>Table 50-3. <TT
+CLASS="STRUCTNAME"
+>pg_am</TT
+> Columns</B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><COL><COL><COL><COL><THEAD
+><TR
+><TH
+>Name</TH
+><TH
+>Type</TH
+><TH
+>References</TH
+><TH
+>Description</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>oid</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>oid</TT
+></TD
+><TD
+>&nbsp;</TD
+><TD
+>Row identifier (hidden attribute; must be explicitly selected)</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>amname</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>name</TT
+></TD
+><TD
+>&nbsp;</TD
+><TD
+>Name of the access method</TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>amhandler</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>regproc</TT
+></TD
+><TD
+><TT
+CLASS="LITERAL"
+><A
+HREF="catalog-pg-proc.html"
+><TT
+CLASS="STRUCTNAME"
+>pg_proc</TT
+></A
+>.oid</TT
+></TD
+><TD
+>       OID of a handler function that is responsible for supplying information
+       about the access method
+      </TD
+></TR
+><TR
+><TD
+><TT
+CLASS="STRUCTFIELD"
+>amtype</TT
+></TD
+><TD
+><TT
+CLASS="TYPE"
+>char</TT
+></TD
+><TD
+>&nbsp;</TD
+><TD
+>       Currently always <TT
+CLASS="LITERAL"
+>i</TT
+> to indicate an index access
+       method; other values may be allowed in future
+      </TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><DIV
+CLASS="NOTE"
+><BLOCKQUOTE
+CLASS="NOTE"
+><P
+><B
+>Note: </B
+>    Before <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> 9.6, <TT
+CLASS="STRUCTNAME"
+>pg_am</TT
+>
+    contained many additional columns representing properties of index access
+    methods.  That data is now only directly visible at the C code level.
+    However, <CODE
+CLASS="FUNCTION"
+>pg_index_column_has_property()</CODE
+> and related
+    functions have been added to allow SQL queries to inspect index access
+    method properties; see <A
+HREF="functions-info.html#FUNCTIONS-INFO-CATALOG-TABLE"
+>Table 9-62</A
+>.
+   </P
+></BLOCKQUOTE
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="catalog-pg-aggregate.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="catalog-pg-amop.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><TT
+CLASS="STRUCTNAME"
+>pg_aggregate</TT
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="catalogs.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><TT
+CLASS="STRUCTNAME"
+>pg_amop</TT
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

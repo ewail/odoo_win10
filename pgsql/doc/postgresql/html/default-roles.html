@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Default Roles</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Database Roles"
+HREF="user-manag.html"><LINK
+REL="PREVIOUS"
+TITLE="Dropping Roles"
+HREF="role-removal.html"><LINK
+REL="NEXT"
+TITLE="Function and Trigger Security"
+HREF="perm-functions.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="Dropping Roles"
+HREF="role-removal.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="user-manag.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 21. Database Roles</TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="Function and Trigger Security"
+HREF="perm-functions.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="DEFAULT-ROLES"
+>21.5. Default Roles</A
+></H1
+><P
+>   <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> provides a set of default roles
+   which provide access to certain, commonly needed, privileged capabilities
+   and information.  Administrators can GRANT these roles to users and/or
+   other roles in their environment, providing those users with access to
+   the specified capabilities and information.
+  </P
+><P
+>   The default roles are described in <A
+HREF="default-roles.html#DEFAULT-ROLES-TABLE"
+>Table 21-1</A
+>.
+   Note that the specific permissions for each of the default roles may
+   change in the future as additional capabilities are added.  Administrators
+   should monitor the release notes for changes.
+  </P
+><DIV
+CLASS="TABLE"
+><A
+NAME="DEFAULT-ROLES-TABLE"
+></A
+><P
+><B
+>Table 21-1. Default Roles</B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><COL><COL><THEAD
+><TR
+><TH
+>Role</TH
+><TH
+>Allowed Access</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+>pg_signal_backend</TD
+><TD
+>Send signals to other backends (eg: cancel query, terminate).</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><P
+>   Administrators can grant access to these roles to users using the GRANT
+   command:
+
+</P><PRE
+CLASS="PROGRAMLISTING"
+>GRANT pg_signal_backend TO admin_user;</PRE
+><P>
+  </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="role-removal.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="perm-functions.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Dropping Roles</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="user-manag.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Function and Trigger Security</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,352 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>CREATE ACCESS METHOD</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="SQL Commands"
+HREF="sql-commands.html"><LINK
+REL="PREVIOUS"
+TITLE="COPY"
+HREF="sql-copy.html"><LINK
+REL="NEXT"
+TITLE="CREATE AGGREGATE"
+HREF="sql-createaggregate.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="REFENTRY"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="COPY"
+HREF="sql-copy.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="sql-commands.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="CREATE AGGREGATE"
+HREF="sql-createaggregate.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><H1
+><A
+NAME="SQL-CREATE-ACCESS-METHOD"
+></A
+>CREATE ACCESS METHOD</H1
+><DIV
+CLASS="REFNAMEDIV"
+><A
+NAME="AEN78018"
+></A
+><H2
+>Name</H2
+>CREATE ACCESS METHOD&nbsp;--&nbsp;define a new access method</DIV
+><DIV
+CLASS="REFSYNOPSISDIV"
+><A
+NAME="AEN78021"
+></A
+><H2
+>Synopsis</H2
+><PRE
+CLASS="SYNOPSIS"
+>CREATE ACCESS METHOD <TT
+CLASS="REPLACEABLE"
+><I
+>name</I
+></TT
+>
+    TYPE <TT
+CLASS="REPLACEABLE"
+><I
+>access_method_type</I
+></TT
+>
+    HANDLER <TT
+CLASS="REPLACEABLE"
+><I
+>handler_function</I
+></TT
+></PRE
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN78026"
+></A
+><H2
+>Description</H2
+><P
+>   <TT
+CLASS="COMMAND"
+>CREATE ACCESS METHOD</TT
+> creates a new access method.
+  </P
+><P
+>   The access method name must be unique within the database.
+  </P
+><P
+>   Only superusers can define new access methods.
+  </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN78032"
+></A
+><H2
+>Parameters</H2
+><P
+></P
+><DIV
+CLASS="VARIABLELIST"
+><DL
+><DT
+><TT
+CLASS="REPLACEABLE"
+><I
+>name</I
+></TT
+></DT
+><DD
+><P
+>      The name of the access method to be created.
+     </P
+></DD
+><DT
+><TT
+CLASS="REPLACEABLE"
+><I
+>access_method_type</I
+></TT
+></DT
+><DD
+><P
+>      This clause specifies the type of access method to define.
+      Only <TT
+CLASS="LITERAL"
+>INDEX</TT
+> is supported at present.
+     </P
+></DD
+><DT
+><TT
+CLASS="REPLACEABLE"
+><I
+>handler_function</I
+></TT
+></DT
+><DD
+><P
+>      <TT
+CLASS="REPLACEABLE"
+><I
+>handler_function</I
+></TT
+> is the
+      name (possibly schema-qualified) of a previously registered function
+      that represents the access method.  The handler function must be
+      declared to take a single argument of type <TT
+CLASS="TYPE"
+>internal</TT
+>,
+      and its return type depends on the type of access method;
+      for <TT
+CLASS="LITERAL"
+>INDEX</TT
+> access methods, it must
+      be <TT
+CLASS="TYPE"
+>index_am_handler</TT
+>.  The C-level API that the handler
+      function must implement varies depending on the type of access method.
+      The index access method API is described in <A
+HREF="indexam.html"
+>Chapter 59</A
+>.
+     </P
+></DD
+></DL
+></DIV
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN78056"
+></A
+><H2
+>Examples</H2
+><P
+>   Create an index access method <TT
+CLASS="LITERAL"
+>heptree</TT
+> with
+   handler function <TT
+CLASS="LITERAL"
+>heptree_handler</TT
+>:
+</P><PRE
+CLASS="PROGRAMLISTING"
+>CREATE ACCESS METHOD heptree TYPE INDEX HANDLER heptree_handler;</PRE
+><P>
+  </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN78062"
+></A
+><H2
+>Compatibility</H2
+><P
+>   <TT
+CLASS="COMMAND"
+>CREATE ACCESS METHOD</TT
+> is a
+   <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> extension.
+  </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN78067"
+></A
+><H2
+>See Also</H2
+><A
+HREF="sql-drop-access-method.html"
+>DROP ACCESS METHOD</A
+>, <A
+HREF="sql-createopclass.html"
+>CREATE OPERATOR CLASS</A
+>, <A
+HREF="sql-createopfamily.html"
+>CREATE OPERATOR FAMILY</A
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="sql-copy.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="sql-createaggregate.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>COPY</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="sql-commands.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>CREATE AGGREGATE</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

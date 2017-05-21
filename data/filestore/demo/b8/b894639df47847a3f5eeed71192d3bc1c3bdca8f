@@ -1,0 +1,92 @@
+
+.o_control_panel {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.o_control_panel .breadcrumb {
+  width: 50%;
+}
+.o_control_panel .breadcrumb > li {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  max-width: 90%;
+  display: inline-block;
+}
+.o_control_panel.o_breadcrumb_full .breadcrumb {
+  width: 100%;
+}
+.o_control_panel .o_cp_searchview {
+  width: 50%;
+  min-height: 30px;
+}
+.o_control_panel .btn.o_enable_searchview {
+  width: 10%;
+  margin-left: 2%;
+  padding: 0px;
+}
+.o_control_panel .o_cp_left {
+  width: 50%;
+  margin-top: 5px;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.o_control_panel .o_cp_right {
+  width: 50%;
+  margin-top: 5px;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.o_control_panel .o_cp_right .o_cp_pager {
+  margin: auto 0 auto auto;
+}
+.o_x2m_control_panel {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.o_x2m_control_panel .o_cp_buttons {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin-right: auto;
+}
+.o_x2m_control_panel .o_cp_pager {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin-left: auto;
+}
+@media print {
+  .o_control_panel {
+    display: none;
+  }
+}

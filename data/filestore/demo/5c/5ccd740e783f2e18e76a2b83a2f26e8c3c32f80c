@@ -1,0 +1,164 @@
+
+.o_kanban_view {
+  /* This is a hack but this is the least ugly way to do it:
+     * We want two blocks (a visible one and an invisible one)
+     * to be overlap but both height should be equal to the
+     * height of the biggest block. Solution : put 0 width for
+     * the invisible on. The 0 padding and margin is mandatory for
+     * the elements to use the same space in both state (visible
+     * and invisible).
+    */
+}
+.o_kanban_view .o_visible {
+  width: 100%;
+  /* This is a hack ; without this, a scrollbar appears
+         * to scroll horizontally because of inline-block and width: 100%,
+         * but they are both necessary.
+        */
+  overflow: hidden;
+}
+.o_kanban_view .o_invisible {
+  width: 0;
+  visibility: hidden;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  overflow: hidden;
+}
+.o_kanban_view .o_invisible * {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped a,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped a,
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped span,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped span {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  position: relative;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped a,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped a {
+  color: #7c7bad;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped a.o_inline_link,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped a.o_inline_link {
+  display: inline;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped a:focus,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped a:focus,
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped a:active,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped a:active,
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped a:focus:active,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped a:focus:active {
+  outline: none;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_record,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_record {
+  padding: 0;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_record,
+  .o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_record {
+    margin-bottom: 10px;
+  }
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_record .row .row,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_record .row .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_record .row .row > div,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_record .row .row > div {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_header,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_header {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #e2e2e0;
+  position: relative;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_header .o_kanban_card_header_title,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_header .o_kanban_card_header_title {
+  -ms-flex: 3 0 0;
+  -moz-flex: 3 0 0;
+  -webkit-box-flex: 3;
+  -webkit-flex: 3 0 0;
+  flex: 3 0 0;
+  padding: 8px 16px;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_header .o_kanban_card_header_title .o_primary,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_header .o_kanban_card_header_title .o_primary {
+  color: #7c7bad;
+  font-weight: 700;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_header .o_kanban_manage_button_section,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_header .o_kanban_manage_button_section {
+  -ms-flex: 1 0 0;
+  -moz-flex: 1 0 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 0;
+  flex: 1 0 0;
+  padding: 16px;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_header .o_kanban_manage_button_section .o_kanban_manage_toggle_button,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_header .o_kanban_manage_button_section .o_kanban_manage_toggle_button {
+  text-align: right;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_content,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_content {
+  display: inline-block;
+  vertical-align: top;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_content > .row > div,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_content > .row > div {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_content .o_kanban_primary_bottom,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_content .o_kanban_primary_bottom {
+  background-color: #e2e2e0;
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: auto;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_manage_pane,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_manage_pane {
+  display: inline-block;
+  vertical-align: top;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_manage_section,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_manage_section {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_manage_title,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_manage_title {
+  font-weight: bold;
+  border-bottom: 1px solid;
+  border-color: #e2e2e0;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+}
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_manage_settings,
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_manage_settings {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-top: 1px solid;
+  border-color: #e2e2e0;
+}

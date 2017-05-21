@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Generic WAL Records</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Internals"
+HREF="internals.html"><LINK
+REL="PREVIOUS"
+TITLE="Index Cost Estimation Functions"
+HREF="index-cost-estimation.html"><LINK
+REL="NEXT"
+TITLE="GiST Indexes"
+HREF="gist.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="CHAPTER"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="Index Cost Estimation Functions"
+HREF="index-cost-estimation.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="internals.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="GiST Indexes"
+HREF="gist.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="CHAPTER"
+><H1
+><A
+NAME="GENERIC-WAL"
+></A
+>Chapter 60. Generic WAL Records</H1
+><P
+>   Although all built-in WAL-logged modules have their own types of WAL
+   records, there is also a generic WAL record type, which describes changes
+   to pages in a generic way.  This is useful for extensions that provide
+   custom access methods, because they cannot register their own WAL redo
+   routines.
+  </P
+><P
+>   The API for constructing generic WAL records is defined in
+   <TT
+CLASS="FILENAME"
+>access/generic_xlog.h</TT
+> and implemented
+   in <TT
+CLASS="FILENAME"
+>access/transam/generic_xlog.c</TT
+>.
+  </P
+><P
+>   To perform a WAL-logged data update using the generic WAL record
+   facility, follow these steps:
+
+   <P
+></P
+></P><OL
+TYPE="1"
+><LI
+><P
+>      <CODE
+CLASS="FUNCTION"
+>state = GenericXLogStart(relation)</CODE
+> &mdash; start
+      construction of a generic WAL record for the given relation.
+     </P
+></LI
+><LI
+><P
+>      <CODE
+CLASS="FUNCTION"
+>page = GenericXLogRegisterBuffer(state, buffer, flags)</CODE
+>
+      &mdash; register a buffer to be modified within the current generic WAL
+      record.  This function returns a pointer to a temporary copy of the
+      buffer's page, where modifications should be made.  (Do not modify the
+      buffer's contents directly.)  The third argument is a bitmask of flags
+      applicable to the operation.  Currently the only such flag is
+      <TT
+CLASS="LITERAL"
+>GENERIC_XLOG_FULL_IMAGE</TT
+>, which indicates that a full-page
+      image rather than a delta update should be included in the WAL record.
+      Typically this flag would be set if the page is new or has been
+      rewritten completely.
+      <CODE
+CLASS="FUNCTION"
+>GenericXLogRegisterBuffer</CODE
+> can be repeated if the
+      WAL-logged action needs to modify multiple pages.
+     </P
+></LI
+><LI
+><P
+>      Apply modifications to the page images obtained in the previous step.
+     </P
+></LI
+><LI
+><P
+>      <CODE
+CLASS="FUNCTION"
+>GenericXLogFinish(state)</CODE
+> &mdash; apply the changes to
+      the buffers and emit the generic WAL record.
+     </P
+></LI
+></OL
+><P>
+  </P
+><P
+>   WAL record construction can be canceled between any of the above steps by
+   calling <CODE
+CLASS="FUNCTION"
+>GenericXLogAbort(state)</CODE
+>.  This will discard all
+   changes to the page image copies.
+  </P
+><P
+>   Please note the following points when using the generic WAL record
+   facility:
+
+   <P
+></P
+></P><UL
+><LI
+><P
+>      No direct modifications of buffers are allowed!  All modifications must
+      be done in copies acquired from <CODE
+CLASS="FUNCTION"
+>GenericXLogRegisterBuffer()</CODE
+>.
+      In other words, code that makes generic WAL records should never call
+      <CODE
+CLASS="FUNCTION"
+>BufferGetPage()</CODE
+> for itself.  However, it remains the
+      caller's responsibility to pin/unpin and lock/unlock the buffers at
+      appropriate times.  Exclusive lock must be held on each target buffer
+      from before <CODE
+CLASS="FUNCTION"
+>GenericXLogRegisterBuffer()</CODE
+> until after
+      <CODE
+CLASS="FUNCTION"
+>GenericXLogFinish()</CODE
+>.
+     </P
+></LI
+><LI
+><P
+>      Registrations of buffers (step 2) and modifications of page images
+      (step 3) can be mixed freely, i.e., both steps may be repeated in any
+      sequence.  Keep in mind that buffers should be registered in the same
+      order in which locks are to be obtained on them during replay.
+     </P
+></LI
+><LI
+><P
+>      The maximum number of buffers that can be registered for a generic WAL
+      record is <TT
+CLASS="LITERAL"
+>MAX_GENERIC_XLOG_PAGES</TT
+>.  An error will be thrown
+      if this limit is exceeded.
+     </P
+></LI
+><LI
+><P
+>      Generic WAL assumes that the pages to be modified have standard
+      layout, and in particular that there is no useful data between
+      <TT
+CLASS="STRUCTFIELD"
+>pd_lower</TT
+> and <TT
+CLASS="STRUCTFIELD"
+>pd_upper</TT
+>.
+     </P
+></LI
+><LI
+><P
+>      Since you are modifying copies of buffer
+      pages, <CODE
+CLASS="FUNCTION"
+>GenericXLogStart()</CODE
+> does not start a critical
+      section.  Thus, you can safely do memory allocation, error throwing,
+      etc. between <CODE
+CLASS="FUNCTION"
+>GenericXLogStart()</CODE
+> and
+      <CODE
+CLASS="FUNCTION"
+>GenericXLogFinish()</CODE
+>.  The only actual critical section is
+      present inside <CODE
+CLASS="FUNCTION"
+>GenericXLogFinish()</CODE
+>.  There is no need to
+      worry about calling  <CODE
+CLASS="FUNCTION"
+>GenericXLogAbort()</CODE
+> during an error
+      exit, either.
+     </P
+></LI
+><LI
+><P
+>      <CODE
+CLASS="FUNCTION"
+>GenericXLogFinish()</CODE
+> takes care of marking buffers dirty
+      and setting their LSNs.  You do not need to do this explicitly.
+     </P
+></LI
+><LI
+><P
+>      For unlogged relations, everything works the same except that no
+      actual WAL record is emitted.  Thus, you typically do not need to do
+      any explicit checks for unlogged relations.
+     </P
+></LI
+><LI
+><P
+>      The generic WAL redo function will acquire exclusive locks to buffers
+      in the same order as they were registered.  After redoing all changes,
+      the locks will be released in the same order.
+     </P
+></LI
+><LI
+><P
+>      If <TT
+CLASS="LITERAL"
+>GENERIC_XLOG_FULL_IMAGE</TT
+> is not specified for a
+      registered buffer, the generic WAL record contains a delta between
+      the old and the new page images.  This delta is based on byte-by-byte
+      comparison.  This is not very compact for the case of moving data
+      within a page, and might be improved in the future.
+     </P
+></LI
+></UL
+><P>
+  </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="index-cost-estimation.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="gist.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Index Cost Estimation Functions</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="internals.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>GiST Indexes</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

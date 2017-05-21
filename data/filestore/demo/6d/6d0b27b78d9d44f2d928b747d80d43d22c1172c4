@@ -1,0 +1,108 @@
+
+.o_searchview {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1px 25px 3px 5px;
+}
+.o_searchview .o_searchview_facet {
+  border: 1px solid #777777;
+  background: #e9e9f1;
+}
+.o_searchview .o_searchview_facet .o_searchview_facet_label {
+  background-color: #777777;
+}
+.o_searchview .o_searchview_facet .o_facet_remove {
+  color: #777777;
+}
+.o_searchview .o_searchview_facet .o_facet_remove:hover {
+  color: #555555;
+}
+.o_searchview .o_searchview_input {
+  border: none;
+  padding: 4px 0 0 0;
+}
+.o_searchview .o_searchview_more {
+  position: absolute;
+  top: 6px;
+  left: auto;
+  bottom: auto;
+  right: 5px;
+}
+.o_searchview .o_searchview_autocomplete li.o-selection-focus {
+  background-color: #7c7bad;
+}
+.o_searchview .o_searchview_autocomplete li.o-selection-focus > a {
+  color: white;
+}
+.o_search_options input[type="text"],
+.o_search_options select {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.o_search_options input[type="text"]:focus,
+.o_search_options select:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.o_search_options input[type="text"]::-moz-placeholder,
+.o_search_options select::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.o_search_options input[type="text"]:-ms-input-placeholder,
+.o_search_options select:-ms-input-placeholder {
+  color: #999;
+}
+.o_search_options input[type="text"]::-webkit-input-placeholder,
+.o_search_options select::-webkit-input-placeholder {
+  color: #999;
+}
+.o_search_options input[type="text"]::-moz-placeholder,
+.o_search_options select::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.o_search_options input[type="text"]:-ms-input-placeholder,
+.o_search_options select:-ms-input-placeholder {
+  color: #999;
+}
+.o_search_options input[type="text"]::-webkit-input-placeholder,
+.o_search_options select::-webkit-input-placeholder {
+  color: #999;
+}
+.o_search_options input[type="text"][disabled],
+.o_search_options select[disabled],
+.o_search_options input[type="text"][readonly],
+.o_search_options select[readonly],
+fieldset[disabled] .o_search_options input[type="text"],
+fieldset[disabled] .o_search_options select {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.o_search_options input[type="text"][disabled],
+.o_search_options select[disabled],
+fieldset[disabled] .o_search_options input[type="text"],
+fieldset[disabled] .o_search_options select {
+  cursor: not-allowed;
+}
+textarea.o_search_options input[type="text"],
+textarea.o_search_options select {
+  height: auto;
+}

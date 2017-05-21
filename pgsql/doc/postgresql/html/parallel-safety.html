@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Parallel Safety</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Parallel Query"
+HREF="parallel-query.html"><LINK
+REL="PREVIOUS"
+TITLE="Parallel Plans"
+HREF="parallel-plans.html"><LINK
+REL="NEXT"
+TITLE="Server Administration"
+HREF="admin.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="Parallel Plans"
+HREF="parallel-plans.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="parallel-query.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 15. Parallel Query</TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="Server Administration"
+HREF="admin.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="PARALLEL-SAFETY"
+>15.4. Parallel Safety</A
+></H1
+><P
+>    The planner classifies operations involved in a query as either
+    <I
+CLASS="FIRSTTERM"
+>parallel safe</I
+>, <I
+CLASS="FIRSTTERM"
+>parallel restricted</I
+>,
+    or <I
+CLASS="FIRSTTERM"
+>parallel unsafe</I
+>.  A parallel safe operation is one which
+    does not conflict with the use of parallel query.  A parallel restricted
+    operation is one which cannot be performed in a parallel worker, but which
+    can be performed in the leader while parallel query is in use.  Therefore,
+    parallel restricted operations can never occur below a <TT
+CLASS="LITERAL"
+>Gather</TT
+>
+    node, but can occur elsewhere in a plan which contains a
+    <TT
+CLASS="LITERAL"
+>Gather</TT
+> node.  A parallel unsafe operation is one which cannot
+    be performed while parallel query is in use, not even in the leader.
+    When a query contains anything which is parallel unsafe, parallel query
+    is completely disabled for that query.
+  </P
+><P
+>    The following operations are always parallel restricted.
+  </P
+><P
+></P
+><UL
+><LI
+><P
+>        Scans of common table expressions (CTEs).
+      </P
+></LI
+><LI
+><P
+>        Scans of temporary tables.
+      </P
+></LI
+><LI
+><P
+>        Scans of foreign tables, unless the foreign data wrapper has
+        an <TT
+CLASS="LITERAL"
+>IsForeignScanParallelSafe</TT
+> API which indicates otherwise.
+      </P
+></LI
+><LI
+><P
+>        Access to an <TT
+CLASS="LITERAL"
+>InitPlan</TT
+> or <TT
+CLASS="LITERAL"
+>SubPlan</TT
+>.
+      </P
+></LI
+></UL
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="PARALLEL-LABELING"
+>15.4.1. Parallel Labeling for Functions and Aggregates</A
+></H2
+><P
+>    The planner cannot automatically determine whether a user-defined
+    function or aggregate is parallel safe, parallel restricted, or parallel
+    unsafe, because this would require predicting every operation which the
+    function could possibly perform.  In general, this is equivalent to the
+    Halting Problem and therefore impossible.  Even for simple functions
+    where it conceivably be done, we do not try, since this would be expensive
+    and error-prone.  Instead, all user-defined functions are assumed to
+    be parallel unsafe unless otherwise marked.  When using
+    <A
+HREF="sql-createfunction.html"
+>CREATE FUNCTION</A
+> or
+    <A
+HREF="sql-alterfunction.html"
+>ALTER FUNCTION</A
+>, markings can be set by specifying
+    <TT
+CLASS="LITERAL"
+>PARALLEL SAFE</TT
+>, <TT
+CLASS="LITERAL"
+>PARALLEL RESTRICTED</TT
+>, or
+    <TT
+CLASS="LITERAL"
+>PARALLEL UNSAFE</TT
+> as appropriate.  When using
+    <A
+HREF="sql-createaggregate.html"
+>CREATE AGGREGATE</A
+>, the
+    <TT
+CLASS="LITERAL"
+>PARALLEL</TT
+> option can be specified with <TT
+CLASS="LITERAL"
+>SAFE</TT
+>,
+    <TT
+CLASS="LITERAL"
+>RESTRICTED</TT
+>, or <TT
+CLASS="LITERAL"
+>UNSAFE</TT
+> as the corresponding value.
+  </P
+><P
+>    Functions and aggregates must be marked <TT
+CLASS="LITERAL"
+>PARALLEL UNSAFE</TT
+> if
+    they write to the database, access sequences, change the transaction state
+    even temporarily (e.g. a PL/pgsql function which establishes an
+    <TT
+CLASS="LITERAL"
+>EXCEPTION</TT
+> block to catch errors), or make persistent changes to
+    settings.  Similarly, functions must be marked <TT
+CLASS="LITERAL"
+>PARALLEL
+    RESTRICTED</TT
+> if they access temporary tables, client connection state,
+    cursors, prepared statements, or miscellaneous backend-local state which
+    the system cannot synchronize across workers. For example,
+    <TT
+CLASS="LITERAL"
+>setseed</TT
+> and <TT
+CLASS="LITERAL"
+>random</TT
+> are parallel restricted for
+    this last reason.
+  </P
+><P
+>    In general, if a function is labeled as being safe when it is restricted or
+    unsafe, or if it is labeled as being restricted when it is in fact unsafe,
+    it may throw errors or produce wrong answers when used in a parallel query.
+    C-language functions could in theory exhibit totally undefined behavior if
+    mislabeled, since there is no way for the system to protect itself against
+    arbitrary C code, but in most likely cases the result will be no worse than
+    for any other function. If in doubt, it is probably best to label functions
+    as <TT
+CLASS="LITERAL"
+>UNSAFE</TT
+>.
+  </P
+><P
+>    If a function executed within a parallel worker acquires locks which are
+    not held by the leader, for example by querying a table not referenced in
+    the query, those locks will be released at worker exit, not end of
+    transaction. If you write a function which does this, and this behavior
+    difference is important to you, mark such functions as
+    <TT
+CLASS="LITERAL"
+>PARALLEL RESTRICTED</TT
+>
+    to ensure that they execute only in the leader. 
+  </P
+><P
+>    Note that the query planner does not consider deferring the evaluation of
+    parallel-restricted functions or aggregates involved in the query in
+    order to obtain a superior plan.  So, for example, if a <TT
+CLASS="LITERAL"
+>WHERE</TT
+>
+    clause applied to a particular table is parallel restricted, the query
+    planner will not consider placing the scan of that table below a 
+    <TT
+CLASS="LITERAL"
+>Gather</TT
+> node.  In some cases, it would be
+    possible (and perhaps even efficient) to include the scan of that table in
+    the parallel portion of the query and defer the evaluation of the
+    <TT
+CLASS="LITERAL"
+>WHERE</TT
+> clause so that it happens above the <TT
+CLASS="LITERAL"
+>Gather</TT
+>
+    node.  However, the planner does not do this.
+  </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="parallel-plans.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="admin.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Parallel Plans</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="parallel-query.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Server Administration</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

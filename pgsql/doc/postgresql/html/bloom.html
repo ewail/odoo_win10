@@ -1,0 +1,513 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>bloom</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Additional Supplied Modules"
+HREF="contrib.html"><LINK
+REL="PREVIOUS"
+TITLE="auto_explain"
+HREF="auto-explain.html"><LINK
+REL="NEXT"
+TITLE="btree_gin"
+HREF="btree-gin.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="auto_explain"
+HREF="auto-explain.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="contrib.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+>Appendix F. Additional Supplied Modules</TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="btree_gin"
+HREF="btree-gin.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="BLOOM"
+>F.4. bloom</A
+></H1
+><P
+>  <TT
+CLASS="LITERAL"
+>bloom</TT
+> provides an index access method based on
+  <A
+HREF="http://en.wikipedia.org/wiki/Bloom_filter"
+TARGET="_top"
+>Bloom filters</A
+>.
+ </P
+><P
+>  A Bloom filter is a space-efficient data structure that is used to test
+  whether an element is a member of a set.  In the case of an index access
+  method, it allows fast exclusion of non-matching tuples via signatures
+  whose size is determined at index creation.
+ </P
+><P
+>  A signature is a lossy representation of the indexed attribute(s), and as
+  such is prone to reporting false positives; that is, it may be reported
+  that an element is in the set, when it is not.  So index search results
+  must always be rechecked using the actual attribute values from the heap
+  entry.  Larger signatures reduce the odds of a false positive and thus
+  reduce the number of useless heap visits, but of course also make the index
+  larger and hence slower to scan.
+ </P
+><P
+>  This type of index is most useful when a table has many attributes and
+  queries test arbitrary combinations of them.  A traditional btree index is
+  faster than a bloom index, but it can require many btree indexes to support
+  all possible queries where one needs only a single bloom index.  Note
+  however that bloom indexes only support equality queries, whereas btree
+  indexes can also perform inequality and range searches.
+ </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN176843"
+>F.4.1. Parameters</A
+></H2
+><P
+>   A <TT
+CLASS="LITERAL"
+>bloom</TT
+> index accepts the following parameters in its
+   <TT
+CLASS="LITERAL"
+>WITH</TT
+> clause:
+  </P
+><P
+></P
+><DIV
+CLASS="VARIABLELIST"
+><DL
+><DT
+><TT
+CLASS="LITERAL"
+>length</TT
+></DT
+><DD
+><P
+>      Length of each signature (index entry) in bits. The default
+      is <TT
+CLASS="LITERAL"
+>80</TT
+> bits and maximum is <TT
+CLASS="LITERAL"
+>4096</TT
+>.
+     </P
+></DD
+></DL
+></DIV
+><P
+></P
+><DIV
+CLASS="VARIABLELIST"
+><DL
+><DT
+><TT
+CLASS="LITERAL"
+>col1 &mdash; col32</TT
+></DT
+><DD
+><P
+>      Number of bits generated for each index column. Each parameter's name
+      refers to the number of the index column that it controls.  The default
+      is <TT
+CLASS="LITERAL"
+>2</TT
+> bits and maximum is <TT
+CLASS="LITERAL"
+>4095</TT
+>.  Parameters for
+      index columns not actually used are ignored.
+     </P
+></DD
+></DL
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN176864"
+>F.4.2. Examples</A
+></H2
+><P
+>   This is an example of creating a bloom index:
+  </P
+><PRE
+CLASS="PROGRAMLISTING"
+>CREATE INDEX bloomidx ON tbloom USING bloom (i1,i2,i3)
+       WITH (length=80, col1=2, col2=2, col3=4);</PRE
+><P
+>   The index is created with a signature length of 80 bits, with attributes
+   i1 and i2 mapped to 2 bits, and attribute i3 mapped to 4 bits.  We could
+   have omitted the <TT
+CLASS="LITERAL"
+>length</TT
+>, <TT
+CLASS="LITERAL"
+>col1</TT
+>,
+   and <TT
+CLASS="LITERAL"
+>col2</TT
+> specifications since those have the default values.
+  </P
+><P
+>   Here is a more complete example of bloom index definition and usage, as
+   well as a comparison with equivalent btree indexes.  The bloom index is
+   considerably smaller than the btree index, and can perform better.
+  </P
+><PRE
+CLASS="PROGRAMLISTING"
+>=# CREATE TABLE tbloom AS
+   SELECT
+     (random() * 1000000)::int as i1,
+     (random() * 1000000)::int as i2,
+     (random() * 1000000)::int as i3,
+     (random() * 1000000)::int as i4,
+     (random() * 1000000)::int as i5,
+     (random() * 1000000)::int as i6
+   FROM
+  generate_series(1,10000000);
+SELECT 10000000
+=# CREATE INDEX bloomidx ON tbloom USING bloom (i1, i2, i3, i4, i5, i6);
+CREATE INDEX
+=# SELECT pg_size_pretty(pg_relation_size('bloomidx'));
+ pg_size_pretty
+----------------
+ 153 MB
+(1 row)
+=# CREATE index btreeidx ON tbloom (i1, i2, i3, i4, i5, i6);
+CREATE INDEX
+=# SELECT pg_size_pretty(pg_relation_size('btreeidx'));
+ pg_size_pretty
+----------------
+ 387 MB
+(1 row)</PRE
+><P
+>   A sequential scan over this large table takes a long time:
+</P><PRE
+CLASS="PROGRAMLISTING"
+>=# EXPLAIN ANALYZE SELECT * FROM tbloom WHERE i2 = 898732 AND i5 = 123451;
+                                                 QUERY PLAN
+------------------------------------------------------------------------------------------------------------
+ Seq Scan on tbloom  (cost=0.00..213694.08 rows=1 width=24) (actual time=1445.438..1445.438 rows=0 loops=1)
+   Filter: ((i2 = 898732) AND (i5 = 123451))
+   Rows Removed by Filter: 10000000
+ Planning time: 0.177 ms
+ Execution time: 1445.473 ms
+(5 rows)</PRE
+><P>
+  </P
+><P
+>   So the planner will usually select an index scan if possible.
+   With a btree index, we get results like this:
+</P><PRE
+CLASS="PROGRAMLISTING"
+>=# EXPLAIN ANALYZE SELECT * FROM tbloom WHERE i2 = 898732 AND i5 = 123451;
+                                                           QUERY PLAN
+--------------------------------------------------------------------------------------------------------------------------------
+ Index Only Scan using btreeidx on tbloom  (cost=0.56..298311.96 rows=1 width=24) (actual time=445.709..445.709 rows=0 loops=1)
+   Index Cond: ((i2 = 898732) AND (i5 = 123451))
+   Heap Fetches: 0
+ Planning time: 0.193 ms
+ Execution time: 445.770 ms
+(5 rows)</PRE
+><P>
+  </P
+><P
+>   Bloom is better than btree in handling this type of search:
+</P><PRE
+CLASS="PROGRAMLISTING"
+>=# EXPLAIN ANALYZE SELECT * FROM tbloom WHERE i2 = 898732 AND i5 = 123451;
+                                                        QUERY PLAN
+---------------------------------------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on tbloom  (cost=178435.39..178439.41 rows=1 width=24) (actual time=76.698..76.698 rows=0 loops=1)
+   Recheck Cond: ((i2 = 898732) AND (i5 = 123451))
+   Rows Removed by Index Recheck: 2439
+   Heap Blocks: exact=2408
+   -&gt;  Bitmap Index Scan on bloomidx  (cost=0.00..178435.39 rows=1 width=0) (actual time=72.455..72.455 rows=2439 loops=1)
+         Index Cond: ((i2 = 898732) AND (i5 = 123451))
+ Planning time: 0.475 ms
+ Execution time: 76.778 ms
+(8 rows)</PRE
+><P>
+   Note the relatively large number of false positives: 2439 rows were
+   selected to be visited in the heap, but none actually matched the
+   query.  We could reduce that by specifying a larger signature length.
+   In this example, creating the index with <TT
+CLASS="LITERAL"
+>length=200</TT
+>
+   reduced the number of false positives to 55; but it doubled the index size
+   (to 306 MB) and ended up being slower for this query (125 ms overall).
+  </P
+><P
+>   Now, the main problem with the btree search is that btree is inefficient
+   when the search conditions do not constrain the leading index column(s).
+   A better strategy for btree is to create a separate index on each column.
+   Then the planner will choose something like this:
+</P><PRE
+CLASS="PROGRAMLISTING"
+>=# EXPLAIN ANALYZE SELECT * FROM tbloom WHERE i2 = 898732 AND i5 = 123451;
+                                                          QUERY PLAN
+------------------------------------------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on tbloom  (cost=9.29..13.30 rows=1 width=24) (actual time=0.148..0.148 rows=0 loops=1)
+   Recheck Cond: ((i5 = 123451) AND (i2 = 898732))
+   -&gt;  BitmapAnd  (cost=9.29..9.29 rows=1 width=0) (actual time=0.145..0.145 rows=0 loops=1)
+         -&gt;  Bitmap Index Scan on tbloom_i5_idx  (cost=0.00..4.52 rows=11 width=0) (actual time=0.089..0.089 rows=10 loops=1)
+               Index Cond: (i5 = 123451)
+         -&gt;  Bitmap Index Scan on tbloom_i2_idx  (cost=0.00..4.52 rows=11 width=0) (actual time=0.048..0.048 rows=8 loops=1)
+               Index Cond: (i2 = 898732)
+ Planning time: 2.049 ms
+ Execution time: 0.280 ms
+(9 rows)</PRE
+><P>
+   Although this query runs much faster than with either of the single
+   indexes, we pay a large penalty in index size.  Each of the single-column
+   btree indexes occupies 214 MB, so the total space needed is over 1.2GB,
+   more than 8 times the space used by the bloom index.
+  </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN176883"
+>F.4.3. Operator Class Interface</A
+></H2
+><P
+>   An operator class for bloom indexes requires only a hash function for the
+   indexed data type and an equality operator for searching. This example
+   shows the operator class definition for the <TT
+CLASS="TYPE"
+>text</TT
+> data type:
+  </P
+><PRE
+CLASS="PROGRAMLISTING"
+>CREATE OPERATOR CLASS text_ops
+DEFAULT FOR TYPE text USING bloom AS
+    OPERATOR    1   =(text, text),
+    FUNCTION    1   hashtext(text);</PRE
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN176888"
+>F.4.4. Limitations</A
+></H2
+><P
+>   <P
+></P
+></P><UL
+><LI
+><P
+>      Only operator classes for <TT
+CLASS="TYPE"
+>int4</TT
+> and <TT
+CLASS="TYPE"
+>text</TT
+> are
+      included with the module.
+     </P
+></LI
+><LI
+><P
+>      Only the <TT
+CLASS="LITERAL"
+>=</TT
+> operator is supported for search.  But
+      it is possible to add support for arrays with union and intersection
+      operations in the future.
+     </P
+></LI
+></UL
+><P>
+  </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN176899"
+>F.4.5. Authors</A
+></H2
+><P
+>   Teodor Sigaev <CODE
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:teodor@postgrespro.ru"
+>teodor@postgrespro.ru</A
+>&#62;</CODE
+>,
+   Postgres Professional, Moscow, Russia
+  </P
+><P
+>   Alexander Korotkov <CODE
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:a.korotkov@postgrespro.ru"
+>a.korotkov@postgrespro.ru</A
+>&#62;</CODE
+>,
+   Postgres Professional, Moscow, Russia
+  </P
+><P
+>   Oleg Bartunov <CODE
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:obartunov@postgrespro.ru"
+>obartunov@postgrespro.ru</A
+>&#62;</CODE
+>,
+   Postgres Professional, Moscow, Russia
+  </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="auto-explain.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="btree-gin.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>auto_explain</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="contrib.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>btree_gin</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

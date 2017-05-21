@@ -1,0 +1,144 @@
+
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_kanban_record {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_main {
+  -ms-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 16px;
+  width: 70%;
+  margin-bottom: 27px;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_main .o_kanban_card_content {
+  font-size: 12px;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_main .o_kanban_card_content .o_primary {
+  font-size: larger;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_main .o_project_kanban_manage .o_left {
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  padding: 8px 16px;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_main .o_project_kanban_manage .o_right {
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 30%;
+  padding: 8px 16px;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_main .o_project_kanban_manage .o_kanban_manage_toggle_button:not(:hover) {
+  color: #4c4c4c;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_main .o_kanban_card_manage_pane .o_kanban_card_manage_title {
+  margin: 0;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_dashboard_star {
+  font-size: 16px;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_dashboard_star.fa-star-o {
+  color: #a8a8a8;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_dashboard_star.fa-star-o:hover {
+  color: gold;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_dashboard_star.fa-star {
+  color: gold;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_boxes {
+  width: 30%;
+  -ms-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_boxes > a:hover {
+  text-decoration: none;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_boxes .o_value {
+  font-size: x-large;
+  color: white;
+  display: block;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_boxes .o_label {
+  color: white;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_boxes .o_needaction {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: white;
+  font-size: small;
+  opacity: 0.5;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_boxes .o_needaction:hover {
+  opacity: 1;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_boxes .o_needaction::before {
+  content: "\f086";
+  font: normal normal normal 14px/1 FontAwesome;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_boxes .o_project_kanban_box {
+  position: relative;
+  text-align: center;
+  padding: 0 0 0 0;
+  -ms-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_boxes .o_project_kanban_box:nth-child(even) {
+  background-color: grey;
+}
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_boxes .o_project_kanban_box:nth-child(odd) {
+  background-color: #7c7bad;
+}
+.o_kanban_task_cover_image {
+  -webkit-columns: 200px 4;
+  -moz-columns: 200px 4;
+  columns: 200px 4;
+}
+.o_kanban_task_cover_image > img {
+  cursor: pointer;
+  margin-bottom: 1em;
+  border: 1px solid transparent;
+}
+.o_kanban_task_cover_image > img.o_selected {
+  border-color: #f0eeee;
+  box-shadow: 0px 0px 2px 2px #f0eeee;
+}

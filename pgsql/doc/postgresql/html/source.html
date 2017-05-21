@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>PostgreSQL Coding Conventions</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Internals"
+HREF="internals.html"><LINK
+REL="PREVIOUS"
+TITLE="Summary of Changes since Protocol 2.0"
+HREF="protocol-changes.html"><LINK
+REL="NEXT"
+TITLE="Formatting"
+HREF="source-format.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="CHAPTER"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="Summary of Changes since Protocol 2.0"
+HREF="protocol-changes.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="internals.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="Formatting"
+HREF="source-format.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="CHAPTER"
+><H1
+><A
+NAME="SOURCE"
+></A
+>Chapter 52. PostgreSQL Coding Conventions</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+>52.1. <A
+HREF="source-format.html"
+>Formatting</A
+></DT
+><DT
+>52.2. <A
+HREF="error-message-reporting.html"
+>Reporting Errors Within the Server</A
+></DT
+><DT
+>52.3. <A
+HREF="error-style-guide.html"
+>Error Message Style Guide</A
+></DT
+><DD
+><DL
+><DT
+>52.3.1. <A
+HREF="error-style-guide.html#AEN114917"
+>What Goes Where</A
+></DT
+><DT
+>52.3.2. <A
+HREF="error-style-guide.html#AEN114926"
+>Formatting</A
+></DT
+><DT
+>52.3.3. <A
+HREF="error-style-guide.html#AEN114930"
+>Quotation Marks</A
+></DT
+><DT
+>52.3.4. <A
+HREF="error-style-guide.html#AEN114934"
+>Use of Quotes</A
+></DT
+><DT
+>52.3.5. <A
+HREF="error-style-guide.html#AEN114940"
+>Grammar and Punctuation</A
+></DT
+><DT
+>52.3.6. <A
+HREF="error-style-guide.html#AEN114947"
+>Upper Case vs. Lower Case</A
+></DT
+><DT
+>52.3.7. <A
+HREF="error-style-guide.html#AEN114951"
+>Avoid Passive Voice</A
+></DT
+><DT
+>52.3.8. <A
+HREF="error-style-guide.html#AEN114957"
+>Present vs. Past Tense</A
+></DT
+><DT
+>52.3.9. <A
+HREF="error-style-guide.html#AEN114967"
+>Type of the Object</A
+></DT
+><DT
+>52.3.10. <A
+HREF="error-style-guide.html#AEN114972"
+>Brackets</A
+></DT
+><DT
+>52.3.11. <A
+HREF="error-style-guide.html#AEN114976"
+>Assembling Error Messages</A
+></DT
+><DT
+>52.3.12. <A
+HREF="error-style-guide.html#AEN114981"
+>Reasons for Errors</A
+></DT
+><DT
+>52.3.13. <A
+HREF="error-style-guide.html#AEN114985"
+>Function Names</A
+></DT
+><DT
+>52.3.14. <A
+HREF="error-style-guide.html#AEN114992"
+>Tricky Words to Avoid</A
+></DT
+><DT
+>52.3.15. <A
+HREF="error-style-guide.html#AEN115035"
+>Proper Spelling</A
+></DT
+><DT
+>52.3.16. <A
+HREF="error-style-guide.html#AEN115050"
+>Localization</A
+></DT
+></DL
+></DD
+><DT
+>52.4. <A
+HREF="source-conventions.html"
+>Miscellaneous Coding Conventions</A
+></DT
+><DD
+><DL
+><DT
+>52.4.1. <A
+HREF="source-conventions.html#AEN115056"
+>C Standard</A
+></DT
+><DT
+>52.4.2. <A
+HREF="source-conventions.html#AEN115063"
+>Function-Like Macros and Inline Functions</A
+></DT
+><DT
+>52.4.3. <A
+HREF="source-conventions.html#AEN115072"
+>Writing Signal Handlers</A
+></DT
+></DL
+></DD
+></DL
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="protocol-changes.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="source-format.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Summary of Changes since Protocol 2.0</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="internals.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Formatting</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

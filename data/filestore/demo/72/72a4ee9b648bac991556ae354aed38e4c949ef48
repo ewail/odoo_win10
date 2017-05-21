@@ -1,0 +1,33 @@
+
+.o_graph {
+  height: 100%;
+}
+.o_graph .o_graph_svg_container {
+  height: 100%;
+  overflow: auto;
+}
+.o_graph .o_graph_svg_container svg {
+  background-color: white;
+}
+.nvtooltip thead {
+  background-color: transparent;
+}
+.o_graph_measures_list li {
+  position: relative;
+}
+.o_graph_measures_list li > a {
+  color: #4c4c4c;
+}
+.o_graph_measures_list li > a:hover {
+  color: #333333;
+}
+.o_graph_measures_list li.selected > a {
+  color: #333333;
+  font-weight: bold;
+}
+.o_graph_measures_list li.selected > a:before {
+  font-family: FontAwesome;
+  position: absolute;
+  left: 6px;
+  content: "\f00c";
+}

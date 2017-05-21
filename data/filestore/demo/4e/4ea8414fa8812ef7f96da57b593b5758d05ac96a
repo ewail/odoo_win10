@@ -1,0 +1,122 @@
+
+.o_dashboard .oe_dashboard_layout_1 .oe_dashboard_column.index_0 {
+  width: 100%;
+}
+.o_dashboard .oe_dashboard_layout_1 .oe_dashboard_column.index_1,
+.o_dashboard .oe_dashboard_layout_1 .oe_dashboard_column.index_2 {
+  display: none;
+}
+.o_dashboard .oe_dashboard_layout_1-1 .oe_dashboard_column {
+  width: 50%;
+}
+.o_dashboard .oe_dashboard_layout_1-1 .oe_dashboard_column.index_2 {
+  display: none;
+}
+.o_dashboard .oe_dashboard_layout_1-1-1 .oe_dashboard_column {
+  width: 33%;
+}
+.o_dashboard .oe_dashboard_layout_2-1 .oe_dashboard_column.index_0 {
+  width: 70%;
+}
+.o_dashboard .oe_dashboard_layout_2-1 .oe_dashboard_column.index_1 {
+  width: 30%;
+}
+.o_dashboard .oe_dashboard_layout_2-1 .oe_dashboard_column.index_2 {
+  display: none;
+}
+.o_dashboard .oe_dashboard_layout_1-2 .oe_dashboard_column.index_0 {
+  width: 30%;
+}
+.o_dashboard .oe_dashboard_layout_1-2 .oe_dashboard_column.index_1 {
+  width: 70%;
+}
+.o_dashboard .oe_dashboard_layout_1-2 .oe_dashboard_column.index_2 {
+  display: none;
+}
+.o_dashboard .oe_dashboard_column {
+  vertical-align: top;
+}
+.o_dashboard .oe_dashboard_links {
+  text-align: right;
+  margin: 0 4px 6px 0;
+}
+.o_dashboard .oe_dashboard {
+  width: 100%;
+}
+.o_dashboard .oe_dashboard .oe_action {
+  background-color: white;
+  border: 1px solid;
+  border-color: #e5e5e5 #dbdbdb #d2d2d2;
+  margin: 0 8px 8px 0;
+}
+.o_dashboard .oe_dashboard .oe_action .oe_header {
+  font-size: 16px;
+  vertical-align: middle;
+  margin: 0;
+  padding: 12px;
+}
+.o_dashboard .oe_dashboard .oe_action .oe_header:hover {
+  cursor: move;
+}
+.o_dashboard .oe_dashboard .oe_action .oe_header .oe_icon {
+  float: right;
+  cursor: pointer;
+  color: #b3b3b3;
+}
+.o_dashboard .oe_dashboard .oe_action .oe_header .oe_icon:hover {
+  color: #666;
+  text-decoration: none;
+}
+.o_dashboard .oe_dashboard .oe_action .oe_header .oe_close:after {
+  content: "×";
+  margin-left: 4px;
+}
+.o_dashboard .oe_dashboard .oe_action .oe_header .oe_minimize:after {
+  content: "-";
+  margin-left: 4px;
+}
+.o_dashboard .oe_dashboard .oe_action .oe_header .oe_maximize:after {
+  content: "+";
+  margin-left: 4px;
+}
+.o_dashboard .oe_dashboard .oe_action .oe_header .oe_header_text {
+  width: auto;
+  visibility: hidden;
+  display: inline-block;
+  cursor: text;
+}
+.o_dashboard .oe_dashboard .oe_action .oe_header span {
+  cursor: pointer;
+}
+.o_dashboard .oe_dashboard .oe_action .oe_header_empty {
+  padding-top: 0;
+  padding-bottom: 2px;
+}
+.o_dashboard .oe_dashboard .oe_action .oe_button_create {
+  margin-left: 4px;
+  padding: 0 4px 0 4px;
+  height: 16px !important;
+}
+.o_dashboard .oe_dashboard .oe_action .oe_content {
+  padding: 0 12px 12px 12px;
+}
+.o_dashboard .oe_dashboard .oe_action .o_kanban_view .o_kanban_record .oe_kanban_list_many2many .o_form_field_many2manytags {
+  border: none;
+}
+.oe_dashboard_layout_selector ul {
+  white-space: nowrap;
+}
+.oe_dashboard_layout_selector li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: left;
+}
+.oe_dashboard_layout_selector .oe_dashboard_selected_layout {
+  margin-left: -30px;
+  vertical-align: bottom;
+  margin-bottom: 10px;
+}
+.o_add_to_dashboard {
+  display: none;
+}

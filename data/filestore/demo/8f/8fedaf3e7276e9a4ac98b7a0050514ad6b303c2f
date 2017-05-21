@@ -1,0 +1,50 @@
+
+.o_datepicker {
+  position: relative;
+}
+.o_datepicker .o_datepicker_input {
+  width: 100%;
+}
+.o_datepicker .o_datepicker_button {
+  position: absolute;
+  top: 2px;
+  left: auto;
+  bottom: auto;
+  right: 4px;
+  cursor: pointer;
+}
+.o_datepicker .o_datepicker_button:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+  border-bottom: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid;
+  -moz-transform: scale(0.9999);
+}
+.datepicker .table-condensed > thead {
+  color: white;
+  background-color: #7c7bad;
+}
+.datepicker .table-condensed > thead > tr:first-child th:hover {
+  color: white;
+  background-color: #5f5e97;
+}
+.datepicker .table-condensed > thead > tr:last-child {
+  color: #8f8f8f;
+  background-color: #dcdcdc;
+}
+.datepicker .table-condensed > thead > tr > th {
+  border-radius: 0;
+}
+.datepicker .table-condensed > tbody > tr > td.active,
+.datepicker .table-condensed > tbody > tr > td .active {
+  background-color: #7c7bad;
+  border-radius: 100px;
+}
+.datepicker .table-condensed > tbody > tr > td.today:before {
+  border-bottom-color: #7c7bad;
+}

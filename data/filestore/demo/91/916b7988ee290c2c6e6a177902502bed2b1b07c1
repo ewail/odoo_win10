@@ -1,0 +1,111 @@
+
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_kanban_record {
+  min-height: 250px;
+}
+@media (min-width: 768px) {
+  .o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_kanban_record {
+    min-width: 420px;
+  }
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard {
+  margin: -4px -12px 4px;
+  -ms-flex: 1 0 100%;
+  -moz-flex: 1 0 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 100%;
+  flex: 1 0 100%;
+  padding: 10px 6px;
+  background-color: white;
+  position: relative;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard .o_welcome_message {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard .o_welcome_message .o_welcome_image {
+  padding: 20px;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard .o_welcome_message .o_welcome_content > a {
+  color: white;
+  display: inline-block;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > .o_demo {
+  opacity: 0.07;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div {
+  display: inline-block;
+  vertical-align: top;
+}
+@media (min-width: 768px) {
+  .o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div {
+    width: 50%;
+  }
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table {
+  margin-bottom: 0;
+  table-layout: fixed;
+  border-spacing: 10px 0px;
+  border-collapse: separate;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td {
+  vertical-align: middle;
+  text-align: center;
+  border-top: 1px solid white;
+  width: 25%;
+  height: 33px;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td span {
+  display: inline;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td a:hover {
+  text-decoration: none;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_main {
+  background-color: #7c7bad;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_main:hover {
+  background-color: #5f5e97;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_main a {
+  color: white;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_warning {
+  background-color: orange;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_warning:hover {
+  background-color: #cc8400;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_warning a {
+  color: white;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_secondary {
+  background-color: #e2e2e0;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_secondary:hover {
+  background-color: #c9c9c6;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_secondary a {
+  color: black;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_highlight,
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td .o_highlight {
+  font-size: 20px;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard > div > table > tbody > tr > td.o_text {
+  text-align: left;
+}
+.o_kanban_view.o_kanban_dashboard.o_salesteam_kanban.o_kanban_nocontent .o_sales_dashboard {
+  margin: 0;
+}

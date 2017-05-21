@@ -1,0 +1,120 @@
+
+.o_form_view.o_form_nosheet {
+  padding: 16px;
+}
+.o_form_view.o_form_nosheet.oe_form_nomargin {
+  margin: 0;
+}
+.o_form_view .o_form_sheet_bg {
+  position: relative;
+  padding: 16px 0;
+}
+.o_form_view .o_form_sheet_bg .o_form_sheet {
+  min-width: 650px;
+  max-width: 860px;
+  min-height: 330px;
+  background: white;
+  padding: 16px;
+  margin: 0 auto;
+}
+.o_form_view .o_form_sheet_bg .o_form_sheet .ui-tabs {
+  margin: 0 -16px;
+}
+.o_form_view .o_form_sheet_bg .o_form_sheet .oe_notebook_page {
+  padding: 0 16px;
+}
+.o_form_view > header {
+  padding-left: 14px;
+}
+.o_form_view > header:before,
+.o_form_view > header:after {
+  content: " ";
+  display: table;
+}
+.o_form_view > header:after {
+  clear: both;
+}
+.o_form_view > header:before,
+.o_form_view > header:after {
+  content: " ";
+  display: table;
+}
+.o_form_view > header:after {
+  clear: both;
+}
+.o_form_view > header ul:not(.oe_tooltip_technical):not(.oe_dropdown_menu) {
+  display: inline-block;
+  float: right;
+}
+.o_form_view > header > button {
+  margin: 0 2px;
+}
+.o_form_view > header > span {
+  margin-left: 4px;
+}
+.o_form_view .oe_button_box {
+  width: 400px;
+  text-align: right;
+  float: right;
+}
+.o_form_view .oe_button_box .oe_stat_button {
+  text-align: left;
+  width: 132px !important;
+  height: 40px;
+  margin: 0px -1px -1px 0px;
+  padding: 0;
+}
+.o_form_view .oe_button_box .oe_stat_button > div {
+  text-align: left;
+  padding: 0;
+  line-height: 120%;
+  vertical-align: middle;
+}
+.o_form_view .oe_button_box .oe_stat_button .o_button_icon {
+  display: inline-block;
+  width: 30%;
+  padding: 0px 3px;
+  width: 37px;
+  text-align: center;
+  vertical-align: middle;
+}
+.o_form_view .oe_button_box .oe_stat_button .o_stat_info {
+  display: inline-block;
+  max-width: 70%;
+  line-height: 1.2;
+}
+.o_form_view .oe_button_box .oe_stat_button > span {
+  display: inline-block;
+  max-width: 70%;
+  line-height: 1.2;
+}
+.o_form_view .oe_button_box + .oe_title,
+.o_form_view .oe_button_box + .oe_avatar + .oe_title {
+  width: 400px;
+}
+.o_form_view .o_group .o_td_label + td {
+  padding: 2px 36px 2px 8px;
+}
+.o_form_view .o_group .o_form_field.o_text_overflow {
+  width: 1px!important;
+  min-width: 100%;
+}
+.o_form_view .oe_avatar {
+  float: left;
+}
+.o_form_view .oe_avatar > img {
+  max-height: 90px;
+  max-width: 90px;
+  margin-bottom: 10px;
+}
+.o_form_view .oe_avatar + .oe_title {
+  padding-left: 95px;
+  margin-left: 5px;
+}
+.o_form_view .oe_chatter {
+  display: block;
+  min-width: 682px;
+  max-width: 892px;
+  margin: 0 auto;
+  padding: 16px 16px 48px;
+}

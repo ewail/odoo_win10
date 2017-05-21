@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>The pgAdmin Tabbed Browser &#8212; pgAdmin 4 1.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The pgAdmin Tree Control" href="pgadmin_tree_control.html" />
+    <link rel="prev" title="The pgAdmin Menu Bar" href="pgadmin_menu_bar.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="pgadmin_tree_control.html" title="The pgAdmin Tree Control"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pgadmin_menu_bar.html" title="The pgAdmin Menu Bar"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pgAdmin 4 1.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="getting_started.html" accesskey="U">Getting Started</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="the-pgadmin-tabbed-browser">
+<span id="pgadmin-tabbed-browser"></span><h1>The pgAdmin Tabbed Browser<a class="headerlink" href="#the-pgadmin-tabbed-browser" title="Permalink to this headline">¶</a></h1>
+<p>The right pane of the <em>pgAdmin</em> window features a collection of tabs that display information about the object currently selected in the <em>pgAdmin</em> tree control in the left window.</p>
+<p>Permanent tabs are named <em>Dashboard, *Properties</em>, <em>SQL</em>, <em>Statistics</em>, <em>Dependencies</em> and <em>Dependents</em>; each tab may be repositioned as a floating window. Select a tab to access information about the highlighted object in the tree control.</p>
+<img alt="_images/main_dashboard.png" src="_images/main_dashboard.png" />
+<p>The <em>Dashboard</em> tab provides a graphical analysis of the usage statistics for the selected server or database:</p>
+<ul class="simple">
+<li>The <em>Server sessions</em> or <em>Database sessions</em> graph displays the interactions with the server or database.</li>
+<li>The <em>Transactions per second</em> graph displays the commits, rollbacks, and total transactions per second that are taking place on the server or database.</li>
+<li>The <em>Tuples In</em> graph displays the number of tuples inserted, updated, and deleted on the server or database.</li>
+<li>The <em>Tuples out</em> graph displays the number of tuples fetched and returned from the server or database.</li>
+<li>The <em>Block I/O</em> graph displays the number of blocks read from the filesystem or fetched from the buffer cache (but not the operating system&#8217;s file system cache) for the server or database.</li>
+</ul>
+<p>The <em>Server activity</em> panel displays information about sessions, locks, prepared transactions and configuration. The information is presented in context-sensitive tables.</p>
+<p>Click the <em>Properties</em> tab to continue.</p>
+<img alt="_images/main_properties_table.png" src="_images/main_properties_table.png" />
+<p>Review properties on expandable windows specific to the <em>Object</em> selected. If multiple boxes are displayed, you can click the arrow to the left on the blue bar at the top of each box:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Point the arrow to the right to contract the box.</li>
+<li>Point the arrow down to expand the window.</li>
+</ul>
+</div></blockquote>
+<img alt="_images/main_properties_edit.png" src="_images/main_properties_edit.png" />
+<p>Click the <em>Edit</em> icon in the toolbar under the browser tabs to launch a dialog.</p>
+<img alt="_images/main_properties_icons.png" src="_images/main_properties_icons.png" />
+<p>If you change properties in the opened dialog, save your work. The <em>Properties</em> tab updates to show recent modifications.</p>
+<p>Click the <em>SQL</em> tab to continue.</p>
+<img alt="_images/main_sql.png" src="_images/main_sql.png" />
+<p>The SQL pane on the <em>SQL</em> tab contains an SQL script that creates the highlighted object, and if applicable, a (commented out) SQL statement that will <em>DROP</em> the selected object. You can copy the SQL statements to an editor of your choice using cut &amp; paste shortcuts.</p>
+<p>Click the <em>Statistics</em> tab to continue.</p>
+<img alt="_images/main_statistics.png" src="_images/main_statistics.png" />
+<p>The <em>Statistics</em> tab displays the statistics gathered for each object on the tree control; the statistics displayed in the table vary by the type of object that is selected. Click a column heading to sort the table by the data displayed in the column; click again to reverse the sort order.  The following table lists some of the statistics that are available:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Panel</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>PID</em></td>
+<td>The process ID associated with the row.</td>
+</tr>
+<tr class="row-odd"><td><em>User</em></td>
+<td>The name of the user that owns the object.</td>
+</tr>
+<tr class="row-even"><td><em>Database</em></td>
+<td>displays the database name.</td>
+</tr>
+<tr class="row-odd"><td><em>Backends</em></td>
+<td>displays the number of current connections to the database.</td>
+</tr>
+<tr class="row-even"><td><em>Backend start</em></td>
+<td>The start time of the backend process.</td>
+</tr>
+<tr class="row-odd"><td><em>Xact Committed</em></td>
+<td>displays the number of transactions committed to the database within the last week.</td>
+</tr>
+<tr class="row-even"><td><em>Xact Rolled Back</em></td>
+<td>displays the number of transactions rolled back within the last week.</td>
+</tr>
+<tr class="row-odd"><td><em>Blocks Read</em></td>
+<td>displays the number of blocks read from memory (in megabytes) within the last week.</td>
+</tr>
+<tr class="row-even"><td><em>Blocks Hit</em></td>
+<td>displays the number of blocks hit in the cache (in megabytes) within the last week.</td>
+</tr>
+<tr class="row-odd"><td><em>Tuples Returned</em></td>
+<td>displays the number of tuples returned within the last week.</td>
+</tr>
+<tr class="row-even"><td><em>Tuples Fetched</em></td>
+<td>displays the number of tuples fetched within the last week.</td>
+</tr>
+<tr class="row-odd"><td><em>Tuples Inserted</em></td>
+<td>displays the number of tuples inserted into the database within the last week.</td>
+</tr>
+<tr class="row-even"><td><em>Tuples Updated</em></td>
+<td>displays the number of tuples updated in the database within the last week.</td>
+</tr>
+<tr class="row-odd"><td><em>Tuples Deleted</em></td>
+<td>displays the number of tuples deleted from the database within the last week.</td>
+</tr>
+<tr class="row-even"><td><em>Last statistics reset</em></td>
+<td>displays the time of the last statistics reset for the database.</td>
+</tr>
+<tr class="row-odd"><td><em>Tablespace conflicts</em></td>
+<td>displays the number of queries canceled because of recovery conflict with dropped tablespaces in database.</td>
+</tr>
+<tr class="row-even"><td><em>Lock conflicts</em></td>
+<td>displays the number of queries canceled because of recovery conflict with locks in database.</td>
+</tr>
+<tr class="row-odd"><td><em>Snapshot conflicts</em></td>
+<td>displays the number of queries canceled because of recovery conflict with old snapshots in database.</td>
+</tr>
+<tr class="row-even"><td><em>Bufferpin conflicts</em></td>
+<td>displays the number of queries canceled because of recovery conflict with pinned buffers in database.</td>
+</tr>
+<tr class="row-odd"><td><em>Temporary files</em></td>
+<td>displays the total number of temporary files, including those used by the statistics collector.</td>
+</tr>
+<tr class="row-even"><td><em>Size of temporary files</em></td>
+<td>displays the size of the temporary files.</td>
+</tr>
+<tr class="row-odd"><td><em>Deadlocks</em></td>
+<td>displays the number of queries canceled because of a recovery conflict with deadlocks in database.</td>
+</tr>
+<tr class="row-even"><td><em>Block read time</em></td>
+<td>displays the number of milliseconds required to read the blocks read.</td>
+</tr>
+<tr class="row-odd"><td><em>Block write time</em></td>
+<td>displays the number of milliseconds required to write the blocks read.</td>
+</tr>
+<tr class="row-even"><td><em>Size</em></td>
+<td>displays the size (in megabytes) of the selected database.</td>
+</tr>
+</tbody>
+</table>
+<p>Click the <em>Dependencies</em> tab to continue.</p>
+<img alt="_images/main_dependencies.png" src="_images/main_dependencies.png" />
+<p>The <em>Dependencies</em> tab displays the objects on which the currently selected object depends. If a dependency is dropped, the object currently selected in the pgAdmin tree control will be affected. To ensure the integrity of the entire database structure, the database server makes sure that you do not accidentally drop objects that other objects depend on; you must use DROP CASCADE to remove an object with a dependency.</p>
+<p>The <em>Dependencies</em> table displays the following information:</p>
+<ul class="simple">
+<li>The <em>Type</em> field specifies the parent object type.</li>
+<li>The <em>Name</em> field specifies the identifying name of the parent object.</li>
+<li><dl class="first docutils">
+<dt>The <em>Restriction</em> field describes the dependency relationship between the currently selected object and the parent.</dt>
+<dd><ul class="first last">
+<li>If the field is <em>auto</em>, the selected object can be dropped separately from the parent object, and will be dropped if the parent object is dropped.</li>
+<li>If the field is <em>internal</em>, the selected object was created during the creation of the parent object, and will be dropped if the parent object is dropped.</li>
+<li>If the field is <em>normal</em>, the selected object can be dropped without dropping the parent object.</li>
+<li>If the field is <em>blank</em>, the selected object is required by the system, and cannot be dropped.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Click the <em>Dependents</em> tab to continue.</p>
+<img alt="_images/main_dependents.png" src="_images/main_dependents.png" />
+<p>The <em>Dependents</em> tab displays a table of objects that depend on the object currently selected in the <em>pgAdmin</em> browser. A dependent object can be dropped without affecting the object currently selected in the <em>pgAdmin</em> tree control.</p>
+<ul class="simple">
+<li>The <em>Type</em> field specifies the dependent object type.</li>
+<li>The <em>Name</em> field specifies the identifying name for the dependent object.</li>
+<li>The <em>Database</em> field specifies the database in which the object resides.</li>
+</ul>
+<p><strong>Feature Tabs</strong></p>
+<p>Additional <em>feature tabs</em> will open in the <em>pgAdmin</em> tabbed browser when you access the extended functionality offered by pgAdmin tools. For example, if you select the <em>Query tool</em> from <em>Tools</em> in the menu bar, pgAdmin will open the Query tool on a tab labeled <em>Query-1</em>. These feature tabs are not permanent and you can close them when you are finished using the tool. Like permanent tabs, these tabs may be repositioned.</p>
+<img alt="_images/main_query_tool.png" src="_images/main_query_tool.png" />
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="getting_started.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="server_deployment.html">Server Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pgadmin_login.html">The pgAdmin Login Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pgadmin_user.html">The User Management Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktop_deployment.html">Desktop Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="browser.html">The pgAdmin 4 Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pgadmin_menu_bar.html">The pgAdmin Menu Bar</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">The pgAdmin Tabbed Browser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pgadmin_tree_control.html">The pgAdmin Tree Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preferences.html">pgAdmin Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts.html">Keyboard Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connecting.html">Connecting to a Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to a Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing_cluster_objects.html">Managing Cluster Level Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing_database_objects.html">Managing Database Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modifying_tables.html">Creating or Modifying a Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="management_basics.html">Management Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backup_and_restore.html">Backup and Restore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_tools.html">Developer Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">pgAdmin Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">pgAdmin Project Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pgagent.html">pgAgent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licence.html">Licence</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="pgadmin_tree_control.html" title="The pgAdmin Tree Control"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pgadmin_menu_bar.html" title="The pgAdmin Menu Bar"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pgAdmin 4 1.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="getting_started.html" >Getting Started</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013 - 2017, The pgAdmin Development Team.
+    </div>
+  </body>
+</html>

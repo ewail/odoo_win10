@@ -1,0 +1,602 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>pg_rewind</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="PostgreSQL Server Applications"
+HREF="reference-server.html"><LINK
+REL="PREVIOUS"
+TITLE="pg_resetxlog"
+HREF="app-pgresetxlog.html"><LINK
+REL="NEXT"
+TITLE="pg_test_fsync"
+HREF="pgtestfsync.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="REFENTRY"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="pg_resetxlog"
+HREF="app-pgresetxlog.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="reference-server.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="pg_test_fsync"
+HREF="pgtestfsync.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><H1
+><A
+NAME="APP-PGREWIND"
+></A
+><SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+></H1
+><DIV
+CLASS="REFNAMEDIV"
+><A
+NAME="AEN102608"
+></A
+><H2
+>Name</H2
+>pg_rewind&nbsp;--&nbsp;synchronize a <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> data directory with another data directory that was forked from it</DIV
+><DIV
+CLASS="REFSYNOPSISDIV"
+><A
+NAME="AEN102612"
+></A
+><H2
+>Synopsis</H2
+><P
+><TT
+CLASS="COMMAND"
+>pg_rewind</TT
+> [<TT
+CLASS="REPLACEABLE"
+><I
+>option</I
+></TT
+>...]  {<TT
+CLASS="OPTION"
+>-D </TT
+> | <TT
+CLASS="OPTION"
+>--target-pgdata</TT
+>}<TT
+CLASS="REPLACEABLE"
+><I
+> directory</I
+></TT
+> {<TT
+CLASS="OPTION"
+>--source-pgdata=<TT
+CLASS="REPLACEABLE"
+><I
+>directory</I
+></TT
+></TT
+> | <TT
+CLASS="OPTION"
+>--source-server=<TT
+CLASS="REPLACEABLE"
+><I
+>connstr</I
+></TT
+></TT
+>} </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN102631"
+></A
+><H2
+>Description</H2
+><P
+>   <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+> is a tool for synchronizing a PostgreSQL cluster
+   with another copy of the same cluster, after the clusters' timelines have
+   diverged. A typical scenario is to bring an old master server back online
+   after failover as a standby that follows the new master.
+  </P
+><P
+>   The result is equivalent to replacing the target data directory with the
+   source one. Only changed blocks from relation files are copied;
+   all other files are copied in full, including configuration files. The
+   advantage of <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+> over taking a new base backup, or
+   tools like <SPAN
+CLASS="APPLICATION"
+>rsync</SPAN
+>, is that <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+> does
+   not require reading through unchanged blocks in the cluster. This makes
+   it a lot faster when the database is large and only a small
+   fraction of blocks differ between the clusters.
+  </P
+><P
+>   <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+> examines the timeline histories of the source
+   and target clusters to determine the point where they diverged, and
+   expects to find WAL in the target cluster's <TT
+CLASS="FILENAME"
+>pg_xlog</TT
+> directory
+   reaching all the way back to the point of divergence. The point of divergence
+   can be found either on the target timeline, the source timeline, or their common
+   ancestor. In the typical failover scenario where the target cluster was
+   shut down soon after the divergence, this is not a problem, but if the
+   target cluster ran for a long time after the divergence, the old WAL
+   files might no longer be present. In that case, they can be manually
+   copied from the WAL archive to the <TT
+CLASS="FILENAME"
+>pg_xlog</TT
+> directory, or
+   fetched on startup by configuring <TT
+CLASS="FILENAME"
+>recovery.conf</TT
+>.  The use of
+   <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+> is not limited to failover, e.g.  a standby
+   server can be promoted, run some write transactions, and then rewinded
+   to become a standby again.
+  </P
+><P
+>   When the target server is started for the first time after running
+   <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+>, it will go into recovery mode and replay all
+   WAL generated in the source server after the point of divergence.
+   If some of the WAL was no longer available in the source server when
+   <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+> was run, and therefore could not be copied by the
+   <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+> session, it must be made available when the
+   target server is started. This can be done by creating a
+   <TT
+CLASS="FILENAME"
+>recovery.conf</TT
+> file in the target data directory with a
+   suitable <TT
+CLASS="VARNAME"
+>restore_command</TT
+>.
+  </P
+><P
+>   <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+> requires that the target server either has
+   the <A
+HREF="runtime-config-wal.html#GUC-WAL-LOG-HINTS"
+>wal_log_hints</A
+> option enabled
+   in <TT
+CLASS="FILENAME"
+>postgresql.conf</TT
+> or data checksums enabled when
+   the cluster was initialized with <SPAN
+CLASS="APPLICATION"
+>initdb</SPAN
+>.  Neither of these
+   are currently on by default.  <A
+HREF="runtime-config-wal.html#GUC-FULL-PAGE-WRITES"
+>full_page_writes</A
+>
+   must also be set to <TT
+CLASS="LITERAL"
+>on</TT
+>, but is enabled by default.
+  </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN102658"
+></A
+><H2
+>Options</H2
+><P
+>    <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+> accepts the following command-line
+    arguments:
+
+    <P
+></P
+></P><DIV
+CLASS="VARIABLELIST"
+><DL
+><DT
+><TT
+CLASS="OPTION"
+>-D <TT
+CLASS="REPLACEABLE"
+><I
+>directory</I
+></TT
+></TT
+><BR><TT
+CLASS="OPTION"
+>--target-pgdata=<TT
+CLASS="REPLACEABLE"
+><I
+>directory</I
+></TT
+></TT
+></DT
+><DD
+><P
+>        This option specifies the target data directory that is synchronized
+        with the source. The target server must be shut down cleanly before
+        running <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+>
+       </P
+></DD
+><DT
+><TT
+CLASS="OPTION"
+>--source-pgdata=<TT
+CLASS="REPLACEABLE"
+><I
+>directory</I
+></TT
+></TT
+></DT
+><DD
+><P
+>        Specifies the file system path to the data directory of the source
+        server to synchronize the target with. This option requires the
+        source server to be cleanly shut down.
+       </P
+></DD
+><DT
+><TT
+CLASS="OPTION"
+>--source-server=<TT
+CLASS="REPLACEABLE"
+><I
+>connstr</I
+></TT
+></TT
+></DT
+><DD
+><P
+>        Specifies a libpq connection string to connect to the source
+        <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> server to synchronize the target with.
+        The connection must be a normal (non-replication) connection
+        with superuser access. This option requires the source
+        server to be running and not in recovery mode.
+       </P
+></DD
+><DT
+><TT
+CLASS="OPTION"
+>-n</TT
+><BR><TT
+CLASS="OPTION"
+>--dry-run</TT
+></DT
+><DD
+><P
+>        Do everything except actually modifying the target directory.
+       </P
+></DD
+><DT
+><TT
+CLASS="OPTION"
+>-P</TT
+><BR><TT
+CLASS="OPTION"
+>--progress</TT
+></DT
+><DD
+><P
+>        Enables progress reporting. Turning this on will deliver an approximate
+        progress report while copying data from the source cluster.
+       </P
+></DD
+><DT
+><TT
+CLASS="OPTION"
+>--debug</TT
+></DT
+><DD
+><P
+>        Print verbose debugging output that is mostly useful for developers
+        debugging <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+>.
+       </P
+></DD
+><DT
+><TT
+CLASS="OPTION"
+>-V</TT
+><BR><TT
+CLASS="OPTION"
+>--version</TT
+></DT
+><DD
+><P
+>Display version information, then exit.</P
+></DD
+><DT
+><TT
+CLASS="OPTION"
+>-?</TT
+><BR><TT
+CLASS="OPTION"
+>--help</TT
+></DT
+><DD
+><P
+>Show help, then exit.</P
+></DD
+></DL
+></DIV
+><P>
+   </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN102720"
+></A
+><H2
+>Environment</H2
+><P
+>   When <TT
+CLASS="OPTION"
+>--source-server</TT
+> option is used,
+   <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+> also uses the environment variables
+   supported by <SPAN
+CLASS="APPLICATION"
+>libpq</SPAN
+> (see <A
+HREF="libpq-envars.html"
+>Section 32.14</A
+>).
+  </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN102727"
+></A
+><H2
+>Notes</H2
+><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN102729"
+></A
+><H3
+>How it works</H3
+><P
+>    The basic idea is to copy all file system-level changes from the source
+    cluster to the target cluster:
+   </P
+><DIV
+CLASS="PROCEDURE"
+><OL
+TYPE="1"
+><LI
+CLASS="STEP"
+><P
+>      Scan the WAL log of the target cluster, starting from the last
+      checkpoint before the point where the source cluster's timeline
+      history forked off from the target cluster. For each WAL record,
+      record each data block that was touched. This yields a list of all
+      the data blocks that were changed in the target cluster, after the
+      source cluster forked off.
+     </P
+></LI
+><LI
+CLASS="STEP"
+><P
+>      Copy all those changed blocks from the source cluster to
+      the target cluster, either using direct file system access
+      (<TT
+CLASS="OPTION"
+>--source-pgdata</TT
+>) or SQL (<TT
+CLASS="OPTION"
+>--source-server</TT
+>).
+     </P
+></LI
+><LI
+CLASS="STEP"
+><P
+>      Copy all other files such as <TT
+CLASS="FILENAME"
+>pg_clog</TT
+> and
+      configuration files from the source cluster to the target cluster
+      (everything except the relation files).
+     </P
+></LI
+><LI
+CLASS="STEP"
+><P
+>      Apply the WAL from the source cluster, starting from the checkpoint
+      created at failover. (Strictly speaking, <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+>
+      doesn't apply the WAL, it just creates a backup label file that
+      makes <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> start by replaying all WAL from
+      that checkpoint forward.)
+     </P
+></LI
+></OL
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="app-pgresetxlog.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="pgtestfsync.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><SPAN
+CLASS="APPLICATION"
+>pg_resetxlog</SPAN
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="reference-server.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><SPAN
+CLASS="APPLICATION"
+>pg_test_fsync</SPAN
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

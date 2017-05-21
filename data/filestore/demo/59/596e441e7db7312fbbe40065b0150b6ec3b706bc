@@ -1,0 +1,21 @@
+
+/* /web/static/lib/bootstrap/less/variables.less defined in bundle 'report.assets_editor' */
+ 
+
+/* /web/static/lib/bootstrap/less/mixins/vendor-prefixes.less defined in bundle 'report.assets_editor' */
+ 
+
+/* /web/static/lib/bootstrap/less/mixins/buttons.less defined in bundle 'report.assets_editor' */
+ 
+
+/* /web/static/src/less/variables.less defined in bundle 'report.assets_editor' */
+ 
+
+/* /web/static/src/less/utils.less defined in bundle 'report.assets_editor' */
+ 
+
+/* /web_editor/static/src/less/web_editor.variables.less defined in bundle 'report.assets_editor' */
+ @-webkit-keyframes fadeInDownSmall{0%{opacity: 0; -webkit-transform: translate(0, -5px); -ms-transform: translate(0, -5px); -o-transform: translate(0, -5px); transform: translate(0, -5px);}100%{opacity: 1; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); transform: translate(0, 0);}} @keyframes fadeInDownSmall{0%{opacity: 0; -webkit-transform: translate(0, -5px); -ms-transform: translate(0, -5px); -o-transform: translate(0, -5px); transform: translate(0, -5px);}100%{opacity: 1; -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); transform: translate(0, 0);}} @-webkit-keyframes fadeInOut{0%{opacity: 0;}25%{opacity: 1;}75%{opacity: 1;}100%{opacity: 0;}} @keyframes fadeInOut{0%{opacity: 0;}25%{opacity: 1;}75%{opacity: 1;}100%{opacity: 0;}} @-webkit-keyframes inputHighlighter{from{background: #7c7bad;}to{width: 0; background: transparent;}} @keyframes inputHighlighter{from{background: #7c7bad;}to{width: 0; background: transparent;}} 
+
+/* /report/static/src/less/report.editor.less defined in bundle 'report.assets_editor' */
+ .o_editable:not(:empty)[date-oe-model="ir.ui.view"]:hover, .o_editable[data-oe-type][date-oe-model="ir.ui.view"]:hover, .o_editable:not(:empty)[date-oe-model="ir.ui.view"] th:hover, .o_editable[data-oe-type][date-oe-model="ir.ui.view"] th:hover, .o_editable:not(:empty)[date-oe-model="ir.ui.view"] td:hover, .o_editable[data-oe-type][date-oe-model="ir.ui.view"] td:hover{-moz-box-shadow: #DDCC33 0 0 5px 2px inset; -webkit-box-shadow: #DDCC33 0 0 5px 2px inset; box-shadow: #DDCC33 0 0 5px 2px inset;} body.o_in_iframe{margin-top: 40px!important;} body.o_in_iframe div.o_css_editor > form{display: none;} body.o_in_iframe .header, body.o_in_iframe .footer{display: none;}

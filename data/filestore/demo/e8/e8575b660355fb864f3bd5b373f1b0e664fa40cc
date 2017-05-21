@@ -1,0 +1,423 @@
+
+.o_form_view .o_form_sheet_bg {
+  background: url(/web/static/src/img/form_sheetbg.png);
+  border-bottom: 1px solid #ddd;
+}
+.o_form_view .o_form_sheet_bg .o_form_sheet {
+  border: 1px solid #c8c8d3;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.o_form_view > header {
+  border-bottom: 1px solid #cacaca;
+  background-color: #ededed;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#dedede));
+  background-image: -webkit-linear-gradient(top, #fcfcfc, #dedede);
+  background-image: -moz-linear-gradient(top, #fcfcfc, #dedede);
+  background-image: -ms-linear-gradient(top, #fcfcfc, #dedede);
+  background-image: -o-linear-gradient(top, #fcfcfc, #dedede);
+  background-image: linear-gradient(to bottom, #fcfcfc, #dedede);
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight) {
+  color: #4c4c4c;
+  background-color: white;
+  border-color: #cccccc;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).focus {
+  color: #4c4c4c;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):hover {
+  color: #4c4c4c;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):active,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).active,
+.open > .dropdown-toggle.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight) {
+  color: #4c4c4c;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):active:hover,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).active:hover,
+.open > .dropdown-toggle.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):hover,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):active:focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).active:focus,
+.open > .dropdown-toggle.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):active.focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).active.focus,
+.open > .dropdown-toggle.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).focus {
+  color: #4c4c4c;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):active,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).active,
+.open > .dropdown-toggle.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight) {
+  background-image: none;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).disabled,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight)[disabled],
+fieldset[disabled] .o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight),
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).disabled:hover,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight)[disabled]:hover,
+fieldset[disabled] .o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):hover,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).disabled:focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight)[disabled]:focus,
+fieldset[disabled] .o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).disabled.focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight)[disabled].focus,
+fieldset[disabled] .o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).disabled:active,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight)[disabled]:active,
+fieldset[disabled] .o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):active,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).disabled.active,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight)[disabled].active,
+fieldset[disabled] .o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).active {
+  background-color: white;
+  border-color: #cccccc;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight) .badge {
+  color: white;
+  background-color: #4c4c4c;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).focus {
+  color: #4c4c4c;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):hover {
+  color: #4c4c4c;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):active,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).active,
+.open > .dropdown-toggle.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight) {
+  color: #4c4c4c;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):active:hover,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).active:hover,
+.open > .dropdown-toggle.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):hover,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):active:focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).active:focus,
+.open > .dropdown-toggle.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):active.focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).active.focus,
+.open > .dropdown-toggle.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).focus {
+  color: #4c4c4c;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):active,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).active,
+.open > .dropdown-toggle.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight) {
+  background-image: none;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).disabled,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight)[disabled],
+fieldset[disabled] .o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight),
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).disabled:hover,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight)[disabled]:hover,
+fieldset[disabled] .o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):hover,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).disabled:focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight)[disabled]:focus,
+fieldset[disabled] .o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).disabled.focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight)[disabled].focus,
+fieldset[disabled] .o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).focus,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).disabled:active,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight)[disabled]:active,
+fieldset[disabled] .o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight):active,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).disabled.active,
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight)[disabled].active,
+fieldset[disabled] .o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight).active {
+  background-color: white;
+  border-color: #cccccc;
+}
+.o_form_view > header > button:not(.btn-primary):not(.btn-link):not(.oe_highlight) .badge {
+  color: white;
+  background-color: #4c4c4c;
+}
+.o_form_view.o_form_nosheet > header {
+  margin: -16px -16px 0 -16px;
+}
+.o_form_view ul.oe_form_status,
+.o_form_view ul.oe_form_status_clickable {
+  display: inline-block;
+  margin: 0;
+  padding: 0 18px 0 0;
+}
+.o_form_view ul.oe_form_status li,
+.o_form_view ul.oe_form_status_clickable li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 -18px 0 0;
+  padding: 0;
+  height: 30px;
+  background-color: #ededed;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#dedede));
+  background-image: -webkit-linear-gradient(top, #fcfcfc, #dedede);
+  background-image: -moz-linear-gradient(top, #fcfcfc, #dedede);
+  background-image: -ms-linear-gradient(top, #fcfcfc, #dedede);
+  background-image: -o-linear-gradient(top, #fcfcfc, #dedede);
+  background-image: linear-gradient(to bottom, #fcfcfc, #dedede);
+}
+.o_form_view ul.oe_form_status li:first-child > .label,
+.o_form_view ul.oe_form_status_clickable li:first-child > .label {
+  border-left: 1px solid #cacaca;
+  padding-left: 14px;
+}
+.o_form_view ul.oe_form_status li:last-child,
+.o_form_view ul.oe_form_status_clickable li:last-child {
+  border-right: 1px solid #cacaca;
+}
+.o_form_view ul.oe_form_status li:last-child > .label,
+.o_form_view ul.oe_form_status_clickable li:last-child > .label {
+  padding-right: 14px;
+}
+.o_form_view ul.oe_form_status li:last-child > .arrow,
+.o_form_view ul.oe_form_status_clickable li:last-child > .arrow {
+  display: none;
+}
+.o_form_view ul.oe_form_status li > .label,
+.o_form_view ul.oe_form_status_clickable li > .label {
+  color: #4c4c4c;
+  text-shadow: 0 1px 1px #fcfcfc, 0 -1px 1px #dedede;
+  padding: 7px;
+  display: inline-block;
+  padding-left: 24px;
+  margin: 0;
+  position: relative;
+  line-height: normal;
+  font-size: 100%;
+  font-weight: normal;
+}
+.o_form_view ul.oe_form_status li > .arrow,
+.o_form_view ul.oe_form_status_clickable li > .arrow {
+  width: 17px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  margin-left: -5px;
+}
+.o_form_view ul.oe_form_status li > .arrow span,
+.o_form_view ul.oe_form_status_clickable li > .arrow span {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-left: -12px;
+  margin-top: 3px;
+  border-radius: 3px;
+  box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.2), inset -1px 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: #dedede;
+  background: -moz-linear-gradient(135deg, #dedede, #fcfcfc);
+  background: -o-linear-gradient(135deg, #fcfcfc, #dedede);
+  background: -webkit-gradient(linear, left top, right bottom, from(#fcfcfc), to(#dedede));
+  background: -ms-linear-gradient(top, #fcfcfc, #dedede);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.o_form_view ul.oe_form_status ul.oe_dropdown_menu,
+.o_form_view ul.oe_form_status_clickable ul.oe_dropdown_menu {
+  display: none;
+  padding: 0;
+  min-width: 0;
+}
+.o_form_view ul.oe_form_status ul.oe_dropdown_menu.oe_opened,
+.o_form_view ul.oe_form_status_clickable ul.oe_dropdown_menu.oe_opened {
+  display: block;
+}
+.o_form_view ul.oe_form_status ul.oe_dropdown_menu li,
+.o_form_view ul.oe_form_status_clickable ul.oe_dropdown_menu li {
+  margin: 0;
+  width: 100%;
+}
+.o_form_view ul.oe_form_status ul.oe_dropdown_menu li span.label,
+.o_form_view ul.oe_form_status_clickable ul.oe_dropdown_menu li span.label {
+  padding-left: 14px;
+}
+.o_form_view ul.oe_form_status li.oe_active,
+.o_form_view ul.oe_form_status_clickable li.oe_active {
+  background-color: #807fa9;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#abaaca), to(#555487));
+  background-image: -webkit-linear-gradient(top, #abaaca, #555487);
+  background-image: -moz-linear-gradient(top, #abaaca, #555487);
+  background-image: -ms-linear-gradient(top, #abaaca, #555487);
+  background-image: -o-linear-gradient(top, #abaaca, #555487);
+  background-image: linear-gradient(to bottom, #abaaca, #555487);
+}
+.o_form_view ul.oe_form_status li.oe_active > .arrow span,
+.o_form_view ul.oe_form_status_clickable li.oe_active > .arrow span {
+  background-color: #555487;
+  background: -moz-linear-gradient(135deg, #555487, #abaaca);
+  background: -o-linear-gradient(135deg, #abaaca, #555487);
+  background: -webkit-gradient(linear, left top, right bottom, from(#abaaca), to(#555487));
+  background: -ms-linear-gradient(top, #abaaca, #555487);
+}
+.o_form_view ul.oe_form_status li.oe_active > .label,
+.o_form_view ul.oe_form_status_clickable li.oe_active > .label {
+  color: white;
+  text-shadow: 0 1px 1px #729fcf, 0 -1px 1px #3465a4;
+}
+.o_form_view ul.oe_form_status_clickable li {
+  cursor: pointer;
+}
+.o_form_view ul.oe_form_status_clickable li:hover {
+  background-color: #d9d9d9;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#cacaca));
+  background-image: -webkit-linear-gradient(top, #e8e8e8, #cacaca);
+  background-image: -moz-linear-gradient(top, #e8e8e8, #cacaca);
+  background-image: -ms-linear-gradient(top, #e8e8e8, #cacaca);
+  background-image: -o-linear-gradient(top, #e8e8e8, #cacaca);
+  background-image: linear-gradient(to bottom, #e8e8e8, #cacaca);
+}
+.o_form_view ul.oe_form_status_clickable li:hover > .label {
+  text-shadow: 0 -1px 1px #fcfcfc, 0 1px 1px #dedede;
+}
+.o_form_view ul.oe_form_status_clickable li:hover > .arrow span {
+  background-color: #d9d9d9;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#cacaca));
+  background-image: -webkit-linear-gradient(top, #e8e8e8, #cacaca);
+  background-image: -moz-linear-gradient(top, #e8e8e8, #cacaca);
+  background-image: -ms-linear-gradient(top, #e8e8e8, #cacaca);
+  background-image: -o-linear-gradient(top, #e8e8e8, #cacaca);
+  background-image: linear-gradient(to bottom, #e8e8e8, #cacaca);
+}
+.o_form_view ul.oe_form_status_clickable li > .label {
+  color: #7c7bad;
+}
+.o_form_view ul.oe_form_status_clickable li.oe_active:hover {
+  background-color: #5a5983;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7c7bad), to(#373758));
+  background-image: -webkit-linear-gradient(top, #7c7bad, #373758);
+  background-image: -moz-linear-gradient(top, #7c7bad, #373758);
+  background-image: -ms-linear-gradient(top, #7c7bad, #373758);
+  background-image: -o-linear-gradient(top, #7c7bad, #373758);
+  background-image: linear-gradient(to bottom, #7c7bad, #373758);
+}
+.o_form_view ul.oe_form_status_clickable li.oe_active:hover > .label {
+  text-shadow: 0 -1px 1px #729fcf, 0 1px 1px #3465a4;
+}
+.o_form_view ul.oe_form_status_clickable li.oe_active:hover > .arrow span {
+  background-color: #373758;
+  background: -moz-linear-gradient(135deg, #373758, #7c7bad);
+  background: -o-linear-gradient(135deg, #7c7bad, #373758);
+  background: -webkit-gradient(linear, left top, right bottom, from(#7c7bad), to(#373758));
+  background: -ms-linear-gradient(top, #7c7bad, #373758);
+}
+.o_form_view .oe_button_box .oe_stat_button {
+  border-radius: 0;
+  border-color: #ccc;
+  background: white;
+  outline: none;
+}
+.o_form_view .oe_button_box .oe_stat_button:hover {
+  background-color: #e6e6e6;
+}
+.o_form_view .oe_button_box .oe_stat_button .o_button_icon {
+  color: #7C7BAD;
+  font-size: 24px;
+}
+.o_form_view .oe_button_box .oe_stat_button .o_stat_info .o_stat_value {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  font-weight: 700;
+  color: #7c7bad;
+}
+.o_form_view .oe_button_box .oe_stat_button .o_stat_info .o_stat_text {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  font-size: small;
+}
+.o_form_view .oe_button_box .oe_stat_button .o_stat_info .o_stat_text .o_stat_value {
+  display: inline;
+}
+.o_form_view .oe_button_box .oe_stat_button > span {
+  font-size: small;
+  white-space: normal;
+}
+.o_form_view .oe_avatar > img {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  border: none;
+}
+.o_form_view .o_group .o_td_label {
+  border-right: 1px solid #ddd;
+}
+.o_form_view .o_form_required.o_form_input,
+.o_form_view .o_form_required .o_form_input,
+.o_form_view .o_form_required.o_form_textarea,
+.o_form_view .o_form_required .o_form_textarea {
+  background-color: #D2D2FF;
+}
+.o_form_view .o_form_field.o_form_field_many2one .o_external_button {
+  padding: 0;
+  margin-left: 2px;
+  font-size: 19px;
+  color: #7C7BAD;
+  border: none;
+}
+.o_form_view .o_form_field.o_form_field_many2one .o_external_button:hover {
+  background-color: transparent;
+}
+.o_form_view .o_form_input_dropdown .o_dropdown_button {
+  position: absolute;
+  top: 2px;
+  left: auto;
+  bottom: auto;
+  right: 4px;
+}
+.o_form_view .o_horizontal_separator {
+  color: #7c7bad;
+  font-weight: bold;
+}
+.o_form_view .o_field_translate {
+  margin-left: -15px;
+}
+.o_form_view .o_form_field_percent_pie .o_pie {
+  width: 34px;
+  height: 34px;
+  margin-left: 5px;
+}
+.o_form_view .o_form_field_percent_pie .o_pie:after {
+  border: 1px solid #7c7bad;
+}
+.o_form_view .o_form_field_percent_pie .o_pie .o_pie_value {
+  position: absolute;
+  top: 4px;
+  left: auto;
+  bottom: auto;
+  right: 4px;
+  width: 26px;
+  height: 26px;
+  border: 1px solid white;
+  background-color: white;
+}
+.o_form_view .o_group.o_inner_group.oe_subtotal_footer .oe_subtotal_footer_separator {
+  border-top: 1px solid #cacaca;
+}
+.o_form_view .o_group.o_inner_group.oe_subtotal_footer .o_td_label {
+  border-right: none;
+}
+.modal .modal-dialog .o_form_view .o_form_sheet_bg,
+.modal .modal-dialog .o_form_view .o_form_sheet {
+  border: none;
+}

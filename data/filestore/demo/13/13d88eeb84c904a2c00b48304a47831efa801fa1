@@ -1,0 +1,62 @@
+
+.o_treeview_table {
+  width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+}
+.o_treeview_table thead {
+  color: #4c4c4c;
+  background-color: #e2e2e0;
+}
+.o_treeview_table thead > tr > th {
+  padding: 10px;
+}
+.o_treeview_table tbody > tr {
+  border: 1px solid #e2e2e0;
+}
+.o_treeview_table tbody > tr:hover {
+  background-color: #ffffff;
+}
+.o_treeview_table tbody > tr > td {
+  border: 1px solid #e2e2e0;
+  cursor: pointer;
+  height: 40px;
+  padding: 0 4px;
+}
+.o_treeview_table tbody > tr > td.oe_number {
+  text-align: right;
+}
+.o_treeview_table tbody .treeview-tr.o_treeview_first > span,
+.o_treeview_table tbody .treeview-td.o_treeview_first > span {
+  padding-left: 16px;
+}
+.o_treeview_table tbody .treeview-tr.o_treeview_first {
+  position: relative;
+}
+.o_treeview_table tbody .treeview-tr.o_treeview_first:before {
+  position: absolute;
+  top: 13px;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid;
+  border-right: 0;
+  border-top: 6px solid transparent;
+  -moz-transform: scale(0.9999);
+}
+.o_treeview_table tbody .o_open .treeview-tr.o_treeview_first:before {
+  top: 16px;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+  border-bottom: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid;
+  -moz-transform: scale(0.9999);
+}

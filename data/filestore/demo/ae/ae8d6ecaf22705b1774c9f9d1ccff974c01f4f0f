@@ -1,0 +1,58 @@
+
+.o_kanban_view.o_theme_kanban.o_kanban_ungrouped {
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.o_kanban_view.o_theme_kanban.o_kanban_ungrouped .o_kanban_record {
+  -ms-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .o_kanban_view.o_theme_kanban.o_kanban_ungrouped .o_kanban_record {
+    width: 45%;
+  }
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_button_area {
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: -100px;
+  right: 0;
+  -webkit-transition: bottom 400ms ease 0s;
+  -moz-transition: bottom 400ms ease 0s;
+  -o-transition: bottom 400ms ease 0s;
+  transition: bottom 400ms ease 0s;
+  width: 100%;
+  padding: 8px;
+  background-color: rgba(240, 238, 238, 0.7);
+  text-align: right;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record:hover .o_button_area {
+  bottom: 0;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record > div {
+  width: 100%;
+  padding-bottom: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: auto 90%;
+  -moz-background-size: auto 90%;
+  -o-background-size: auto 90%;
+  background-size: auto 90%;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record > div.o_screenshot {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

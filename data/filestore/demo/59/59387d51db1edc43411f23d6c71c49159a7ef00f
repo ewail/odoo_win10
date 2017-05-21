@@ -1,0 +1,169 @@
+
+.o_composer_subject {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 5px;
+}
+.o_composer_subject > input {
+  -ms-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 5px;
+  margin-right: 30px;
+}
+.o_composer .o_composer_input > textarea {
+  width: 100%;
+  resize: none;
+}
+.o_composer .o_composer_mention_dropdown .o_mention_proposition > a {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  width: 100%;
+  padding: 3px 15px;
+}
+.o_composer .o_composer_mention_dropdown .o_mention_proposition > a .o_mention_name {
+  font-weight: 500;
+}
+.o_composer .o_composer_mention_dropdown .o_mention_proposition > a .o_mention_info {
+  font-style: italic;
+  color: gray;
+}
+.o_composer_attachments_list {
+  margin-bottom: 5px;
+  text-align: justify;
+}
+.o_mail_emoji {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+.o_mail_emoji > img {
+  width: 100%;
+}
+.o_composer_emoji .o_mail_emoji {
+  cursor: pointer;
+}
+@-webkit-keyframes oe_mail_attach_loading_anim {
+  0% {
+    background: #7c7bad;
+  }
+  50% {
+    background: #5f5e97;
+  }
+  100% {
+    background: #7c7bad;
+  }
+}
+@-moz-keyframes oe_mail_attach_loading_anim {
+  0% {
+    background: #7c7bad;
+  }
+  50% {
+    background: #5f5e97;
+  }
+  100% {
+    background: #7c7bad;
+  }
+}
+@-o-keyframes oe_mail_attach_loading_anim {
+  0% {
+    background: #7c7bad;
+  }
+  50% {
+    background: #5f5e97;
+  }
+  100% {
+    background: #7c7bad;
+  }
+}
+@keyframes oe_mail_attach_loading_anim {
+  0% {
+    background: #7c7bad;
+  }
+  50% {
+    background: #5f5e97;
+  }
+  100% {
+    background: #7c7bad;
+  }
+}
+.o_attachment {
+  position: relative;
+  width: 120px;
+  display: inline-block;
+  height: 60px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.o_attachment .o_image {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  bottom: auto;
+  right: auto;
+  width: 60px;
+  height: 60px;
+}
+.o_attachment .o_attachment_name {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #4c4c4c;
+}
+.o_attachment .o_attachment_progress_bar {
+  display: none;
+}
+.o_attachment .o_attachment_delete {
+  position: absolute;
+  top: 0;
+  left: auto;
+  bottom: auto;
+  right: 0;
+  color: #4c4c4c;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear 0s;
+  -moz-transition: opacity 0.2s linear 0s;
+  -o-transition: opacity 0.2s linear 0s;
+  transition: opacity 0.2s linear 0s;
+}
+.o_attachment.o_attachment_uploading .o_attachment_progress_bar {
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  bottom: auto;
+  right: 16px;
+  height: 17px;
+  line-height: 13px;
+  color: white;
+  border-radius: 4px;
+  border: solid 1px grey;
+  box-shadow: 0px 1px 10px #303030;
+  -webkit-animation: oe_mail_attach_loading_anim 1s linear 0s infinite normal none running;
+  -moz-animation: oe_mail_attach_loading_anim 1s linear 0s infinite normal none running;
+  -o-animation: oe_mail_attach_loading_anim 1s linear 0s infinite normal none running;
+  animation: oe_mail_attach_loading_anim 1s linear 0s infinite normal none running;
+}
+.o_attachment.o_attachment_uploading .o_attachment_delete {
+  display: none;
+}
+.o_attachment:hover .o_attachment_delete {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s linear 0s;
+  -moz-transition: opacity 0.2s linear 0s;
+  -o-transition: opacity 0.2s linear 0s;
+  transition: opacity 0.2s linear 0s;
+}

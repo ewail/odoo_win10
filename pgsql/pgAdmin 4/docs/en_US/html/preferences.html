@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pgAdmin Preferences &#8212; pgAdmin 4 1.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Keyboard Shortcuts" href="keyboard_shortcuts.html" />
+    <link rel="prev" title="The pgAdmin Tree Control" href="pgadmin_tree_control.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="keyboard_shortcuts.html" title="Keyboard Shortcuts"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pgadmin_tree_control.html" title="The pgAdmin Tree Control"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pgAdmin 4 1.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="getting_started.html" accesskey="U">Getting Started</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pgadmin-preferences">
+<span id="preferences"></span><h1>pgAdmin Preferences<a class="headerlink" href="#pgadmin-preferences" title="Permalink to this headline">¶</a></h1>
+<p>pgAdmin 4 has a selection of configuration options (<em>Preferences</em>) that you can use to customize your pgAdmin client. To open the <em>Preferences</em> dialog, select <em>Preferences</em> from the <em>File</em> menu.</p>
+<img alt="_images/preferences_tree.png" src="_images/preferences_tree.png" />
+<p>The left pane of the <em>Preferences</em> dialog displays a tree control; each node of the tree control provides access to options that are related to the selected node.</p>
+<ul class="simple">
+<li>Use the plus sign (+) to the left of a node to expand a segment of the tree control.</li>
+<li>Click the minus sign (-) to the left of a node to close that node.</li>
+</ul>
+<p>Expand the <strong>Browser</strong> node of the tree control to personalize your workspace.</p>
+<img alt="_images/preferences_browser_display.png" src="_images/preferences_browser_display.png" />
+<p>Use the options on the <em>Display</em> dialog to specify general display preferences:</p>
+<p>Move the <em>Show system objects</em> switch to the <em>True</em> position to display system objects in the <em>pgAdmin</em> tree control. This option instructs pgAdmin to display objects such as system schemas (e.g. pg_temp*) and system columns (e.g. xmin, ctid) in the tree control.</p>
+<p>Use the options on the <em>Nodes</em> dialog to select the object types that will be displayed in the <em>pgAdmin</em> tree control.</p>
+<img alt="_images/preferences_browser_nodes.png" src="_images/preferences_browser_nodes.png" />
+<p>The right pane of the <em>Preferences</em> dialog displays a list of database objects. Slide the switch located next to each object to <em>Show</em> or <em>Hide</em> the database object. When querying system catalogs, you can reduce the number of object types displayed to increase speed.</p>
+<p>Expand the <strong>Dashboards</strong> node to specify your graphing preferences.</p>
+<img alt="_images/preferences_dashboard_graphs.png" src="_images/preferences_dashboard_graphs.png" />
+<p>Use the options on the <em>Graphs</em> dialog specify a refresh rate for statistics, transaction throughput and tuples. The rate you specify will affect a corresponding graph on the <em>Dashboard</em> tab of the <em>pgAdmin</em> tabbed browser.</p>
+<p>Expand the <strong>Paths</strong> node to specify the locations of supporting files.</p>
+<img alt="_images/preferences_paths_binary.png" src="_images/preferences_paths_binary.png" />
+<p>Use the fields in the <em>Binary paths</em> node to specify paths to the PostgreSQL binary utilities and EnterpriseDB Postgres Advanced Server binary utilities.</p>
+<img alt="_images/preferences_paths_help.png" src="_images/preferences_paths_help.png" />
+<p>Use the <em>Help</em> dialog to customize links to support documentation.</p>
+<ul class="simple">
+<li>Use the <em>EDB Advanced Server Help Path</em> to find a link path for EnterpriseDB Postgres Advanced Server documentation on the company website. This link is editable: substitute the applicable PostgreSQL version number for <em>$VERSION$</em>, or provide an alternate link path.</li>
+<li>Use the <em>PostgreSQL Help Path</em> to find a link path to the current set of PostgreSQL core documentation. This link is editable: substitute the applicable PostgreSQL version number for <em>$VERSION$</em>, or provide an alternate link path.</li>
+</ul>
+<p>Expand the <strong>SQL Editor</strong> node to specify your preferences for the SQL Editor tool.</p>
+<img alt="_images/preferences_sql_display.png" src="_images/preferences_sql_display.png" />
+<p>Use the <em>Display</em> dialog to specify your preferences for the SQL Editor display.</p>
+<ul class="simple">
+<li>Use the <em>Query info notifier timeout</em> to control the behaviour of the notifier that is displayed when query execution completes. A value of <em>-1</em> will disable the notifier, and a value of 0 will display it until clicked. If a positive value above zero is specified, the notifier will be displayed for the specified number of seconds. The default is <em>5</em>.</li>
+</ul>
+<img alt="_images/preferences_sql_explain_options.png" src="_images/preferences_sql_explain_options.png" />
+<p>Use the options on the <em>Explain Options</em> dialog to specify the level of detail included in a graphical EXPLAIN.</p>
+<ul class="simple">
+<li>Move the <em>Buffers</em> switch to the <em>True</em> position to include information on buffer usage.</li>
+<li>Move the <em>Costs</em> switch to the <em>True</em> position to include information on the estimated startup and total cost of each plan, as well as the estimated number of rows and the estimated width of each row.</li>
+<li>Move the <em>Timing</em> switch to the <em>True</em> position to include actual startup time and time spent in each node in the output.</li>
+<li>Move the <em>Verbose</em> switch to the <em>True</em> position to display additional information regarding the plan.</li>
+</ul>
+<img alt="_images/preferences_sql_options.png" src="_images/preferences_sql_options.png" />
+<p>Use the options in the <em>Options</em> dialog to manage modifications to a SQL statement.</p>
+<ul class="simple">
+<li>Move the <em>Auto-Commit</em> switch to the <em>True</em> position to commit a SQL statement upon completion.</li>
+<li>Move the <em>Auto-Rollback</em> switch to the <em>True</em> to rollback a SQL statement to the beginning of the statement or to a prior rollback.</li>
+</ul>
+<p>Expand the <strong>Storage</strong> node to specify a maximum file size for uploads.</p>
+<img alt="_images/preferences_storage_options.png" src="_images/preferences_storage_options.png" />
+<p>Use the <em>Maximum file upload size(MB)</em> in the <em>Options</em> node of the <strong>Storage</strong> node to specify the maximum file size for an upload.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="getting_started.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="server_deployment.html">Server Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pgadmin_login.html">The pgAdmin Login Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pgadmin_user.html">The User Management Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktop_deployment.html">Desktop Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="browser.html">The pgAdmin 4 Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pgadmin_menu_bar.html">The pgAdmin Menu Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pgadmin_tabbed_browser.html">The pgAdmin Tabbed Browser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pgadmin_tree_control.html">The pgAdmin Tree Control</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pgAdmin Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts.html">Keyboard Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connecting.html">Connecting to a Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to a Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing_cluster_objects.html">Managing Cluster Level Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing_database_objects.html">Managing Database Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modifying_tables.html">Creating or Modifying a Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="management_basics.html">Management Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backup_and_restore.html">Backup and Restore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_tools.html">Developer Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">pgAdmin Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributions.html">pgAdmin Project Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pgagent.html">pgAgent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licence.html">Licence</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="keyboard_shortcuts.html" title="Keyboard Shortcuts"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pgadmin_tree_control.html" title="The pgAdmin Tree Control"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pgAdmin 4 1.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="getting_started.html" >Getting Started</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013 - 2017, The pgAdmin Development Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+
+div.o_checkbox {
+  display: inline-block;
+  vertical-align: sub;
+}
+div.o_checkbox > input + span {
+  display: none;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 4px;
+  color: #1f1f1f;
+  width: 100%;
+  outline: none;
+  display: block;
+}
+select {
+  background: white;
+}
+.o_loading {
+  position: fixed;
+  top: 0;
+  right: 50%;
+  padding: 4px 12px;
+  background-color: #875A7B;
+  color: white;
+  text-align: center;
+  border-top: none;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+#PlannerDialog {
+  top: 35px;
+  box-shadow: 0 3px 9px #666666;
+  padding-bottom: 44px;
+}
+#oe_main_menu_navbar .oe_user_menu_placeholder .o_user_menu .oe_topbar_name {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  max-width: 150px;
+}

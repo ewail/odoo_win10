@@ -1,0 +1,655 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Release 9.6.1</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Release Notes"
+HREF="release.html"><LINK
+REL="PREVIOUS"
+TITLE="Release 9.6.2"
+HREF="release-9-6-2.html"><LINK
+REL="NEXT"
+TITLE="Release 9.6"
+HREF="release-9-6.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="Release 9.6.2"
+HREF="release-9-6-2.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="release.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+>Appendix E. Release Notes</TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="Release 9.6"
+HREF="release-9-6.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="RELEASE-9-6-1"
+>E.2. Release 9.6.1</A
+></H1
+><DIV
+CLASS="NOTE"
+><BLOCKQUOTE
+CLASS="NOTE"
+><P
+><B
+>Release Date: </B
+>2016-10-27</P
+></BLOCKQUOTE
+></DIV
+><P
+>   This release contains a variety of fixes from 9.6.0.
+   For information about new features in the 9.6 major release, see
+   <A
+HREF="release-9-6.html"
+>Section E.3</A
+>.
+  </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN130785"
+>E.2.1. Migration to Version 9.6.1</A
+></H2
+><P
+>    A dump/restore is not required for those running 9.6.X.
+   </P
+><P
+>    However, if your installation has been affected by the bugs described in
+    the first two changelog entries below, then after updating you may need
+    to take action to repair corrupted free space maps and/or visibility
+    maps.
+   </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN130789"
+>E.2.2. Changes</A
+></H2
+><P
+></P
+><UL
+><LI
+><P
+>      Fix WAL-logging of truncation of relation free space maps and
+      visibility maps (Pavan Deolasee, Heikki Linnakangas)
+     </P
+><P
+>      It was possible for these files to not be correctly restored during
+      crash recovery, or to be written incorrectly on a standby server.
+      Bogus entries in a free space map could lead to attempts to access
+      pages that have been truncated away from the relation itself, typically
+      producing errors like <SPAN
+CLASS="QUOTE"
+>"could not read block <TT
+CLASS="REPLACEABLE"
+><I
+>XXX</I
+></TT
+>:
+      read only 0 of 8192 bytes"</SPAN
+>.  Checksum failures in the
+      visibility map are also possible, if checksumming is enabled.
+     </P
+><P
+>      Procedures for determining whether there is a problem and repairing it
+      if so are discussed at
+      <A
+HREF="https://wiki.postgresql.org/wiki/Free_Space_Map_Problems"
+TARGET="_top"
+>https://wiki.postgresql.org/wiki/Free_Space_Map_Problems</A
+>.
+     </P
+></LI
+><LI
+><P
+>      Fix possible data corruption when <SPAN
+CLASS="APPLICATION"
+>pg_upgrade</SPAN
+> rewrites
+      a relation visibility map into 9.6 format (Tom Lane)
+     </P
+><P
+>      On big-endian machines, bytes of the new visibility map were written
+      in the wrong order, leading to a completely incorrect map.  On
+      Windows, the old map was read using text mode, leading to incorrect
+      results if the map happened to contain consecutive bytes that matched
+      a carriage return/line feed sequence.  The latter error would almost
+      always lead to a <SPAN
+CLASS="APPLICATION"
+>pg_upgrade</SPAN
+> failure due to the map
+      file appearing to be the wrong length.
+     </P
+><P
+>      If you are using a big-endian machine (many non-Intel architectures
+      are big-endian) and have used <SPAN
+CLASS="APPLICATION"
+>pg_upgrade</SPAN
+> to upgrade
+      from a pre-9.6 release, you should assume that all visibility maps are
+      incorrect and need to be regenerated.  It is sufficient to truncate
+      each relation's visibility map
+      with <TT
+CLASS="FILENAME"
+>contrib/pg_visibility</TT
+>'s
+      <CODE
+CLASS="FUNCTION"
+>pg_truncate_visibility_map()</CODE
+> function.
+      For more information see
+      <A
+HREF="https://wiki.postgresql.org/wiki/Visibility_Map_Problems"
+TARGET="_top"
+>https://wiki.postgresql.org/wiki/Visibility_Map_Problems</A
+>.
+     </P
+></LI
+><LI
+><P
+>      Don't throw serialization errors for self-conflicting insertions
+      in <TT
+CLASS="COMMAND"
+>INSERT ... ON CONFLICT</TT
+> (Thomas Munro, Peter Geoghegan)
+     </P
+></LI
+><LI
+><P
+>      Fix use-after-free hazard in execution of aggregate functions
+      using <TT
+CLASS="LITERAL"
+>DISTINCT</TT
+> (Peter Geoghegan)
+     </P
+><P
+>      This could lead to a crash or incorrect query results.
+     </P
+></LI
+><LI
+><P
+>      Fix incorrect handling of polymorphic aggregates used as window
+      functions (Tom Lane)
+     </P
+><P
+>      The aggregate's transition function was told that its first argument
+      and result were of the aggregate's output type, rather than the
+      state type.  This led to errors or crashes with
+      polymorphic transition functions.
+     </P
+></LI
+><LI
+><P
+>      Fix <TT
+CLASS="COMMAND"
+>COPY</TT
+> with a column name list from a table that has
+      row-level security enabled (Adam Brightwell)
+     </P
+></LI
+><LI
+><P
+>      Fix <TT
+CLASS="COMMAND"
+>EXPLAIN</TT
+> to emit valid XML when
+      <A
+HREF="runtime-config-statistics.html#GUC-TRACK-IO-TIMING"
+>track_io_timing</A
+> is on (Markus Winand)
+     </P
+><P
+>      Previously the XML output-format option produced syntactically invalid
+      tags such as <TT
+CLASS="LITERAL"
+>&lt;I/O-Read-Time&gt;</TT
+>.  That is now
+      rendered as <TT
+CLASS="LITERAL"
+>&lt;I-O-Read-Time&gt;</TT
+>.
+     </P
+></LI
+><LI
+><P
+>      Fix statistics update for <TT
+CLASS="COMMAND"
+>TRUNCATE</TT
+> in a prepared
+      transaction (Stas Kelvich)
+     </P
+></LI
+><LI
+><P
+>      Fix bugs in merging inherited <TT
+CLASS="LITERAL"
+>CHECK</TT
+> constraints while
+      creating or altering a table (Tom Lane, Amit Langote)
+     </P
+><P
+>      Allow identical <TT
+CLASS="LITERAL"
+>CHECK</TT
+> constraints to be added to a parent
+      and child table in either order.  Prevent merging of a valid
+      constraint from the parent table with a <TT
+CLASS="LITERAL"
+>NOT VALID</TT
+>
+      constraint on the child.  Likewise, prevent merging of a <TT
+CLASS="LITERAL"
+>NO
+      INHERIT</TT
+> child constraint with an inherited constraint.
+     </P
+></LI
+><LI
+><P
+>      Show a sensible value
+      in <TT
+CLASS="STRUCTNAME"
+>pg_settings</TT
+>.<TT
+CLASS="STRUCTFIELD"
+>unit</TT
+>
+      for <TT
+CLASS="VARNAME"
+>min_wal_size</TT
+> and <TT
+CLASS="VARNAME"
+>max_wal_size</TT
+> (Tom Lane)
+     </P
+></LI
+><LI
+><P
+>      Fix replacement of array elements in <CODE
+CLASS="FUNCTION"
+>jsonb_set()</CODE
+>
+      (Tom Lane)
+     </P
+><P
+>      If the target is an existing JSON array element, it got deleted
+      instead of being replaced with a new value.
+     </P
+></LI
+><LI
+><P
+>      Avoid very-low-probability data corruption due to testing tuple
+      visibility without holding buffer lock (Thomas Munro, Peter Geoghegan,
+      Tom Lane)
+     </P
+></LI
+><LI
+><P
+>      Preserve commit timestamps across server restart
+      (Julien Rouhaud, Craig Ringer)
+     </P
+><P
+>      With <A
+HREF="runtime-config-replication.html#GUC-TRACK-COMMIT-TIMESTAMP"
+>track_commit_timestamp</A
+> turned on, old
+      commit timestamps became inaccessible after a clean server restart.
+     </P
+></LI
+><LI
+><P
+>      Fix logical WAL decoding to work properly when a subtransaction's WAL
+      output is large enough to spill to disk (Andres Freund)
+     </P
+></LI
+><LI
+><P
+>      Fix dangling-pointer problem in logical WAL decoding (Stas Kelvich)
+     </P
+></LI
+><LI
+><P
+>      Round shared-memory allocation request to a multiple of the actual
+      huge page size when attempting to use huge pages on Linux (Tom Lane)
+     </P
+><P
+>      This avoids possible failures during <CODE
+CLASS="FUNCTION"
+>munmap()</CODE
+> on systems
+      with atypical default huge page sizes.  Except in crash-recovery
+      cases, there were no ill effects other than a log message.
+     </P
+></LI
+><LI
+><P
+>      Don't try to share SSL contexts across multiple connections
+      in <SPAN
+CLASS="APPLICATION"
+>libpq</SPAN
+> (Heikki Linnakangas)
+     </P
+><P
+>      This led to assorted corner-case bugs, particularly when trying to use
+      different SSL parameters for different connections.
+     </P
+></LI
+><LI
+><P
+>      Avoid corner-case memory leak in <SPAN
+CLASS="APPLICATION"
+>libpq</SPAN
+> (Tom Lane)
+     </P
+><P
+>      The reported problem involved leaking an error report
+      during <CODE
+CLASS="FUNCTION"
+>PQreset()</CODE
+>, but there might be related cases.
+     </P
+></LI
+><LI
+><P
+>      In <SPAN
+CLASS="APPLICATION"
+>pg_upgrade</SPAN
+>, check library loadability in name order
+      (Tom Lane)
+     </P
+><P
+>      This is a workaround to deal with cross-extension dependencies from
+      language transform modules to their base language and data type
+      modules.
+     </P
+></LI
+><LI
+><P
+>      Fix <SPAN
+CLASS="APPLICATION"
+>pg_upgrade</SPAN
+> to work correctly for extensions
+      containing index access methods (Tom Lane)
+     </P
+><P
+>      To allow this, the server has been extended to support <TT
+CLASS="COMMAND"
+>ALTER
+      EXTENSION ADD/DROP ACCESS METHOD</TT
+>.  That functionality should have
+      been included in the original patch to support dynamic creation of
+      access methods, but it was overlooked.
+     </P
+></LI
+><LI
+><P
+>      Improve error reporting in <SPAN
+CLASS="APPLICATION"
+>pg_upgrade</SPAN
+>'s file
+      copying/linking/rewriting steps (Tom Lane, &Aacute;lvaro Herrera)
+     </P
+></LI
+><LI
+><P
+>      Fix <SPAN
+CLASS="APPLICATION"
+>pg_dump</SPAN
+> to work against pre-7.4 servers
+      (Amit Langote, Tom Lane)
+     </P
+></LI
+><LI
+><P
+>      Disallow specifying both <TT
+CLASS="OPTION"
+>--source-server</TT
+>
+      and <TT
+CLASS="OPTION"
+>--source-target</TT
+> options to <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+>
+      (Michael Banck)
+     </P
+></LI
+><LI
+><P
+>      Make <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+> turn off <TT
+CLASS="VARNAME"
+>synchronous_commit</TT
+>
+      in its session on the source server (Michael Banck, Michael Paquier)
+     </P
+><P
+>      This allows <SPAN
+CLASS="APPLICATION"
+>pg_rewind</SPAN
+> to work even when the source
+      server is using synchronous replication that is not working for some
+      reason.
+     </P
+></LI
+><LI
+><P
+>      In <SPAN
+CLASS="APPLICATION"
+>pg_xlogdump</SPAN
+>, retry opening new WAL segments when
+      using <TT
+CLASS="OPTION"
+>--follow</TT
+> option (Magnus Hagander)
+     </P
+><P
+>      This allows for a possible delay in the server's creation of the next
+      segment.
+     </P
+></LI
+><LI
+><P
+>      Fix <TT
+CLASS="FILENAME"
+>contrib/pg_visibility</TT
+> to report the correct TID for
+      a corrupt tuple that has been the subject of a rolled-back update
+      (Tom Lane)
+     </P
+></LI
+><LI
+><P
+>      Fix makefile dependencies so that parallel make
+      of <SPAN
+CLASS="APPLICATION"
+>PL/Python</SPAN
+> by itself will succeed reliably
+      (Pavel Raiskup)
+     </P
+></LI
+><LI
+><P
+>      Update time zone data files to <SPAN
+CLASS="APPLICATION"
+>tzdata</SPAN
+> release 2016h
+      for DST law changes in Palestine and Turkey, plus historical
+      corrections for Turkey and some regions of Russia.
+      Switch to numeric abbreviations for some time zones in Antarctica,
+      the former Soviet Union, and Sri Lanka.
+     </P
+><P
+>      The IANA time zone database previously provided textual abbreviations
+      for all time zones, sometimes making up abbreviations that have little
+      or no currency among the local population.  They are in process of
+      reversing that policy in favor of using numeric UTC offsets in zones
+      where there is no evidence of real-world use of an English
+      abbreviation.  At least for the time being, <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+>
+      will continue to accept such removed abbreviations for timestamp input.
+      But they will not be shown in the <TT
+CLASS="STRUCTNAME"
+>pg_timezone_names</TT
+>
+      view nor used for output.
+     </P
+><P
+>      In this update, <TT
+CLASS="LITERAL"
+>AMT</TT
+> is no longer shown as being in use to
+      mean Armenia Time.  Therefore, we have changed the <TT
+CLASS="LITERAL"
+>Default</TT
+>
+      abbreviation set to interpret it as Amazon Time, thus UTC-4 not UTC+4.
+     </P
+></LI
+></UL
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="release-9-6-2.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="release-9-6.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Release 9.6.2</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="release.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Release 9.6</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

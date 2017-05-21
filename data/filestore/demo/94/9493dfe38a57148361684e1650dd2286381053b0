@@ -1,0 +1,69 @@
+
+.o_control_panel {
+  padding-top: 10px;
+  padding-right: 16px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  background-color: #f0eeee;
+  border-bottom: 1px solid #a8a8a8;
+}
+.o_control_panel .breadcrumb {
+  font-size: 18px;
+  margin: 0px;
+}
+.o_control_panel .breadcrumb > li > a {
+  color: #7c7bad;
+  cursor: pointer;
+}
+.o_control_panel .breadcrumb > li > a:hover {
+  color: #5f5e97;
+  text-decoration: none;
+}
+.o_control_panel .o_cp_sidebar {
+  padding-right: 10px;
+}
+.o_control_panel .o_cp_sidebar .o_hidden_input_file {
+  position: relative;
+}
+.o_control_panel .o_cp_sidebar .o_hidden_input_file input.o_form_input_file {
+  position: absolute;
+  top: 1px;
+  opacity: 0;
+  width: 100%;
+  height: 26px;
+}
+.o_control_panel .o_cp_sidebar .o_hidden_input_file .o_form_binary_form span {
+  padding: 3px 25px;
+  color: #4c4c4c;
+}
+.o_control_panel .o_cp_sidebar .o_hidden_input_file .o_form_binary_form:hover {
+  background-color: #f5f5f5;
+}
+.o_control_panel .o_cp_sidebar .o_sidebar_delete_attachment {
+  padding: 0px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.o_control_panel .o_cp_pager {
+  text-align: center;
+  padding-left: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.o_control_panel .o_cp_switch_buttons {
+  padding-left: 5px;
+}
+.o_x2m_control_panel .o_cp_buttons > div {
+  margin-top: 5px;
+}
+.o_pager_value > input {
+  display: inline-block;
+  width: 60px;
+  text-align: right;
+}
+.o_pager_value > input:focus {
+  outline: none;
+}

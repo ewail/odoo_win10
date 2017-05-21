@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Error Handling in PL/Tcl</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="PL/Tcl - Tcl Procedural Language"
+HREF="pltcl.html"><LINK
+REL="PREVIOUS"
+TITLE="Event Trigger Procedures in PL/Tcl"
+HREF="pltcl-event-trigger.html"><LINK
+REL="NEXT"
+TITLE="Modules and the unknown Command"
+HREF="pltcl-unknown.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="Event Trigger Procedures in PL/Tcl"
+HREF="pltcl-event-trigger.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="pltcl.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 42. PL/Tcl - Tcl Procedural Language</TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="Modules and the unknown Command"
+HREF="pltcl-unknown.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="PLTCL-ERROR-HANDLING"
+>42.8. Error Handling in PL/Tcl</A
+></H1
+><P
+>     Tcl code within or called from a PL/Tcl function can raise an error,
+     either by executing some invalid operation or by generating an error
+     using the Tcl <CODE
+CLASS="FUNCTION"
+>error</CODE
+> command or
+     PL/Tcl's <CODE
+CLASS="FUNCTION"
+>elog</CODE
+> command.  Such errors can be caught
+     within Tcl using the Tcl <CODE
+CLASS="FUNCTION"
+>catch</CODE
+> command.  If they
+     are not caught but are allowed to propagate out to the top level of
+     execution of the PL/Tcl function, they turn into database errors.
+    </P
+><P
+>     Conversely, database errors that occur within PL/Tcl's
+     <CODE
+CLASS="FUNCTION"
+>spi_exec</CODE
+>, <CODE
+CLASS="FUNCTION"
+>spi_prepare</CODE
+>,
+     and <CODE
+CLASS="FUNCTION"
+>spi_execp</CODE
+> commands are reported as Tcl errors,
+     so they are catchable by Tcl's <CODE
+CLASS="FUNCTION"
+>catch</CODE
+> command.
+     Again, if they propagate out to the top level without being caught,
+     they turn back into database errors.
+    </P
+><P
+>     Tcl provides an <TT
+CLASS="VARNAME"
+>errorCode</TT
+> variable that can represent
+     additional information about an error in a form that is easy for Tcl
+     programs to interpret.  The contents are in Tcl list format, and the
+     first word identifies the subsystem or library reporting the error;
+     beyond that the contents are left to the individual subsystem or
+     library.  For database errors reported by PL/Tcl commands, the first
+     word is <TT
+CLASS="LITERAL"
+>POSTGRES</TT
+>, the second word is the Postgres
+     version number, and additional words are field name/value pairs
+     providing detailed information about the error.
+     Fields <TT
+CLASS="VARNAME"
+>SQLSTATE</TT
+>, <TT
+CLASS="VARNAME"
+>condition</TT
+>,
+     and <TT
+CLASS="VARNAME"
+>message</TT
+> are always supplied
+     (the first two represent the error code and condition name as shown
+     in <A
+HREF="errcodes-appendix.html"
+>Appendix A</A
+>).
+     Fields that may be present include
+     <TT
+CLASS="VARNAME"
+>detail</TT
+>, <TT
+CLASS="VARNAME"
+>hint</TT
+>, <TT
+CLASS="VARNAME"
+>context</TT
+>,
+     <TT
+CLASS="VARNAME"
+>schema</TT
+>, <TT
+CLASS="VARNAME"
+>table</TT
+>, <TT
+CLASS="VARNAME"
+>column</TT
+>,
+     <TT
+CLASS="VARNAME"
+>datatype</TT
+>, <TT
+CLASS="VARNAME"
+>constraint</TT
+>,
+     <TT
+CLASS="VARNAME"
+>statement</TT
+>, <TT
+CLASS="VARNAME"
+>cursor_position</TT
+>,
+     <TT
+CLASS="VARNAME"
+>filename</TT
+>, <TT
+CLASS="VARNAME"
+>lineno</TT
+>, and
+     <TT
+CLASS="VARNAME"
+>funcname</TT
+>.
+    </P
+><P
+>     A convenient way to work with PL/Tcl's <TT
+CLASS="VARNAME"
+>errorCode</TT
+>
+     information is to load it into an array, so that the field names become
+     array subscripts.  Code for doing that might look like
+</P><PRE
+CLASS="PROGRAMLISTING"
+>if {[catch { spi_exec $sql_command }]} {
+    if {[lindex $::errorCode 0] == "POSTGRES"} {
+        array set errorArray $::errorCode
+        if {$errorArray(condition) == "undefined_table"} {
+            # deal with missing table
+        } else {
+            # deal with some other type of SQL error
+        }
+    }
+}</PRE
+><P>
+     (The double colons explicitly specify that <TT
+CLASS="VARNAME"
+>errorCode</TT
+>
+     is a global variable.)
+    </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="pltcl-event-trigger.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="pltcl-unknown.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Event Trigger Procedures in PL/Tcl</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="pltcl.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Modules and the <CODE
+CLASS="FUNCTION"
+>unknown</CODE
+> Command</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

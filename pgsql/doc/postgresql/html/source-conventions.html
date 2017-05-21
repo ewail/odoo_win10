@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Miscellaneous Coding Conventions</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="PostgreSQL Coding Conventions"
+HREF="source.html"><LINK
+REL="PREVIOUS"
+TITLE="Error Message Style Guide"
+HREF="error-style-guide.html"><LINK
+REL="NEXT"
+TITLE="Native Language Support"
+HREF="nls.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="SECT1"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="Error Message Style Guide"
+HREF="error-style-guide.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="source.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 52. PostgreSQL Coding Conventions</TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="Native Language Support"
+HREF="nls.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="SOURCE-CONVENTIONS"
+>52.4. Miscellaneous Coding Conventions</A
+></H1
+><DIV
+CLASS="SIMPLESECT"
+><H2
+CLASS="SIMPLESECT"
+><A
+NAME="AEN115056"
+>52.4.1. C Standard</A
+></H2
+><P
+>     Code in <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> should only rely on language
+     features available in the C89 standard. That means a conforming
+     C89 compiler has to be able to compile postgres, at least aside
+     from a few platform dependent pieces. Features from later
+     revision of the C standard or compiler specific features can be
+     used, if a fallback is provided.
+    </P
+><P
+>     For example <TT
+CLASS="LITERAL"
+>static inline</TT
+> and
+     <TT
+CLASS="LITERAL"
+>_StaticAssert()</TT
+> are currently used, even
+     though they are from newer revisions of the C standard. If not
+     available we respectively fall back to defining the functions
+     without inline, and to using a C89 compatible replacement that
+     performs the same checks, but emits rather cryptic messages.
+    </P
+></DIV
+><DIV
+CLASS="SIMPLESECT"
+><H2
+CLASS="SIMPLESECT"
+><A
+NAME="AEN115063"
+>52.4.2. Function-Like Macros and Inline Functions</A
+></H2
+><P
+>     Both, macros with arguments and <TT
+CLASS="LITERAL"
+>static inline</TT
+>
+     functions, may be used. The latter are preferable if there are
+     multiple-evaluation hazards when written as a macro, as e.g. the
+     case with
+</P><PRE
+CLASS="PROGRAMLISTING"
+>#define Max(x, y)       ((x) &#62; (y) ? (x) : (y))</PRE
+><P>
+     or when the macro would be very long. In other cases it's only
+     possible to use macros, or at least easier.  For example because
+     expressions of various types need to be passed to the macro.
+    </P
+><P
+>     When the definition of an inline function references symbols
+     (i.e. variables, functions) that are only available as part of the
+     backend, the function may not be visible when included from frontend
+     code.
+</P><PRE
+CLASS="PROGRAMLISTING"
+>#ifndef FRONTEND
+static inline MemoryContext
+MemoryContextSwitchTo(MemoryContext context)
+{
+    MemoryContext old = CurrentMemoryContext;
+
+    CurrentMemoryContext = context;
+    return old;
+}
+#endif   /* FRONTEND */</PRE
+><P>
+     In this example <TT
+CLASS="LITERAL"
+>CurrentMemoryContext</TT
+>, which is only
+     available in the backend, is referenced and the function thus
+     hidden with a <TT
+CLASS="LITERAL"
+>#ifndef FRONTEND</TT
+>. This rule
+     exists because some compilers emit references to symbols
+     contained in inline functions even if the function is not used.
+    </P
+></DIV
+><DIV
+CLASS="SIMPLESECT"
+><H2
+CLASS="SIMPLESECT"
+><A
+NAME="AEN115072"
+>52.4.3. Writing Signal Handlers</A
+></H2
+><P
+>     To be suitable to run inside a signal handler code has to be
+     written very carefully. The fundamental problem is that, unless
+     blocked, a signal handler can interrupt code at any time. If code
+     inside the signal handler uses the same state as code outside
+     chaos may ensue. As an example consider what happens if a signal
+     handler tries to acquire a lock that's already held in the
+     interrupted code.
+    </P
+><P
+>     Barring special arrangements code in signal handlers may only
+     call async-signal safe functions (as defined in POSIX) and access
+     variables of type <TT
+CLASS="LITERAL"
+>volatile sig_atomic_t</TT
+>. A few
+     functions in <TT
+CLASS="COMMAND"
+>postgres</TT
+> are also deemed signal safe, importantly
+     <CODE
+CLASS="FUNCTION"
+>SetLatch()</CODE
+>.
+    </P
+><P
+>     In most cases signal handlers should do nothing more than note
+     that a signal has arrived, and wake up code running outside of
+     the handler using a latch. An example of such a handler is the
+     following:
+</P><PRE
+CLASS="PROGRAMLISTING"
+>static void
+handle_sighup(SIGNAL_ARGS)
+{
+    int         save_errno = errno;
+
+    got_SIGHUP = true;
+    SetLatch(MyLatch);
+
+    errno = save_errno;
+}</PRE
+><P>
+     <TT
+CLASS="VARNAME"
+>errno</TT
+> is saved and restored because
+     <CODE
+CLASS="FUNCTION"
+>SetLatch()</CODE
+> might change it. If that were not done
+     interrupted code that's currently inspecting <TT
+CLASS="VARNAME"
+>errno</TT
+> might see the wrong
+     value.
+    </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="error-style-guide.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="nls.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Error Message Style Guide</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="source.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Native Language Support</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

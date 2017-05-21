@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Parallel Query</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REV="MADE"
+HREF="mailto:pgsql-docs@postgresql.org"><LINK
+REL="HOME"
+TITLE="PostgreSQL 9.6.2 Documentation"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="The SQL Language"
+HREF="sql.html"><LINK
+REL="PREVIOUS"
+TITLE="Non-Durable Settings"
+HREF="non-durability.html"><LINK
+REL="NEXT"
+TITLE="How Parallel Query Works"
+HREF="how-parallel-query-works.html"><LINK
+REL="STYLESHEET"
+TYPE="text/css"
+HREF="stylesheet.css"><META
+HTTP-EQUIV="Content-Type"
+CONTENT="text/html; charset=ISO-8859-1"><META
+NAME="creation"
+CONTENT="2017-02-06T21:56:32"></HEAD
+><BODY
+CLASS="CHAPTER"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>PostgreSQL 9.6.2 Documentation</A
+></TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+TITLE="Non-Durable Settings"
+HREF="non-durability.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="sql.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="60%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="20%"
+ALIGN="right"
+VALIGN="top"
+><A
+TITLE="How Parallel Query Works"
+HREF="how-parallel-query-works.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="CHAPTER"
+><H1
+><A
+NAME="PARALLEL-QUERY"
+></A
+>Chapter 15. Parallel Query</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+>15.1. <A
+HREF="how-parallel-query-works.html"
+>How Parallel Query Works</A
+></DT
+><DT
+>15.2. <A
+HREF="when-can-parallel-query-be-used.html"
+>When Can Parallel Query Be Used?</A
+></DT
+><DT
+>15.3. <A
+HREF="parallel-plans.html"
+>Parallel Plans</A
+></DT
+><DD
+><DL
+><DT
+>15.3.1. <A
+HREF="parallel-plans.html#PARALLEL-SCANS"
+>Parallel Scans</A
+></DT
+><DT
+>15.3.2. <A
+HREF="parallel-plans.html#PARALLEL-JOINS"
+>Parallel Joins</A
+></DT
+><DT
+>15.3.3. <A
+HREF="parallel-plans.html#PARALLEL-AGGREGATION"
+>Parallel Aggregation</A
+></DT
+><DT
+>15.3.4. <A
+HREF="parallel-plans.html#PARALLEL-PLAN-TIPS"
+>Parallel Plan Tips</A
+></DT
+></DL
+></DD
+><DT
+>15.4. <A
+HREF="parallel-safety.html"
+>Parallel Safety</A
+></DT
+></DL
+></DIV
+><P
+>   <SPAN
+CLASS="PRODUCTNAME"
+>PostgreSQL</SPAN
+> can devise query plans which can leverage
+   multiple CPUs in order to answer queries faster.  This feature is known
+   as parallel query.  Many queries cannot benefit from parallel query, either
+   due to limitations of the current implementation or because there is no
+   imaginable query plan which is any faster than the serial query plan.
+   However, for queries that can benefit, the speedup from parallel query
+   is often very significant.  Many queries can run more than twice as fast
+   when using parallel query, and some queries can run four times faster or
+   even more.  Queries that touch a large amount of data but return only a
+   few rows to the user will typically benefit most.  This chapter explains
+   some details of how parallel query works and in which situations it can be
+   used so that users who wish to make use of it can understand what to expect.
+  </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="non-durability.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="how-parallel-query-works.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Non-Durable Settings</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="sql.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>How Parallel Query Works</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

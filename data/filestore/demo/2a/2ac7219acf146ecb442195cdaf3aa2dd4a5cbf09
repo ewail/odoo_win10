@@ -1,0 +1,181 @@
+
+.o_web_client .o_export {
+  -ms-flex: 0 1 1000px;
+  -moz-flex: 0 1 1000px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 1000px;
+  flex: 0 1 1000px;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+.o_web_client .o_export > p,
+.o_web_client .o_export > .row {
+  -ms-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.o_web_client .o_export label {
+  vertical-align: top;
+  font-weight: normal;
+}
+.o_web_client .o_export .o_import_compat,
+.o_web_client .o_export .o_export_format {
+  display: inline-block;
+}
+.o_web_client .o_export .o_import_compat > div,
+.o_web_client .o_export .o_export_format > div {
+  margin-left: 5px;
+  display: -ms-inline-flexbox;
+  display: -moz-inline-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.o_web_client .o_export .o_import_compat > div > label,
+.o_web_client .o_export .o_export_format > div > label,
+.o_web_client .o_export .o_import_compat > div > input,
+.o_web_client .o_export .o_export_format > div > input {
+  margin: 0 0 0 5px;
+}
+.o_web_client .o_export .o_export_panel {
+  -ms-flex: 1 0 0;
+  -moz-flex: 1 0 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 0;
+  flex: 1 0 0;
+  position: relative;
+}
+.o_web_client .o_export .o_export_panel > div {
+  height: 100%;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.o_web_client .o_export .o_export_panel > div.o_left_panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 57%;
+}
+.o_web_client .o_export .o_export_panel > div.o_center_panel {
+  position: absolute;
+  top: 0;
+  left: 43%;
+  bottom: 0;
+  right: 43%;
+}
+.o_web_client .o_export .o_export_panel > div.o_right_panel {
+  position: absolute;
+  top: 0;
+  left: 57%;
+  bottom: 0;
+  right: 0;
+}
+.o_web_client .o_export .o_export_panel > div > h4,
+.o_web_client .o_export .o_export_panel > div > div {
+  -ms-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.o_web_client .o_export .o_export_panel > div > button {
+  -ms-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-top: 10px;
+}
+.o_web_client .o_export .o_export_panel > div .o_left_field_panel,
+.o_web_client .o_export .o_export_panel > div .o_fields_list {
+  border: 1px solid #e2e2e0;
+  overflow: auto;
+  -ms-flex: 1 0 0;
+  -moz-flex: 1 0 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 0;
+  flex: 1 0 0;
+}
+.o_web_client .o_export .o_export_panel > div .o_export_tree_item {
+  cursor: pointer;
+  position: relative;
+  padding-left: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.o_web_client .o_export .o_export_panel > div .o_export_tree_item.o_selected > .o_tree_column {
+  background-color: #7c7bad;
+  color: white;
+}
+.o_web_client .o_export .o_export_panel > div .o_export_tree_item .o_expand_parent {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  bottom: auto;
+  right: auto;
+}
+.o_web_client .o_export .o_export_panel > div .o_export_tree_item .o_tree_column {
+  display: block;
+}
+.o_web_client .o_export .o_export_panel > div .o_export_tree_item .o_tree_column.o_required {
+  border-bottom: 2px solid #4c4c4c;
+}
+.o_web_client .o_export .o_export_panel > div .o_export_tree_item:focus {
+  outline: none;
+}
+.o_web_client .o_export .o_export_panel > div .o_save_list,
+.o_web_client .o_export .o_export_panel > div .o_exported_lists {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+}
+.o_web_client .o_export .o_export_panel > div .o_save_list > label,
+.o_web_client .o_export .o_export_panel > div .o_exported_lists > label,
+.o_web_client .o_export .o_export_panel > div .o_save_list > button,
+.o_web_client .o_export .o_export_panel > div .o_exported_lists > button {
+  margin: 0 0 5px;
+  -ms-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.o_web_client .o_export .o_export_panel > div .o_save_list > input,
+.o_web_client .o_export .o_export_panel > div .o_exported_lists > input,
+.o_web_client .o_export .o_export_panel > div .o_save_list > select,
+.o_web_client .o_export .o_export_panel > div .o_exported_lists > select {
+  width: 0;
+  -ms-flex: 1 0 auto;
+  -moz-flex: 1 0 auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
