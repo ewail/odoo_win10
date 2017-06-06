@@ -1,592 +1,373 @@
-2017-05-09 09:05:59,631 20028 INFO ? odoo: Odoo version 10.0
-2017-05-09 09:05:59,631 20028 INFO ? odoo: Using configuration file at C:\APP\Odoo\odoo.conf
-2017-05-09 09:05:59,631 20028 INFO ? odoo: addons paths: ['data\\addons\\10.0', u'C:\\APP\\Odoo\\source\\addons', 'C:\\APP\\Odoo\\source\\odoo\\addons']
-2017-05-09 09:05:59,631 20028 INFO ? odoo: database: root@localhost:5432
-2017-05-09 09:05:59,990 20028 INFO ? odoo.service.server: HTTP service (werkzeug) running on 0.0.0.0:80
-2017-05-09 09:06:00,303 20028 INFO demo odoo.modules.loading: loading 1 modules...
-2017-05-09 09:06:01,897 20028 INFO demo odoo.modules.loading: 1 modules loaded in 1.59s, 0 queries
-2017-05-09 09:06:02,460 20028 INFO demo odoo.modules.loading: loading 103 modules...
-2017-05-09 09:06:02,803 20028 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres
-2017-05-09 09:06:05,460 20028 INFO demo odoo.addons.report.models.report: Will use the Wkhtmltopdf binary at C:\APP\Odoo\thirdparty\wkhtmltopdf.exe
-2017-05-09 09:06:10,788 20028 INFO demo odoo.modules.loading: 103 modules loaded in 8.33s, 0 queries
-2017-05-09 09:06:11,678 20028 INFO demo odoo.modules.loading: Modules loaded.
-2017-05-09 09:06:20,608 20028 INFO ? odoo.http: HTTP Configuring static files
-2017-05-09 09:06:20,625 20028 INFO demo odoo.addons.base.ir.ir_http: Generating routing map
-2017-05-09 09:06:23,611 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:23] "GET / HTTP/1.1" 200 -
-2017-05-09 09:06:24,121 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /web/content/860-d13801a/web.assets_common.0.css HTTP/1.1" 200 -
-2017-05-09 09:06:24,121 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /web/content/1257-624c6ec/web.assets_frontend.0.css HTTP/1.1" 200 -
-2017-05-09 09:06:24,121 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /web/content/345-cdde6b3/web_editor.summernote.0.css HTTP/1.1" 200 -
-2017-05-09 09:06:24,122 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /web/content/1209-8093158/web_editor.assets_editor.0.css HTTP/1.1" 200 -
-2017-05-09 09:06:24,121 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /web/content/1258-624c6ec/web.assets_frontend.1.css HTTP/1.1" 200 -
-2017-05-09 09:06:24,160 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /web/content/1235-12ce815/website.assets_editor.0.css HTTP/1.1" 200 -
-2017-05-09 09:06:24,211 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 -
-2017-05-09 09:06:24,290 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /web/content/1237-12ce815/website.assets_editor.js HTTP/1.1" 200 -
-2017-05-09 09:06:24,296 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /web/content/349-cdde6b3/web_editor.summernote.js HTTP/1.1" 200 -
-2017-05-09 09:06:24,312 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /web/content/1211-8093158/web_editor.assets_editor.js HTTP/1.1" 200 -
-2017-05-09 09:06:24,411 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /web/content/1259-624c6ec/web.assets_frontend.js HTTP/1.1" 200 -
-2017-05-09 09:06:24,469 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /web/content/864-d13801a/web.assets_common.js HTTP/1.1" 200 -
-2017-05-09 09:06:24,496 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:24] "GET /logo.png HTTP/1.1" 200 -
-2017-05-09 09:06:25,023 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "POST /web/dataset/call_kw/web_tour.tour/get_consumed_tours HTTP/1.1" 200 -
-2017-05-09 09:06:25,036 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.5.0 HTTP/1.1" 200 -
-2017-05-09 09:06:25,038 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /web_editor/static/src/xml/ace.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,105 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:06:25,107 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:06:25,111 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:06:25,125 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 -
-2017-05-09 09:06:25,177 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /web/static/src/xml/base_common.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,197 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /website/static/src/xml/website.share.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,217 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /website_forum/static/src/xml/website_forum_share_templates.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,234 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /website_mail/static/src/xml/chatter_message.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,253 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /rating/static/src/xml/rating_common.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,270 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /web_editor/static/src/xml/editor.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,290 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /web_editor/static/src/xml/snippets.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,309 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /website/static/src/xml/website.editor.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,326 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /website/static/src/xml/website.seo.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,351 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /web_planner/static/src/xml/web_planner.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,371 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /website/static/src/xml/website.contentMenu.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,394 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /website/static/src/xml/website.gallery.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,413 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /web_tour/static/src/xml/tip.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,480 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "GET /website/static/src/xml/website.xml HTTP/1.1" 200 -
-2017-05-09 09:06:25,601 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "POST /web/dataset/call_kw/web.planner/search_read HTTP/1.1" 200 -
-2017-05-09 09:06:25,667 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:25] "POST /website/translations HTTP/1.1" 200 -
-2017-05-09 09:06:26,351 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:26] "POST /web/dataset/call_kw/web.planner/render HTTP/1.1" 200 -
-2017-05-09 09:06:26,584 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:26] "GET /website/static/src/img/website_planner_clean.png HTTP/1.1" 200 -
-2017-05-09 09:06:26,585 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:26] "GET /website/static/src/img/website_planner_footer.png HTTP/1.1" 200 -
-2017-05-09 09:06:26,586 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:26] "GET /website_sale/static/src/img/planner_product_page.png HTTP/1.1" 200 -
-2017-05-09 09:06:26,586 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:26] "GET /web_planner/static/src/img/odoo_logo.png HTTP/1.1" 200 -
-2017-05-09 09:06:29,088 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:29] "GET /web/static/src/fonts/lato/Lato-Reg-webfont.woff HTTP/1.1" 200 -
-2017-05-09 09:06:29,088 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:29] "GET /web/static/src/fonts/lato/Lato-Bol-webfont.woff HTTP/1.1" 200 -
-2017-05-09 09:06:29,088 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:29] "GET /web/static/src/fonts/lato/Lato-Bla-webfont.woff HTTP/1.1" 200 -
-2017-05-09 09:06:29,092 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:29] "GET /web/static/src/fonts/lato/Lato-Lig-webfont.woff HTTP/1.1" 200 -
-2017-05-09 09:06:29,099 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:06:29] "GET /web/static/src/fonts/lato/Lato-RegIta-webfont.woff HTTP/1.1" 200 -
-2017-05-09 09:06:58,345 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:58] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 -
-2017-05-09 09:06:59,088 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "POST /website/snippets HTTP/1.1" 200 -
-2017-05-09 09:06:59,543 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.s_text_image_default_image HTTP/1.1" 200 -
-2017-05-09 09:06:59,657 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.s_image_text_default_image HTTP/1.1" 200 -
-2017-05-09 09:06:59,657 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.s_big_picture_default_image HTTP/1.1" 200 -
-2017-05-09 09:06:59,674 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.library_image_11 HTTP/1.1" 200 -
-2017-05-09 09:06:59,690 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.library_image_13 HTTP/1.1" 200 -
-2017-05-09 09:06:59,700 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.library_image_07 HTTP/1.1" 200 -
-2017-05-09 09:06:59,701 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.s_banner_default_image HTTP/1.1" 200 -
-2017-05-09 09:06:59,769 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.s_reference_demo_image_1 HTTP/1.1" 200 -
-2017-05-09 09:06:59,799 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.s_reference_demo_image_2 HTTP/1.1" 200 -
-2017-05-09 09:06:59,802 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.s_reference_demo_image_3 HTTP/1.1" 200 -
-2017-05-09 09:06:59,802 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.s_reference_demo_image_4 HTTP/1.1" 200 -
-2017-05-09 09:06:59,806 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.s_reference_demo_image_5 HTTP/1.1" 200 -
-2017-05-09 09:06:59,812 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:06:59] "GET /web/image/website.s_image_floating_default_image HTTP/1.1" 200 -
-2017-05-09 09:07:00,029 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_title.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,062 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_image_gallery.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,072 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_well.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,075 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_text_image.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,085 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_feature_grid.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,092 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_panel.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,092 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_jumbotron.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,105 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_faq.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,111 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_text_block.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,114 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_quotes_slider.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,118 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_parallax.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,125 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_button.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,134 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_image_text.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,142 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_banner.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,147 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website_mass_mailing/static/src/img/blocks/newsletter_subscribe_form.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,154 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_features.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,154 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_big_picture.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,154 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_comparison.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,168 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_three_columns.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,171 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_share.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,176 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /website/static/src/img/blocks/block_references.png HTTP/1.1" 200 -
-2017-05-09 09:07:00,203 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 -
-2017-05-09 09:07:00,342 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET / HTTP/1.1" 200 -
-2017-05-09 09:07:00,592 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/content/345-cdde6b3/web_editor.summernote.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:00,595 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/content/1235-12ce815/website.assets_editor.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:00,608 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/content/1209-8093158/web_editor.assets_editor.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:00,618 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/content/1258-624c6ec/web.assets_frontend.1.css HTTP/1.1" 200 -
-2017-05-09 09:07:00,621 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/content/860-d13801a/web.assets_common.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:00,663 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/content/1257-624c6ec/web.assets_frontend.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:00,727 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/content/1237-12ce815/website.assets_editor.js HTTP/1.1" 200 -
-2017-05-09 09:07:00,740 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/content/1211-8093158/web_editor.assets_editor.js HTTP/1.1" 200 -
-2017-05-09 09:07:00,746 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/content/349-cdde6b3/web_editor.summernote.js HTTP/1.1" 200 -
-2017-05-09 09:07:00,752 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 -
-2017-05-09 09:07:00,789 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/content/1259-624c6ec/web.assets_frontend.js HTTP/1.1" 200 -
-2017-05-09 09:07:00,809 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:00] "GET /web/content/864-d13801a/web.assets_common.js HTTP/1.1" 200 -
-2017-05-09 09:07:01,375 20028 INFO demo odoo.addons.base.ir.ir_attachment: filestore gc 0 checked, 0 removed
-2017-05-09 09:07:01,453 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.5.0 HTTP/1.1" 200 -
-2017-05-09 09:07:01,457 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /web_editor/static/src/xml/ace.xml HTTP/1.1" 200 -
-2017-05-09 09:07:01,520 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "POST /web/dataset/call_kw/web_tour.tour/get_consumed_tours HTTP/1.1" 200 -
-2017-05-09 09:07:01,562 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /web/static/src/xml/base_common.xml HTTP/1.1" 200 -
-2017-05-09 09:07:01,582 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /website/static/src/xml/website.share.xml HTTP/1.1" 200 -
-2017-05-09 09:07:01,608 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /website_forum/static/src/xml/website_forum_share_templates.xml HTTP/1.1" 200 -
-2017-05-09 09:07:01,630 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /website_mail/static/src/xml/chatter_message.xml HTTP/1.1" 200 -
-2017-05-09 09:07:01,645 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /rating/static/src/xml/rating_common.xml HTTP/1.1" 200 -
-2017-05-09 09:07:01,653 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:01,653 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:01,657 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /logo.png HTTP/1.1" 200 -
-2017-05-09 09:07:01,677 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:01,700 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /web_editor/static/src/xml/editor.xml HTTP/1.1" 200 -
-2017-05-09 09:07:01,821 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /web_editor/static/src/xml/snippets.xml HTTP/1.1" 200 -
-2017-05-09 09:07:01,851 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /website/static/src/xml/website.editor.xml HTTP/1.1" 200 -
-2017-05-09 09:07:01,875 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /website/static/src/xml/website.seo.xml HTTP/1.1" 200 -
-2017-05-09 09:07:01,898 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /web_planner/static/src/xml/web_planner.xml HTTP/1.1" 200 -
-2017-05-09 09:07:01,940 20028 INFO demo odoo.addons.base.ir.ir_autovacuum: GC'd 0 user log entries
-2017-05-09 09:07:01,963 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /website/static/src/xml/website.contentMenu.xml HTTP/1.1" 200 -
-2017-05-09 09:07:01,983 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:01] "GET /website/static/src/xml/website.gallery.xml HTTP/1.1" 200 -
-2017-05-09 09:07:02,005 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:02] "GET /web_tour/static/src/xml/tip.xml HTTP/1.1" 200 -
-2017-05-09 09:07:02,117 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:02] "GET /website/static/src/xml/website.xml HTTP/1.1" 200 -
-2017-05-09 09:07:02,206 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:02] "POST /web/dataset/call_kw/web.planner/search_read HTTP/1.1" 200 -
-2017-05-09 09:07:02,288 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:02] "POST /website/translations HTTP/1.1" 200 -
-2017-05-09 09:07:02,403 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:02] "POST /web/dataset/call_kw/web.planner/render HTTP/1.1" 200 -
-2017-05-09 09:07:02,750 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:02] "GET /website/static/src/img/website_planner_clean.png HTTP/1.1" 200 -
-2017-05-09 09:07:02,753 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:02] "GET /website/static/src/img/website_planner_footer.png HTTP/1.1" 200 -
-2017-05-09 09:07:02,756 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:02] "GET /website_sale/static/src/img/planner_product_page.png HTTP/1.1" 200 -
-2017-05-09 09:07:02,762 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:02] "GET /web_planner/static/src/img/odoo_logo.png HTTP/1.1" 200 -
-2017-05-09 09:07:03,451 20028 INFO demo odoo.addons.base.ir.ir_mail_server: 通过SMTP发送邮件失败 'localhost'.
-error: 10061
-
-2017-05-09 09:07:03,456 20028 ERROR demo odoo.addons.mail.models.mail_mail: failed sending mail (id: 82) due to 邮件发送失败
-通过SMTP发送邮件失败 'localhost'.
-error: 10061
+2017-06-06 02:39:25,655 119120 INFO ? odoo: Odoo version 10.0
+2017-06-06 02:39:25,655 119120 INFO ? odoo: Using configuration file at C:\APP\Odoo\odoo_win10\odoo.conf
+2017-06-06 02:39:25,655 119120 INFO ? odoo: addons paths: ['data\\addons\\10.0', u'C:\\APP\\Odoo\\odoo_win10\\source\\addons', 'C:\\APP\\Odoo\\odoo_win10\\source\\odoo\\addons']
+2017-06-06 02:39:25,655 119120 INFO ? odoo: database: root@localhost:5432
+2017-06-06 02:39:25,980 119120 INFO ? odoo.service.server: HTTP service (werkzeug) running on 0.0.0.0:80
+2017-06-06 02:39:26,328 119120 INFO demo odoo.modules.loading: loading 1 modules...
+2017-06-06 02:39:27,880 119120 INFO demo odoo.modules.loading: 1 modules loaded in 1.55s, 0 queries
+2017-06-06 02:39:28,532 119120 INFO demo odoo.modules.loading: loading 103 modules...
+2017-06-06 02:39:28,954 119120 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres
+2017-06-06 02:39:30,891 119120 INFO demo odoo.addons.report.models.report: Will use the Wkhtmltopdf binary at C:\APP\Odoo\odoo_win10\thirdparty\wkhtmltopdf.exe
+2017-06-06 02:39:36,332 119120 INFO demo odoo.modules.loading: 103 modules loaded in 7.80s, 0 queries
+2017-06-06 02:39:37,361 119120 INFO demo odoo.modules.loading: Modules loaded.
+2017-06-06 02:40:02,378 119120 INFO ? odoo.http: HTTP Configuring static files
+2017-06-06 02:40:02,397 119120 INFO demo odoo.addons.base.ir.ir_http: Generating routing map
+2017-06-06 02:40:07,056 119120 INFO demo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [860]
+2017-06-06 02:40:09,407 119120 INFO demo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [1258, 1257]
+2017-06-06 02:40:09,907 119120 INFO demo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [345]
+2017-06-06 02:40:10,727 119120 INFO demo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [1209]
+2017-06-06 02:40:11,410 119120 INFO demo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [1235]
+2017-06-06 02:40:13,111 119120 INFO demo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [864]
+2017-06-06 02:40:14,286 119120 INFO demo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [1259]
+2017-06-06 02:40:14,842 119120 INFO demo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [349]
+2017-06-06 02:40:15,180 119120 INFO demo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [1211]
+2017-06-06 02:40:15,658 119120 INFO demo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [1237]
+2017-06-06 02:40:16,051 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET / HTTP/1.1" 200 -
+2017-06-06 02:40:16,589 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /web/content/1264-b3a1105/web.assets_common.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:16,589 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /web/content/1265-dbc01cb/web.assets_frontend.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:16,592 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /web/content/1267-aef375f/web_editor.summernote.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:16,592 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /web/content/1266-dbc01cb/web.assets_frontend.1.css HTTP/1.1" 200 -
+2017-06-06 02:40:16,592 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /web/content/1268-78cf25f/web_editor.assets_editor.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:16,631 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /web/content/1269-2723329/website.assets_editor.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:16,677 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 -
+2017-06-06 02:40:16,750 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /web/content/1274-2723329/website.assets_editor.js HTTP/1.1" 200 -
+2017-06-06 02:40:16,762 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /web/content/1272-aef375f/web_editor.summernote.js HTTP/1.1" 200 -
+2017-06-06 02:40:16,782 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /web/content/1273-78cf25f/web_editor.assets_editor.js HTTP/1.1" 200 -
+2017-06-06 02:40:16,903 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /web/content/1271-dbc01cb/web.assets_frontend.js HTTP/1.1" 200 -
+2017-06-06 02:40:16,957 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /web/content/1270-b3a1105/web.assets_common.js HTTP/1.1" 200 -
+2017-06-06 02:40:16,979 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:16] "GET /logo.png HTTP/1.1" 200 -
+2017-06-06 02:40:17,667 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:17] "GET /web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.5.0 HTTP/1.1" 200 -
+2017-06-06 02:40:17,693 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:17] "POST /web/dataset/call_kw/web_tour.tour/get_consumed_tours HTTP/1.1" 200 -
+2017-06-06 02:40:17,730 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:17] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 -
+2017-06-06 02:40:17,749 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:17] "GET /web_editor/static/src/xml/ace.xml HTTP/1.1" 200 -
+2017-06-06 02:40:17,796 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:17] "POST /web/dataset/call HTTP/1.1" 200 -
+2017-06-06 02:40:17,801 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:17] "POST /web/dataset/call HTTP/1.1" 200 -
+2017-06-06 02:40:17,819 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:17] "POST /web/dataset/call HTTP/1.1" 200 -
+2017-06-06 02:40:17,917 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:17] "GET /web/static/src/xml/base_common.xml HTTP/1.1" 200 -
+2017-06-06 02:40:17,944 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:17] "GET /website/static/src/xml/website.share.xml HTTP/1.1" 200 -
+2017-06-06 02:40:17,973 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:17] "GET /website_forum/static/src/xml/website_forum_share_templates.xml HTTP/1.1" 200 -
+2017-06-06 02:40:18,002 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "GET /website_mail/static/src/xml/chatter_message.xml HTTP/1.1" 200 -
+2017-06-06 02:40:18,025 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "GET /rating/static/src/xml/rating_common.xml HTTP/1.1" 200 -
+2017-06-06 02:40:18,049 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "GET /web_editor/static/src/xml/editor.xml HTTP/1.1" 200 -
+2017-06-06 02:40:18,078 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "GET /web_editor/static/src/xml/snippets.xml HTTP/1.1" 200 -
+2017-06-06 02:40:18,107 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "GET /website/static/src/xml/website.editor.xml HTTP/1.1" 200 -
+2017-06-06 02:40:18,131 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "GET /website/static/src/xml/website.seo.xml HTTP/1.1" 200 -
+2017-06-06 02:40:18,154 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "GET /web_planner/static/src/xml/web_planner.xml HTTP/1.1" 200 -
+2017-06-06 02:40:18,177 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "GET /website/static/src/xml/website.contentMenu.xml HTTP/1.1" 200 -
+2017-06-06 02:40:18,209 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "GET /website/static/src/xml/website.gallery.xml HTTP/1.1" 200 -
+2017-06-06 02:40:18,236 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "GET /web_tour/static/src/xml/tip.xml HTTP/1.1" 200 -
+2017-06-06 02:40:18,305 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "GET /website/static/src/xml/website.xml HTTP/1.1" 200 -
+2017-06-06 02:40:18,374 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "POST /web/dataset/call_kw/web.planner/search_read HTTP/1.1" 200 -
+2017-06-06 02:40:18,424 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:18] "POST /website/translations HTTP/1.1" 200 -
+2017-06-06 02:40:19,444 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:19] "POST /web/dataset/call_kw/web.planner/render HTTP/1.1" 200 -
+2017-06-06 02:40:19,700 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:19] "GET /website/static/src/img/website_planner_footer.png HTTP/1.1" 200 -
+2017-06-06 02:40:19,703 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:19] "GET /website/static/src/img/website_planner_clean.png HTTP/1.1" 200 -
+2017-06-06 02:40:19,716 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:19] "GET /website_sale/static/src/img/planner_product_page.png HTTP/1.1" 200 -
+2017-06-06 02:40:19,720 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:19] "GET /web_planner/static/src/img/odoo_logo.png HTTP/1.1" 200 -
+2017-06-06 02:40:27,375 119120 INFO demo odoo.addons.base.ir.ir_attachment: filestore gc 11 checked, 0 removed
+2017-06-06 02:40:27,857 119120 INFO demo odoo.addons.base.ir.ir_autovacuum: GC'd 0 user log entries
+2017-06-06 02:40:29,131 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /my/home HTTP/1.1" 200 -
+2017-06-06 02:40:29,628 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /web/content/1267-aef375f/web_editor.summernote.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:29,630 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /web/content/1266-dbc01cb/web.assets_frontend.1.css HTTP/1.1" 200 -
+2017-06-06 02:40:29,630 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /web/content/1265-dbc01cb/web.assets_frontend.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:29,630 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /web/content/1264-b3a1105/web.assets_common.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:29,630 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /web/content/1268-78cf25f/web_editor.assets_editor.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:29,655 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /web/content/1269-2723329/website.assets_editor.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:29,710 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 -
+2017-06-06 02:40:29,713 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /web/content/1274-2723329/website.assets_editor.js HTTP/1.1" 200 -
+2017-06-06 02:40:29,721 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /web/content/1273-78cf25f/web_editor.assets_editor.js HTTP/1.1" 200 -
+2017-06-06 02:40:29,727 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /web/content/1272-aef375f/web_editor.summernote.js HTTP/1.1" 200 -
+2017-06-06 02:40:29,755 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /web/content/1271-dbc01cb/web.assets_frontend.js HTTP/1.1" 200 -
+2017-06-06 02:40:29,769 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:29] "GET /web/content/1270-b3a1105/web.assets_common.js HTTP/1.1" 200 -
+2017-06-06 02:40:30,496 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "POST /web/dataset/call_kw/web_tour.tour/get_consumed_tours HTTP/1.1" 200 -
+2017-06-06 02:40:30,506 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /web_editor/static/src/xml/ace.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,552 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "POST /web/dataset/call HTTP/1.1" 200 -
+2017-06-06 02:40:30,558 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /web/static/src/xml/base_common.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,565 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "POST /web/dataset/call HTTP/1.1" 200 -
+2017-06-06 02:40:30,569 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "POST /web/dataset/call HTTP/1.1" 200 -
+2017-06-06 02:40:30,598 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /website/static/src/xml/website.share.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,614 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /website_forum/static/src/xml/website_forum_share_templates.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,631 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /website_mail/static/src/xml/chatter_message.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,648 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /rating/static/src/xml/rating_common.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,664 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /web_editor/static/src/xml/editor.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,681 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /web_editor/static/src/xml/snippets.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,698 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /website/static/src/xml/website.editor.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,713 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /website/static/src/xml/website.seo.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,734 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /web_planner/static/src/xml/web_planner.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,759 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /website/static/src/xml/website.contentMenu.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,776 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /website/static/src/xml/website.gallery.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,792 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /web_tour/static/src/xml/tip.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,848 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "GET /website/static/src/xml/website.xml HTTP/1.1" 200 -
+2017-06-06 02:40:30,895 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "POST /web/dataset/call_kw/web.planner/search_read HTTP/1.1" 200 -
+2017-06-06 02:40:30,987 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:30] "POST /website/translations HTTP/1.1" 200 -
+2017-06-06 02:40:31,630 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:31] "POST /web/dataset/call_kw/web.planner/render HTTP/1.1" 200 -
+2017-06-06 02:40:38,388 119120 INFO demo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [1262, 1261]
+2017-06-06 02:40:41,625 119120 INFO demo odoo.models.unlink: User #1 deleted ir.attachment records with IDs: [1263]
+2017-06-06 02:40:41,961 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:41] "GET /web HTTP/1.1" 200 -
+2017-06-06 02:40:42,223 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:42] "GET /web/content/1264-b3a1105/web.assets_common.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:42,226 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:42] "GET /web/content/1267-aef375f/web_editor.summernote.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:42,239 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:42] "GET /web/content/1268-78cf25f/web_editor.assets_editor.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:42,257 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:42] "GET /web/content/1276-c2bbb82/web.assets_backend.1.css HTTP/1.1" 200 -
+2017-06-06 02:40:42,276 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:42] "GET /web/static/src/img/favicon.ico HTTP/1.1" 200 -
+2017-06-06 02:40:42,288 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:42] "GET /web/content/1275-c2bbb82/web.assets_backend.0.css HTTP/1.1" 200 -
+2017-06-06 02:40:42,315 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:42] "GET /web/content/1272-aef375f/web_editor.summernote.js HTTP/1.1" 200 -
+2017-06-06 02:40:42,316 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:42] "GET /web/content/1273-78cf25f/web_editor.assets_editor.js HTTP/1.1" 200 -
+2017-06-06 02:40:42,338 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:42] "GET /web/content/1270-b3a1105/web.assets_common.js HTTP/1.1" 200 -
+2017-06-06 02:40:42,628 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:42] "GET /web/content/1277-c2bbb82/web.assets_backend.js HTTP/1.1" 200 -
+2017-06-06 02:40:42,707 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:42] "GET /web/binary/company_logo HTTP/1.1" 200 -
+2017-06-06 02:40:43,240 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:43] "GET /web/static/src/img/favicon.ico HTTP/1.1" 200 -
+2017-06-06 02:40:43,311 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:43] "GET /web_editor/static/src/xml/ace.xml HTTP/1.1" 200 -
+2017-06-06 02:40:43,339 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:43] "GET /web_editor/static/src/xml/editor.xml HTTP/1.1" 200 -
+2017-06-06 02:40:43,351 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:43] "POST /web/dataset/call HTTP/1.1" 200 -
+2017-06-06 02:40:43,368 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:43] "GET /web_editor/static/src/xml/snippets.xml HTTP/1.1" 200 -
+2017-06-06 02:40:43,403 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:43] "POST /web/webclient/translations HTTP/1.1" 200 -
+2017-06-06 02:40:43,602 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:43] "GET /web/webclient/qweb?mods=web,web_kanban,base,bus,web_tour,mail,report,product,web_planner,account,account_bank_statement_import,web_editor,website,website_partner,website_mail,event,website_event,website_portal,payment,website_payment,website_portal_sale,rating,website_links,im_livechat,website_livechat,web_kanban_gauge,mass_mailing,website_form,barcodes,point_of_sale,website_mass_mailing,account_accountant,website_blog,sales_team,sale,event_sale,contacts,web_calendar,calendar,crm,website_crm,l10n_cn,website_theme_install,website_slides,note,web_settings_dashboard,website_sale,board,maintenance,document,sale_stock,base_import,stock,purchase,hr,hr_attendance,project,project_issue,hr_timesheet,mrp_repair,sale_crm,portal,gamification,fleet,website_forum,hr_expense,web_diagram,lunch,mrp,hr_recruitment,hr_holidays,survey,website_event_sale,payment_transfer,hr_gamification HTTP/1.1" 200 -
+2017-06-06 02:40:43,812 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:43] "POST /web/webclient/translations HTTP/1.1" 200 -
+2017-06-06 02:40:43,848 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:43] "GET /web/webclient/locale/zh_CN HTTP/1.1" 200 -
+2017-06-06 02:40:44,069 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:44] "GET /web/binary/company_logo?db=demo&company=1 HTTP/1.1" 200 -
+2017-06-06 02:40:44,122 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:44] "GET /web/image?model=res.users&field=image_small&id=1 HTTP/1.1" 200 -
+2017-06-06 02:40:44,168 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:44] "POST /calendar/notify HTTP/1.1" 200 -
+2017-06-06 02:40:44,312 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:44] "POST /mail/client_action HTTP/1.1" 200 -
+2017-06-06 02:40:44,450 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:44] "POST /web/action/load HTTP/1.1" 200 -
+2017-06-06 02:40:44,844 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:44] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:40:44,858 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:44] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 -
+2017-06-06 02:40:45,048 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "POST /web/dataset/call_kw/ir.module.module/fields_get HTTP/1.1" 200 -
+2017-06-06 02:40:45,117 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:40:45,309 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "POST /web/menu/load_needaction HTTP/1.1" 200 -
+2017-06-06 02:40:45,726 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /crm/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,727 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /project/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,730 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /stock/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,733 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /sale/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,736 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /mrp/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,742 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /hr_timesheet/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,742 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /point_of_sale/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,743 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /mail/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,750 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /hr_holidays/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,750 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /account/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,756 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /account_accountant/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,757 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /project_issue/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,763 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /note/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,766 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /website/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,769 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /website_sale/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,772 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /purchase/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,776 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /hr/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,776 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /hr_attendance/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,783 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /hr_recruitment/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,783 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /hr_expense/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,789 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /board/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,792 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /contacts/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,792 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /survey/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,795 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /mass_mailing/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,801 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /lunch/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,801 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /maintenance/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,809 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /calendar/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,809 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /website_event/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,811 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /website_blog/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,819 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /website_slides/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,819 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /website_forum/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,826 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /fleet/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,829 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /mrp_repair/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:40:45,829 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:40:45] "GET /im_livechat/static/description/icon.png HTTP/1.1" 200 -
+2017-06-06 02:41:15,369 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:15] "POST /web/menu/load_needaction HTTP/1.1" 200 -
+2017-06-06 02:41:15,430 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:15] "POST /web/action/load HTTP/1.1" 200 -
+2017-06-06 02:41:15,855 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:15] "POST /web/dataset/call_kw/account.journal/load_views HTTP/1.1" 200 -
+2017-06-06 02:41:16,028 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:16] "POST /web/dataset/call_kw/account.journal/fields_get HTTP/1.1" 200 -
+2017-06-06 02:41:16,181 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:16] "POST /web/dataset/call_kw/web.planner/render HTTP/1.1" 200 -
+2017-06-06 02:41:16,263 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:16] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:41:16,325 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:16] "GET /web_planner/static/src/img/odoo_logo.png HTTP/1.1" 200 -
+2017-06-06 02:41:16,326 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:16] "GET /web_planner/static/src/img/fabien_signature.png HTTP/1.1" 200 -
+2017-06-06 02:41:18,335 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:18] "POST /web/dataset/call_button HTTP/1.1" 200 -
+2017-06-06 02:41:18,642 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:18] "POST /web/dataset/call_kw/account.invoice/load_views HTTP/1.1" 200 -
+2017-06-06 02:41:19,115 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:19] "POST /web/dataset/call_kw/account.invoice/default_get HTTP/1.1" 200 -
+2017-06-06 02:41:20,104 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "GET /web/static/src/img/form_sheetbg.png HTTP/1.1" 200 -
+2017-06-06 02:41:20,184 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /web/dataset/call_kw/res.currency/name_get HTTP/1.1" 200 -
+2017-06-06 02:41:20,191 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /web/dataset/call_kw/crm.team/name_get HTTP/1.1" 200 -
+2017-06-06 02:41:20,214 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /web/dataset/call_kw/res.users/name_get HTTP/1.1" 200 -
+2017-06-06 02:41:20,232 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /web/dataset/call_kw/account.journal/name_get HTTP/1.1" 200 -
+2017-06-06 02:41:20,259 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /web/dataset/call_kw/res.company/name_get HTTP/1.1" 200 -
+2017-06-06 02:41:20,269 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /mail/read_followers HTTP/1.1" 200 -
+2017-06-06 02:41:20,289 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /web/dataset/call_kw/stock.incoterms/name_search HTTP/1.1" 200 -
+2017-06-06 02:41:20,293 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /web/menu/load_needaction HTTP/1.1" 200 -
+2017-06-06 02:41:20,311 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /web/dataset/call_kw/account.invoice.tax/fields_get HTTP/1.1" 200 -
+2017-06-06 02:41:20,312 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /web/dataset/call_kw/account.invoice.line/fields_get HTTP/1.1" 200 -
+2017-06-06 02:41:20,407 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /web/dataset/call_kw/account.invoice/onchange HTTP/1.1" 200 -
+2017-06-06 02:41:20,683 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /web/dataset/call_kw/ir.values/get_defaults HTTP/1.1" 200 -
+2017-06-06 02:41:20,684 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:20] "POST /web/dataset/call_kw/ir.values/get_defaults HTTP/1.1" 200 -
+2017-06-06 02:41:23,864 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:23] "POST /web/dataset/call_kw/res.partner/name_search HTTP/1.1" 200 -
+2017-06-06 02:41:25,420 119120 ERROR demo odoo.http: Exception during JSON request handling.
 Traceback (most recent call last):
-  File "C:\APP\Odoo\source\addons\mail\models\mail_mail.py", line 277, in send
-    res = IrMailServer.send_email(msg, mail_server_id=mail.mail_server_id.id)
-  File "C:\APP\Odoo\source\odoo\addons\base\ir\ir_mail_server.py", line 464, in send_email
-    raise MailDeliveryException(_("Mail Delivery Failed"), msg)
-MailDeliveryException: (u'\u90ae\u4ef6\u53d1\u9001\u5931\u8d25', u"\u901a\u8fc7SMTP\u53d1\u9001\u90ae\u4ef6\u5931\u8d25 'localhost'.\nerror: 10061\n")
-2017-05-09 09:07:03,882 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:03] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 -
-2017-05-09 09:07:05,496 20028 INFO demo odoo.addons.base.ir.ir_mail_server: 通过SMTP发送邮件失败 'localhost'.
-error: 10061
-
-2017-05-09 09:07:05,499 20028 ERROR demo odoo.addons.mail.models.mail_mail: failed sending mail (id: 81) due to 邮件发送失败
-通过SMTP发送邮件失败 'localhost'.
-error: 10061
+  File "C:\APP\Odoo\odoo_win10\source\odoo\http.py", line 638, in _handle_exception
+    return super(JsonRequest, self)._handle_exception(exception)
+  File "C:\APP\Odoo\odoo_win10\source\odoo\http.py", line 675, in dispatch
+    result = self._call_function(**self.params)
+  File "C:\APP\Odoo\odoo_win10\source\odoo\http.py", line 331, in _call_function
+    return checked_call(self.db, *args, **kwargs)
+  File "C:\APP\Odoo\odoo_win10\source\odoo\service\model.py", line 119, in wrapper
+    return f(dbname, *args, **kwargs)
+  File "C:\APP\Odoo\odoo_win10\source\odoo\http.py", line 324, in checked_call
+    result = self.endpoint(*a, **kw)
+  File "C:\APP\Odoo\odoo_win10\source\odoo\http.py", line 933, in __call__
+    return self.method(*args, **kw)
+  File "C:\APP\Odoo\odoo_win10\source\odoo\http.py", line 504, in response_wrap
+    response = f(*args, **kw)
+  File "C:\APP\Odoo\odoo_win10\source\addons\web\controllers\main.py", line 878, in call_kw
+    return self._call_kw(model, method, args, kwargs)
+  File "C:\APP\Odoo\odoo_win10\source\addons\web\controllers\main.py", line 870, in _call_kw
+    return call_kw(request.env[model], method, args, kwargs)
+  File "C:\APP\Odoo\odoo_win10\source\odoo\api.py", line 681, in call_kw
+    return call_kw_multi(method, model, args, kwargs)
+  File "C:\APP\Odoo\odoo_win10\source\odoo\api.py", line 672, in call_kw_multi
+    result = method(recs, *args, **kwargs)
+  File "C:\APP\Odoo\odoo_win10\source\odoo\models.py", line 5474, in onchange
+    record._onchange_eval(name, field_onchange[name], result)
+  File "C:\APP\Odoo\odoo_win10\source\odoo\models.py", line 5372, in _onchange_eval
+    method_res = method(self)
+  File "C:\APP\Odoo\odoo_win10\source\addons\purchase\models\account_invoice.py", line 98, in _onchange_partner_id
+    res = super(AccountInvoice, self)._onchange_partner_id()
+  File "C:\APP\Odoo\odoo_win10\source\addons\account\models\account_invoice.py", line 478, in _onchange_partner_id
+    raise RedirectWarning(msg, action.id, _('Go to the configuration panel'))
+RedirectWarning: (u'\u627e\u4e0d\u5230\u672c\u516c\u53f8\u7684\u79d1\u76ee\u8868. \n\u8bf7\u5230\u4f1a\u8ba1\u914d\u7f6e\u8fdb\u884c\u914d\u7f6e', 308, u'\u81f3\u914d\u7f6e\u9762\u677f')
+2017-06-06 02:41:25,526 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:25] "POST /web/dataset/call_kw/account.invoice/onchange HTTP/1.1" 200 -
+2017-06-06 02:41:29,243 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:29] "POST /web/dataset/call_kw/res.partner/name_search HTTP/1.1" 200 -
+2017-06-06 02:41:31,619 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:31] "POST /web/dataset/call_kw/account.payment.term/name_search HTTP/1.1" 200 -
+2017-06-06 02:41:34,029 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:34] "POST /web/dataset/call_kw/account.invoice/onchange HTTP/1.1" 200 -
+2017-06-06 02:41:34,411 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:34] "POST /longpolling/poll HTTP/1.1" 200 -
+2017-06-06 02:41:35,260 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:35] "POST /web/dataset/call_kw/account.invoice/onchange HTTP/1.1" 200 -
+2017-06-06 02:41:40,726 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:40] "POST /web/dataset/call_kw/account.invoice.line/default_get HTTP/1.1" 200 -
+2017-06-06 02:41:40,993 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:40] "POST /web/dataset/call_kw/account.analytic.tag/fields_get HTTP/1.1" 200 -
+2017-06-06 02:41:40,997 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:40] "POST /web/dataset/call_kw/account.tax/fields_get HTTP/1.1" 200 -
+2017-06-06 02:41:41,016 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:41] "POST /web/dataset/call_kw/account.invoice.line/onchange HTTP/1.1" 200 -
+2017-06-06 02:41:42,312 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:42] "POST /web/dataset/call_kw/product.product/name_search HTTP/1.1" 200 -
+2017-06-06 02:41:44,140 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:41:44] "POST /web/dataset/call_kw/account.invoice.line/onchange HTTP/1.1" 200 -
+2017-06-06 02:42:00,328 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:00] "POST /web/dataset/call_kw/account.account/name_search HTTP/1.1" 200 -
+2017-06-06 02:42:01,730 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:01] "POST /web/dataset/call_kw/account.account/fields_view_get HTTP/1.1" 200 -
+2017-06-06 02:42:01,887 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:01] "POST /web/dataset/call_kw/account.account/default_get HTTP/1.1" 200 -
+2017-06-06 02:42:02,253 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:02] "POST /web/dataset/call_kw/account.account.tag/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:02,253 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:02] "POST /web/dataset/call_kw/account.tax/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:02,263 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:02] "POST /web/dataset/call_kw/res.company/name_get HTTP/1.1" 200 -
+2017-06-06 02:42:02,266 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:02] "POST /web/dataset/call_kw/account.account/onchange HTTP/1.1" 200 -
+2017-06-06 02:42:02,272 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:02] "POST /web/dataset/call_kw/account.account.type/name_search HTTP/1.1" 200 -
+2017-06-06 02:42:04,618 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:04] "POST /web/dataset/call_kw/account.account/onchange HTTP/1.1" 200 -
+2017-06-06 02:42:13,584 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:13] "POST /web/dataset/call_kw/product.product/get_formview_id HTTP/1.1" 200 -
+2017-06-06 02:42:13,993 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:13] "POST /web/dataset/call_kw/product.product/fields_view_get HTTP/1.1" 200 -
+2017-06-06 02:42:14,953 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:14] "POST /web/dataset/call_kw/product.product/read HTTP/1.1" 200 -
+2017-06-06 02:42:15,846 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:15] "GET /web/image?model=product.product&id=80&field=image_medium&unique=20170318110227 HTTP/1.1" 200 -
+2017-06-06 02:42:15,875 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:15] "POST /web/dataset/call_kw/product.attribute.value/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:15,891 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:15] "POST /web/dataset/call_kw/stock.location.route/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:15,894 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:15] "POST /web/dataset/call_kw/stock.location.route/search HTTP/1.1" 200 -
+2017-06-06 02:42:15,894 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:15] "POST /web/dataset/call_kw/product.public.category/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:15,930 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:15] "POST /web/dataset/call_kw/product.template/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:15,941 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:15] "POST /web/dataset/call_kw/product.style/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:15,950 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:15] "POST /web/dataset/call_kw/account.tax/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:15,951 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:15] "POST /web/dataset/call_kw/account.tax/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:15,963 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:15] "POST /web/dataset/call_kw/product.product/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:16,040 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:16] "POST /mail/read_followers HTTP/1.1" 200 -
+2017-06-06 02:42:16,046 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:16] "POST /web/dataset/call_kw/product.pricelist.item/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:16,062 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:16] "POST /web/dataset/call_kw/mail.message/message_format HTTP/1.1" 200 -
+2017-06-06 02:42:16,092 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:16] "POST /web/dataset/call_kw/product.packaging/load_views HTTP/1.1" 200 -
+2017-06-06 02:42:16,105 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:16] "POST /web/dataset/call_kw/product.supplierinfo/load_views HTTP/1.1" 200 -
+2017-06-06 02:42:16,121 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:16] "POST /web/dataset/call_kw/product.image/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:16,457 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:16] "POST /web/dataset/call_kw/stock.location.route/name_get HTTP/1.1" 200 -
+2017-06-06 02:42:16,476 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:16] "GET /web/image/res.partner/3/image_small HTTP/1.1" 200 -
+2017-06-06 02:42:20,632 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:20] "POST /web/dataset/call_kw/account.tax/name_search HTTP/1.1" 200 -
+2017-06-06 02:42:21,726 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:21] "POST /web/dataset/call_kw/crm.team/name_search HTTP/1.1" 200 -
+2017-06-06 02:42:24,338 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:24] "POST /web/menu/load_needaction HTTP/1.1" 200 -
+2017-06-06 02:42:24,489 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:24] "POST /longpolling/poll HTTP/1.1" 200 -
+2017-06-06 02:42:24,750 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:24] "POST /web/action/load HTTP/1.1" 200 -
+2017-06-06 02:42:24,967 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:24] "POST /web/dataset/call_kw/web.planner/render HTTP/1.1" 200 -
+2017-06-06 02:42:25,140 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:25] "GET /project/static/src/img/chrome_store.png HTTP/1.1" 200 -
+2017-06-06 02:42:25,140 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:25] "GET /project/static/src/img/play_store.png HTTP/1.1" 200 -
+2017-06-06 02:42:25,141 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:25] "GET /project/static/src/img/app_store.png HTTP/1.1" 200 -
+2017-06-06 02:42:25,144 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:25] "GET /project/static/src/img/web_planner_subtype.png HTTP/1.1" 200 -
+2017-06-06 02:42:25,148 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:25] "GET /project/static/src/img/web_planner_project.png HTTP/1.1" 200 -
+2017-06-06 02:42:25,151 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:25] "GET /project/static/src/img/web_planner_email.png HTTP/1.1" 200 -
+2017-06-06 02:42:31,440 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:31] "POST /web/dataset/call_kw/project.project/load_views HTTP/1.1" 200 -
+2017-06-06 02:42:31,556 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:31] "POST /web/dataset/call_kw/project.project/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:31,694 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:31] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:42:37,078 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:37] "POST /web/action/load HTTP/1.1" 200 -
+2017-06-06 02:42:37,155 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:37] "POST /web/dataset/call_kw/project.project/load_views HTTP/1.1" 200 -
+2017-06-06 02:42:37,253 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:37] "POST /web/dataset/call_kw/project.project/default_get HTTP/1.1" 200 -
+2017-06-06 02:42:37,371 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:37] "POST /web/dataset/call_kw/project.project/onchange HTTP/1.1" 200 -
+2017-06-06 02:42:41,213 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:41] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:42:43,229 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:43] "POST /web/menu/load_needaction HTTP/1.1" 200 -
+2017-06-06 02:42:43,288 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:43] "POST /web/action/load HTTP/1.1" 200 -
+2017-06-06 02:42:43,398 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:43] "POST /web/dataset/call_kw/hr.job/load_views HTTP/1.1" 200 -
+2017-06-06 02:42:43,551 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:43] "POST /web/dataset/call_kw/hr.job/fields_get HTTP/1.1" 200 -
+2017-06-06 02:42:43,680 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:43] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:42:46,891 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:46] "POST /web/action/load HTTP/1.1" 200 -
+2017-06-06 02:42:47,098 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:47] "POST /web/dataset/call_kw/hr.applicant/load_views HTTP/1.1" 200 -
+2017-06-06 02:42:47,223 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:47] "POST /web/dataset/call_kw/hr.job/name_get HTTP/1.1" 200 -
+2017-06-06 02:42:47,306 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:47] "POST /web/dataset/call_kw/hr.applicant/read_group HTTP/1.1" 200 -
+2017-06-06 02:42:47,352 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:47] "POST /web/dataset/call_kw/hr.recruitment.stage/read HTTP/1.1" 200 -
+2017-06-06 02:42:51,848 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:51] "POST /web/dataset/call_kw/hr.applicant/read_group HTTP/1.1" 200 -
+2017-06-06 02:42:51,891 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:51] "POST /web/dataset/call_kw/hr.recruitment.stage/read HTTP/1.1" 200 -
+2017-06-06 02:42:52,176 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:52] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:42:52,188 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:52] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:42:52,196 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:52] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:42:52,201 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:52] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:42:52,474 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:52] "GET /web/image?model=res.users&field=image_small&id=&unique=20170318111001 HTTP/1.1" 404 -
+2017-06-06 02:42:52,483 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:52] "POST /web/dataset/call_kw/hr.applicant.category/read HTTP/1.1" 200 -
+2017-06-06 02:42:52,500 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:52] "GET /web/image?model=res.users&field=image_small&id=1&unique=20170318111001 HTTP/1.1" 200 -
+2017-06-06 02:42:52,506 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:52] "GET /web/image?model=res.users&field=image_small&id=5&unique=20170320010747 HTTP/1.1" 200 -
+2017-06-06 02:42:52,507 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:52] "GET /web/image?model=res.users&field=image_small&id=5&unique=20170318111001 HTTP/1.1" 200 -
+2017-06-06 02:42:53,676 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:53] "POST /web/menu/load_needaction HTTP/1.1" 200 -
+2017-06-06 02:42:53,697 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:53] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:42:57,480 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:57] "POST /web/dataset/call_kw/hr.job/name_get HTTP/1.1" 200 -
+2017-06-06 02:42:57,532 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:57] "POST /web/dataset/call_kw/hr.applicant/read_group HTTP/1.1" 200 -
+2017-06-06 02:42:57,569 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:42:57] "POST /web/dataset/call_kw/hr.recruitment.stage/read HTTP/1.1" 200 -
+2017-06-06 02:43:10,757 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:10] "POST /web/dataset/call_kw/hr.applicant/fields_get HTTP/1.1" 200 -
+2017-06-06 02:43:10,901 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:10] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:43:11,052 119120 INFO ? werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:11] "GET /web/static/src/img/view_empty_arrow.png HTTP/1.1" 200 -
+2017-06-06 02:43:11,953 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:11] "POST /web/dataset/call_kw/hr.applicant/read_group HTTP/1.1" 200 -
+2017-06-06 02:43:13,164 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:13] "POST /web/pivot/check_xlwt HTTP/1.1" 200 -
+2017-06-06 02:43:13,345 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:13] "POST /web/dataset/call_kw/hr.applicant/read_group HTTP/1.1" 200 -
+2017-06-06 02:43:13,351 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:13] "POST /web/dataset/call_kw/hr.applicant/read_group HTTP/1.1" 200 -
+2017-06-06 02:43:13,357 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:13] "POST /web/dataset/call_kw/hr.applicant/read_group HTTP/1.1" 200 -
+2017-06-06 02:43:13,358 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:13] "POST /web/dataset/call_kw/hr.applicant/read_group HTTP/1.1" 200 -
+2017-06-06 02:43:14,025 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:14] "POST /web/dataset/call_kw/hr.applicant/check_access_rights HTTP/1.1" 200 -
+2017-06-06 02:43:14,026 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:14] "POST /web/dataset/call_kw/hr.applicant/check_access_rights HTTP/1.1" 200 -
+2017-06-06 02:43:14,515 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:14] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:43:14,638 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:14] "POST /longpolling/poll HTTP/1.1" 200 -
+2017-06-06 02:43:15,201 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:15] "POST /web/action/load HTTP/1.1" 200 -
+2017-06-06 02:43:15,204 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:15] "POST /web/menu/load_needaction HTTP/1.1" 200 -
+2017-06-06 02:43:15,684 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:15] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:43:17,269 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:17] "GET /web_enterprise/static/src/img/application-switcher-bg.jpg HTTP/1.1" 404 -
+2017-06-06 02:43:18,364 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:18] "POST /web/action/load HTTP/1.1" 200 -
+2017-06-06 02:43:18,489 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:18] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:43:18,562 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:18] "GET /web/image?model=res.company&id=1&field=logo HTTP/1.1" 200 -
+2017-06-06 02:43:20,677 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:20] "POST /web/action/load HTTP/1.1" 200 -
+2017-06-06 02:43:20,796 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:20] "POST /web/dataset/call_kw/hr.employee/load_views HTTP/1.1" 200 -
+2017-06-06 02:43:20,875 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:20] "POST /web/dataset/call_kw/hr.employee/fields_get HTTP/1.1" 200 -
+2017-06-06 02:43:20,933 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:20] "POST /web/dataset/search_read HTTP/1.1" 200 -
+2017-06-06 02:43:21,377 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=2&unique=20170318110003 HTTP/1.1" 200 -
+2017-06-06 02:43:21,384 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=12&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,390 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=6&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,398 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=7&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,400 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=11&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,523 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=13&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,565 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=8&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,605 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=14&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,607 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=15&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,611 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=10&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,625 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=16&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,654 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=3&unique=20170318110220 HTTP/1.1" 200 -
+2017-06-06 02:43:21,713 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=17&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,717 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=18&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,720 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=5&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,723 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=19&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,746 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=9&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,792 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=4&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,813 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=1&unique=20170318110220 HTTP/1.1" 200 -
+2017-06-06 02:43:21,819 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=20&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,821 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=21&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:43:21,835 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:43:21] "GET /web/image?model=hr.employee&field=image_medium&id=22&unique=20170318104401 HTTP/1.1" 200 -
+2017-06-06 02:44:04,684 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:44:04] "POST /longpolling/poll HTTP/1.1" 200 -
+2017-06-06 02:44:54,773 119120 INFO demo werkzeug: 127.0.0.1 - - [06/Jun/2017 02:44:54] "POST /longpolling/poll HTTP/1.1" 200 -
+2017-06-06 02:45:17,242 119120 ERROR ? odoo.addons.bus.models.bus: Bus.loop error, sleep and retry
 Traceback (most recent call last):
-  File "C:\APP\Odoo\source\addons\mail\models\mail_mail.py", line 277, in send
-    res = IrMailServer.send_email(msg, mail_server_id=mail.mail_server_id.id)
-  File "C:\APP\Odoo\source\odoo\addons\base\ir\ir_mail_server.py", line 464, in send_email
-    raise MailDeliveryException(_("Mail Delivery Failed"), msg)
-MailDeliveryException: (u'\u90ae\u4ef6\u53d1\u9001\u5931\u8d25', u"\u901a\u8fc7SMTP\u53d1\u9001\u90ae\u4ef6\u5931\u8d25 'localhost'.\nerror: 10061\n")
-2017-05-09 09:07:05,808 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:05] "GET /?mobilepreview= HTTP/1.1" 200 -
-2017-05-09 09:07:05,997 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:05] "GET /web/content/345-cdde6b3/web_editor.summernote.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:06,003 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web/content/1235-12ce815/website.assets_editor.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:06,019 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web/content/1209-8093158/web_editor.assets_editor.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:06,023 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web/content/1258-624c6ec/web.assets_frontend.1.css HTTP/1.1" 200 -
-2017-05-09 09:07:06,026 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web/content/860-d13801a/web.assets_common.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:06,065 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web/content/1257-624c6ec/web.assets_frontend.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:06,125 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web/content/1237-12ce815/website.assets_editor.js HTTP/1.1" 200 -
-2017-05-09 09:07:06,134 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web/content/1211-8093158/web_editor.assets_editor.js HTTP/1.1" 200 -
-2017-05-09 09:07:06,141 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web/content/349-cdde6b3/web_editor.summernote.js HTTP/1.1" 200 -
-2017-05-09 09:07:06,174 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web/content/1259-624c6ec/web.assets_frontend.js HTTP/1.1" 200 -
-2017-05-09 09:07:06,190 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web/content/864-d13801a/web.assets_common.js HTTP/1.1" 200 -
-2017-05-09 09:07:06,709 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /logo.png HTTP/1.1" 200 -
-2017-05-09 09:07:06,716 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.5.0 HTTP/1.1" 200 -
-2017-05-09 09:07:06,743 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web_editor/static/src/xml/ace.xml HTTP/1.1" 200 -
-2017-05-09 09:07:06,805 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:06,813 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:06,828 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:06,921 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /web/static/src/xml/base_common.xml HTTP/1.1" 200 -
-2017-05-09 09:07:06,976 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /website/static/src/xml/website.share.xml HTTP/1.1" 200 -
-2017-05-09 09:07:06,990 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:06] "GET /website_forum/static/src/xml/website_forum_share_templates.xml HTTP/1.1" 200 -
-2017-05-09 09:07:07,003 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:07] "GET /website_mail/static/src/xml/chatter_message.xml HTTP/1.1" 200 -
-2017-05-09 09:07:07,017 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:07] "GET /rating/static/src/xml/rating_common.xml HTTP/1.1" 200 -
-2017-05-09 09:07:07,039 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:07] "GET /web_editor/static/src/xml/editor.xml HTTP/1.1" 200 -
-2017-05-09 09:07:07,055 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:07] "GET /web_editor/static/src/xml/snippets.xml HTTP/1.1" 200 -
-2017-05-09 09:07:07,071 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:07] "GET /website/static/src/xml/website.editor.xml HTTP/1.1" 200 -
-2017-05-09 09:07:07,085 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:07] "GET /website/static/src/xml/website.seo.xml HTTP/1.1" 200 -
-2017-05-09 09:07:07,101 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:07] "GET /web_planner/static/src/xml/web_planner.xml HTTP/1.1" 200 -
-2017-05-09 09:07:07,117 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:07] "GET /website/static/src/xml/website.contentMenu.xml HTTP/1.1" 200 -
-2017-05-09 09:07:07,131 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:07] "GET /website/static/src/xml/website.gallery.xml HTTP/1.1" 200 -
-2017-05-09 09:07:07,180 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:07] "GET /website/static/src/xml/website.xml HTTP/1.1" 200 -
-2017-05-09 09:07:07,230 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:07] "POST /web/dataset/call_kw/web.planner/search_read HTTP/1.1" 200 -
-2017-05-09 09:07:07,378 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:07] "POST /website/translations HTTP/1.1" 200 -
-2017-05-09 09:07:07,568 20028 INFO demo odoo.addons.base.ir.ir_mail_server: 通过SMTP发送邮件失败 'localhost'.
-error: 10061
-
-2017-05-09 09:07:07,569 20028 ERROR demo odoo.addons.mail.models.mail_mail: failed sending mail (id: 80) due to 邮件发送失败
-通过SMTP发送邮件失败 'localhost'.
-error: 10061
-Traceback (most recent call last):
-  File "C:\APP\Odoo\source\addons\mail\models\mail_mail.py", line 277, in send
-    res = IrMailServer.send_email(msg, mail_server_id=mail.mail_server_id.id)
-  File "C:\APP\Odoo\source\odoo\addons\base\ir\ir_mail_server.py", line 464, in send_email
-    raise MailDeliveryException(_("Mail Delivery Failed"), msg)
-MailDeliveryException: (u'\u90ae\u4ef6\u53d1\u9001\u5931\u8d25', u"\u901a\u8fc7SMTP\u53d1\u9001\u90ae\u4ef6\u5931\u8d25 'localhost'.\nerror: 10061\n")
-2017-05-09 09:07:08,009 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:08] "POST /web/dataset/call_kw/web.planner/render HTTP/1.1" 200 -
-2017-05-09 09:07:08,217 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:08] "GET /website/static/src/img/website_planner_clean.png HTTP/1.1" 200 -
-2017-05-09 09:07:08,219 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:08] "GET /website/static/src/img/website_planner_footer.png HTTP/1.1" 200 -
-2017-05-09 09:07:08,220 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:08] "GET /website_sale/static/src/img/planner_product_page.png HTTP/1.1" 200 -
-2017-05-09 09:07:08,223 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:08] "GET /web_planner/static/src/img/odoo_logo.png HTTP/1.1" 200 -
-2017-05-09 09:07:09,596 20028 INFO demo odoo.addons.base.ir.ir_mail_server: 通过SMTP发送邮件失败 'localhost'.
-error: 10061
-
-2017-05-09 09:07:09,596 20028 ERROR demo odoo.addons.mail.models.mail_mail: failed sending mail (id: 79) due to 邮件发送失败
-通过SMTP发送邮件失败 'localhost'.
-error: 10061
-Traceback (most recent call last):
-  File "C:\APP\Odoo\source\addons\mail\models\mail_mail.py", line 277, in send
-    res = IrMailServer.send_email(msg, mail_server_id=mail.mail_server_id.id)
-  File "C:\APP\Odoo\source\odoo\addons\base\ir\ir_mail_server.py", line 464, in send_email
-    raise MailDeliveryException(_("Mail Delivery Failed"), msg)
-MailDeliveryException: (u'\u90ae\u4ef6\u53d1\u9001\u5931\u8d25', u"\u901a\u8fc7SMTP\u53d1\u9001\u90ae\u4ef6\u5931\u8d25 'localhost'.\nerror: 10061\n")
-2017-05-09 09:07:11,615 20028 INFO demo odoo.addons.base.ir.ir_mail_server: 通过SMTP发送邮件失败 'localhost'.
-error: 10061
-
-2017-05-09 09:07:11,615 20028 ERROR demo odoo.addons.mail.models.mail_mail: failed sending mail (id: 78) due to 邮件发送失败
-通过SMTP发送邮件失败 'localhost'.
-error: 10061
-Traceback (most recent call last):
-  File "C:\APP\Odoo\source\addons\mail\models\mail_mail.py", line 277, in send
-    res = IrMailServer.send_email(msg, mail_server_id=mail.mail_server_id.id)
-  File "C:\APP\Odoo\source\odoo\addons\base\ir\ir_mail_server.py", line 464, in send_email
-    raise MailDeliveryException(_("Mail Delivery Failed"), msg)
-MailDeliveryException: (u'\u90ae\u4ef6\u53d1\u9001\u5931\u8d25', u"\u901a\u8fc7SMTP\u53d1\u9001\u90ae\u4ef6\u5931\u8d25 'localhost'.\nerror: 10061\n")
-2017-05-09 09:07:13,654 20028 INFO demo odoo.addons.base.ir.ir_mail_server: 通过SMTP发送邮件失败 'localhost'.
-error: 10061
-
-2017-05-09 09:07:13,655 20028 ERROR demo odoo.addons.mail.models.mail_mail: failed sending mail (id: 77) due to 邮件发送失败
-通过SMTP发送邮件失败 'localhost'.
-error: 10061
-Traceback (most recent call last):
-  File "C:\APP\Odoo\source\addons\mail\models\mail_mail.py", line 277, in send
-    res = IrMailServer.send_email(msg, mail_server_id=mail.mail_server_id.id)
-  File "C:\APP\Odoo\source\odoo\addons\base\ir\ir_mail_server.py", line 464, in send_email
-    raise MailDeliveryException(_("Mail Delivery Failed"), msg)
-MailDeliveryException: (u'\u90ae\u4ef6\u53d1\u9001\u5931\u8d25', u"\u901a\u8fc7SMTP\u53d1\u9001\u90ae\u4ef6\u5931\u8d25 'localhost'.\nerror: 10061\n")
-2017-05-09 09:07:15,711 20028 INFO demo odoo.addons.base.ir.ir_mail_server: 通过SMTP发送邮件失败 'localhost'.
-error: 10061
-
-2017-05-09 09:07:15,711 20028 ERROR demo odoo.addons.mail.models.mail_mail: failed sending mail (id: 74) due to 邮件发送失败
-通过SMTP发送邮件失败 'localhost'.
-error: 10061
-Traceback (most recent call last):
-  File "C:\APP\Odoo\source\addons\mail\models\mail_mail.py", line 277, in send
-    res = IrMailServer.send_email(msg, mail_server_id=mail.mail_server_id.id)
-  File "C:\APP\Odoo\source\odoo\addons\base\ir\ir_mail_server.py", line 464, in send_email
-    raise MailDeliveryException(_("Mail Delivery Failed"), msg)
-MailDeliveryException: (u'\u90ae\u4ef6\u53d1\u9001\u5931\u8d25', u"\u901a\u8fc7SMTP\u53d1\u9001\u90ae\u4ef6\u5931\u8d25 'localhost'.\nerror: 10061\n")
-2017-05-09 09:07:17,740 20028 INFO demo odoo.addons.base.ir.ir_mail_server: 通过SMTP发送邮件失败 'localhost'.
-error: 10061
-
-2017-05-09 09:07:17,742 20028 ERROR demo odoo.addons.mail.models.mail_mail: failed sending mail (id: 73) due to 邮件发送失败
-通过SMTP发送邮件失败 'localhost'.
-error: 10061
-Traceback (most recent call last):
-  File "C:\APP\Odoo\source\addons\mail\models\mail_mail.py", line 277, in send
-    res = IrMailServer.send_email(msg, mail_server_id=mail.mail_server_id.id)
-  File "C:\APP\Odoo\source\odoo\addons\base\ir\ir_mail_server.py", line 464, in send_email
-    raise MailDeliveryException(_("Mail Delivery Failed"), msg)
-MailDeliveryException: (u'\u90ae\u4ef6\u53d1\u9001\u5931\u8d25', u"\u901a\u8fc7SMTP\u53d1\u9001\u90ae\u4ef6\u5931\u8d25 'localhost'.\nerror: 10061\n")
-2017-05-09 09:07:19,855 20028 INFO demo odoo.addons.base.ir.ir_mail_server: 通过SMTP发送邮件失败 'localhost'.
-error: 10061
-
-2017-05-09 09:07:19,857 20028 ERROR demo odoo.addons.mail.models.mail_mail: failed sending mail (id: 72) due to 邮件发送失败
-通过SMTP发送邮件失败 'localhost'.
-error: 10061
-Traceback (most recent call last):
-  File "C:\APP\Odoo\source\addons\mail\models\mail_mail.py", line 277, in send
-    res = IrMailServer.send_email(msg, mail_server_id=mail.mail_server_id.id)
-  File "C:\APP\Odoo\source\odoo\addons\base\ir\ir_mail_server.py", line 464, in send_email
-    raise MailDeliveryException(_("Mail Delivery Failed"), msg)
-MailDeliveryException: (u'\u90ae\u4ef6\u53d1\u9001\u5931\u8d25', u"\u901a\u8fc7SMTP\u53d1\u9001\u90ae\u4ef6\u5931\u8d25 'localhost'.\nerror: 10061\n")
-2017-05-09 09:07:33,598 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:33] "GET /web HTTP/1.1" 200 -
-2017-05-09 09:07:33,880 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:33] "GET /web/content/345-cdde6b3/web_editor.summernote.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:33,894 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:33] "GET /web/content/1209-8093158/web_editor.assets_editor.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:33,907 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:33] "GET /web/content/860-d13801a/web.assets_common.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:33,924 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:33] "GET /web/content/1262-ef5bfac/web.assets_backend.1.css HTTP/1.1" 200 -
-2017-05-09 09:07:33,944 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:33] "GET /web/static/src/img/favicon.ico HTTP/1.1" 200 -
-2017-05-09 09:07:33,957 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:33] "GET /web/content/1261-ef5bfac/web.assets_backend.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:33,994 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:33] "GET /web/content/349-cdde6b3/web_editor.summernote.js HTTP/1.1" 200 -
-2017-05-09 09:07:33,996 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:33] "GET /web/content/1211-8093158/web_editor.assets_editor.js HTTP/1.1" 200 -
-2017-05-09 09:07:34,019 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:34] "GET /web/content/864-d13801a/web.assets_common.js HTTP/1.1" 200 -
-2017-05-09 09:07:34,305 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:34] "GET /web/content/1263-ef5bfac/web.assets_backend.js HTTP/1.1" 200 -
-2017-05-09 09:07:34,332 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:34] "GET /web/binary/company_logo HTTP/1.1" 200 -
-2017-05-09 09:07:34,884 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:34] "GET /web/static/src/img/favicon.ico HTTP/1.1" 200 -
-2017-05-09 09:07:34,898 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:34] "GET /web_editor/static/src/xml/ace.xml HTTP/1.1" 200 -
-2017-05-09 09:07:34,940 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:34] "GET /web_editor/static/src/xml/editor.xml HTTP/1.1" 200 -
-2017-05-09 09:07:34,947 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:34] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:34,974 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:34] "GET /web_editor/static/src/xml/snippets.xml HTTP/1.1" 200 -
-2017-05-09 09:07:35,003 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:35] "POST /web/webclient/translations HTTP/1.1" 200 -
-2017-05-09 09:07:35,194 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:35] "GET /web/webclient/qweb?mods=web,web_kanban,base,bus,web_tour,mail,report,product,web_planner,account,account_bank_statement_import,web_editor,website,website_partner,website_mail,event,website_event,website_portal,payment,website_payment,website_portal_sale,rating,website_links,im_livechat,website_livechat,web_kanban_gauge,mass_mailing,website_form,barcodes,point_of_sale,website_mass_mailing,account_accountant,website_blog,sales_team,sale,event_sale,contacts,web_calendar,calendar,crm,website_crm,l10n_cn,website_theme_install,website_slides,note,web_settings_dashboard,website_sale,board,maintenance,document,sale_stock,base_import,stock,purchase,hr,hr_attendance,project,project_issue,hr_timesheet,mrp_repair,sale_crm,portal,gamification,fleet,website_forum,hr_expense,web_diagram,lunch,mrp,hr_recruitment,hr_holidays,survey,website_event_sale,payment_transfer,hr_gamification HTTP/1.1" 200 -
-2017-05-09 09:07:35,426 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:35] "POST /web/webclient/translations HTTP/1.1" 200 -
-2017-05-09 09:07:35,476 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:35] "GET /web/webclient/locale/zh_CN HTTP/1.1" 200 -
-2017-05-09 09:07:35,788 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:35] "GET /web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.5.0 HTTP/1.1" 200 -
-2017-05-09 09:07:35,822 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:35] "GET /web/binary/company_logo?db=demo&company=1 HTTP/1.1" 200 -
-2017-05-09 09:07:35,894 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:35] "GET /web/image?model=res.users&field=image_small&id=1 HTTP/1.1" 200 -
-2017-05-09 09:07:35,940 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:35] "POST /web/action/load HTTP/1.1" 200 -
-2017-05-09 09:07:35,947 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:35] "POST /calendar/notify HTTP/1.1" 200 -
-2017-05-09 09:07:36,066 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:36] "POST /mail/client_action HTTP/1.1" 200 -
-2017-05-09 09:07:36,068 20028 ERROR demo odoo.service.server: Exception happened during processing of request from ('127.0.0.1', 45998)
-Traceback (most recent call last):
-  File "C:\APP\Odoo\thirdparty\python\lib\SocketServer.py", line 582, in process_request_thread
-    self.finish_request(request, client_address)
-  File "C:\APP\Odoo\thirdparty\python\lib\SocketServer.py", line 323, in finish_request
-    self.RequestHandlerClass(request, client_address, self)
-  File "C:\APP\Odoo\thirdparty\python\lib\SocketServer.py", line 640, in __init__
-    self.finish()
-  File "C:\APP\Odoo\thirdparty\python\lib\SocketServer.py", line 693, in finish
-    self.wfile.flush()
-  File "C:\APP\Odoo\thirdparty\python\lib\socket.py", line 303, in flush
-    self._sock.sendall(view[write_offset:write_offset+buffer_size])
-error: [Errno 10053] 
-2017-05-09 09:07:36,825 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:36] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:07:36,825 20028 ERROR demo odoo.service.server: Exception happened during processing of request from ('127.0.0.1', 46002)
-Traceback (most recent call last):
-  File "C:\APP\Odoo\thirdparty\python\lib\SocketServer.py", line 582, in process_request_thread
-    self.finish_request(request, client_address)
-  File "C:\APP\Odoo\thirdparty\python\lib\SocketServer.py", line 323, in finish_request
-    self.RequestHandlerClass(request, client_address, self)
-  File "C:\APP\Odoo\thirdparty\python\lib\SocketServer.py", line 640, in __init__
-    self.finish()
-  File "C:\APP\Odoo\thirdparty\python\lib\SocketServer.py", line 693, in finish
-    self.wfile.flush()
-  File "C:\APP\Odoo\thirdparty\python\lib\socket.py", line 303, in flush
-    self._sock.sendall(view[write_offset:write_offset+buffer_size])
-error: [Errno 10053] 
-2017-05-09 09:07:37,407 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:37] "GET / HTTP/1.1" 200 -
-2017-05-09 09:07:37,763 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:37] "GET /web/content/345-cdde6b3/web_editor.summernote.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:37,772 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:37] "GET /web/content/1235-12ce815/website.assets_editor.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:37,789 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:37] "GET /web/content/1209-8093158/web_editor.assets_editor.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:37,795 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:37] "GET /web/content/1258-624c6ec/web.assets_frontend.1.css HTTP/1.1" 200 -
-2017-05-09 09:07:37,801 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:37] "GET /web/content/860-d13801a/web.assets_common.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:37,832 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:37] "GET /web/content/1257-624c6ec/web.assets_frontend.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:37,926 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:37] "GET /web/content/1237-12ce815/website.assets_editor.js HTTP/1.1" 200 -
-2017-05-09 09:07:37,926 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:37] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 -
-2017-05-09 09:07:37,934 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:37] "GET /web/content/1211-8093158/web_editor.assets_editor.js HTTP/1.1" 200 -
-2017-05-09 09:07:37,943 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:37] "GET /web/content/349-cdde6b3/web_editor.summernote.js HTTP/1.1" 200 -
-2017-05-09 09:07:37,982 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:37] "GET /web/content/1259-624c6ec/web.assets_frontend.js HTTP/1.1" 200 -
-2017-05-09 09:07:38,007 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /web/content/864-d13801a/web.assets_common.js HTTP/1.1" 200 -
-2017-05-09 09:07:38,098 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "POST /web/menu/load_needaction HTTP/1.1" 200 -
-2017-05-09 09:07:38,098 20028 ERROR demo odoo.service.server: Exception happened during processing of request from ('127.0.0.1', 46003)
-Traceback (most recent call last):
-  File "C:\APP\Odoo\thirdparty\python\lib\SocketServer.py", line 582, in process_request_thread
-    self.finish_request(request, client_address)
-  File "C:\APP\Odoo\thirdparty\python\lib\SocketServer.py", line 323, in finish_request
-    self.RequestHandlerClass(request, client_address, self)
-  File "C:\APP\Odoo\thirdparty\python\lib\SocketServer.py", line 640, in __init__
-    self.finish()
-  File "C:\APP\Odoo\thirdparty\python\lib\SocketServer.py", line 693, in finish
-    self.wfile.flush()
-  File "C:\APP\Odoo\thirdparty\python\lib\socket.py", line 303, in flush
-    self._sock.sendall(view[write_offset:write_offset+buffer_size])
-error: [Errno 10053] 
-2017-05-09 09:07:38,736 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "POST /web/dataset/call_kw/web_tour.tour/get_consumed_tours HTTP/1.1" 200 -
-2017-05-09 09:07:38,779 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /web_editor/static/src/xml/ace.xml HTTP/1.1" 200 -
-2017-05-09 09:07:38,803 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:38,808 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:38,809 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:38,812 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /web/static/src/xml/base_common.xml HTTP/1.1" 200 -
-2017-05-09 09:07:38,842 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /website/static/src/xml/website.share.xml HTTP/1.1" 200 -
-2017-05-09 09:07:38,858 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /website_forum/static/src/xml/website_forum_share_templates.xml HTTP/1.1" 200 -
-2017-05-09 09:07:38,871 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /website_mail/static/src/xml/chatter_message.xml HTTP/1.1" 200 -
-2017-05-09 09:07:38,884 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /rating/static/src/xml/rating_common.xml HTTP/1.1" 200 -
-2017-05-09 09:07:38,897 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /web_editor/static/src/xml/editor.xml HTTP/1.1" 200 -
-2017-05-09 09:07:38,913 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /web_editor/static/src/xml/snippets.xml HTTP/1.1" 200 -
-2017-05-09 09:07:38,927 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /website/static/src/xml/website.editor.xml HTTP/1.1" 200 -
-2017-05-09 09:07:38,940 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /website/static/src/xml/website.seo.xml HTTP/1.1" 200 -
-2017-05-09 09:07:38,959 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /web_planner/static/src/xml/web_planner.xml HTTP/1.1" 200 -
-2017-05-09 09:07:38,973 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /website/static/src/xml/website.contentMenu.xml HTTP/1.1" 200 -
-2017-05-09 09:07:38,986 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:38] "GET /website/static/src/xml/website.gallery.xml HTTP/1.1" 200 -
-2017-05-09 09:07:39,000 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:39] "GET /web_tour/static/src/xml/tip.xml HTTP/1.1" 200 -
-2017-05-09 09:07:39,053 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:39] "GET /website/static/src/xml/website.xml HTTP/1.1" 200 -
-2017-05-09 09:07:39,114 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:39] "POST /web/dataset/call_kw/web.planner/search_read HTTP/1.1" 200 -
-2017-05-09 09:07:39,151 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:39] "POST /website/translations HTTP/1.1" 200 -
-2017-05-09 09:07:39,220 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:39] "POST /web/dataset/call_kw/web.planner/render HTTP/1.1" 200 -
-2017-05-09 09:07:45,263 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /shop HTTP/1.1" 200 -
-2017-05-09 09:07:45,707 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /web/content/345-cdde6b3/web_editor.summernote.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:45,727 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /web/content/1258-624c6ec/web.assets_frontend.1.css HTTP/1.1" 200 -
-2017-05-09 09:07:45,727 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /web/content/1235-12ce815/website.assets_editor.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:45,733 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /web/content/860-d13801a/web.assets_common.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:45,750 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /web/content/1209-8093158/web_editor.assets_editor.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:45,779 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /web/content/1257-624c6ec/web.assets_frontend.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:45,848 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /web/content/1237-12ce815/website.assets_editor.js HTTP/1.1" 200 -
-2017-05-09 09:07:45,855 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /web/content/1211-8093158/web_editor.assets_editor.js HTTP/1.1" 200 -
-2017-05-09 09:07:45,862 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 -
-2017-05-09 09:07:45,865 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /web/content/349-cdde6b3/web_editor.summernote.js HTTP/1.1" 200 -
-2017-05-09 09:07:45,898 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /web/content/1259-624c6ec/web.assets_frontend.js HTTP/1.1" 200 -
-2017-05-09 09:07:45,911 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:45] "GET /web/content/864-d13801a/web.assets_common.js HTTP/1.1" 200 -
-2017-05-09 09:07:46,276 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/11/image?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,289 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/16/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,305 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/14/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,311 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/18/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,352 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/15/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,405 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/77/image/300x300?unique=fdeda75 HTTP/1.1" 200 -
-2017-05-09 09:07:46,467 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/13/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,493 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/74/image/300x300?unique=ff6a667 HTTP/1.1" 200 -
-2017-05-09 09:07:46,516 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/75/image/300x300?unique=fdeda75 HTTP/1.1" 200 -
-2017-05-09 09:07:46,523 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/10/image?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,529 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/76/image/300x300?unique=fdeda75 HTTP/1.1" 200 -
-2017-05-09 09:07:46,683 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/73/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,732 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/72/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,757 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/70/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,759 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/68/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,765 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/69/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,802 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/71/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,849 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/66/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,857 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/65/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:46,924 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:46] "GET /web/image/product.template/67/image/300x300?unique=635fa31 HTTP/1.1" 200 -
-2017-05-09 09:07:47,023 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "POST /web/dataset/call_kw/web_tour.tour/get_consumed_tours HTTP/1.1" 200 -
-2017-05-09 09:07:47,052 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /web_editor/static/src/xml/ace.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,094 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:47,098 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:47,098 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:47,163 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /web/static/src/xml/base_common.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,177 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /website/static/src/xml/website.share.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,191 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /website_forum/static/src/xml/website_forum_share_templates.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,207 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /website_mail/static/src/xml/chatter_message.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,219 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /rating/static/src/xml/rating_common.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,232 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /web_editor/static/src/xml/editor.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,246 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /web_editor/static/src/xml/snippets.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,259 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /website/static/src/xml/website.editor.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,273 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /website/static/src/xml/website.seo.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,286 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /web_planner/static/src/xml/web_planner.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,301 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /website/static/src/xml/website.contentMenu.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,315 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /website/static/src/xml/website.gallery.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,329 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /web_tour/static/src/xml/tip.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,380 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "GET /website/static/src/xml/website.xml HTTP/1.1" 200 -
-2017-05-09 09:07:47,500 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "POST /web/dataset/call_kw/web.planner/search_read HTTP/1.1" 200 -
-2017-05-09 09:07:47,588 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "POST /website/translations HTTP/1.1" 200 -
-2017-05-09 09:07:47,641 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:47] "POST /web/dataset/call_kw/web.planner/render HTTP/1.1" 200 -
-2017-05-09 09:07:57,509 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:57] "GET /web HTTP/1.1" 200 -
-2017-05-09 09:07:57,832 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:57] "GET /web/content/345-cdde6b3/web_editor.summernote.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:57,846 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:57] "GET /web/content/1209-8093158/web_editor.assets_editor.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:57,855 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:57] "GET /web/content/860-d13801a/web.assets_common.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:57,869 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:57] "GET /web/content/1262-ef5bfac/web.assets_backend.1.css HTTP/1.1" 200 -
-2017-05-09 09:07:57,901 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:57] "GET /web/content/1261-ef5bfac/web.assets_backend.0.css HTTP/1.1" 200 -
-2017-05-09 09:07:57,954 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:57] "GET /web/content/1211-8093158/web_editor.assets_editor.js HTTP/1.1" 200 -
-2017-05-09 09:07:57,954 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:57] "GET /web/content/349-cdde6b3/web_editor.summernote.js HTTP/1.1" 200 -
-2017-05-09 09:07:57,983 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:57] "GET /web/content/864-d13801a/web.assets_common.js HTTP/1.1" 200 -
-2017-05-09 09:07:58,035 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:58] "GET /web/content/1263-ef5bfac/web.assets_backend.js HTTP/1.1" 200 -
-2017-05-09 09:07:58,769 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:58] "GET /web_editor/static/src/xml/ace.xml HTTP/1.1" 200 -
-2017-05-09 09:07:58,789 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:58] "POST /web/dataset/call HTTP/1.1" 200 -
-2017-05-09 09:07:58,795 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:58] "GET /web_editor/static/src/xml/editor.xml HTTP/1.1" 200 -
-2017-05-09 09:07:58,823 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:07:58] "GET /web_editor/static/src/xml/snippets.xml HTTP/1.1" 200 -
-2017-05-09 09:07:58,865 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:58] "POST /web/webclient/translations HTTP/1.1" 200 -
-2017-05-09 09:07:58,934 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:58] "GET /web/webclient/qweb?mods=web,web_kanban,base,bus,web_tour,mail,report,product,web_planner,account,account_bank_statement_import,web_editor,website,website_partner,website_mail,event,website_event,website_portal,payment,website_payment,website_portal_sale,rating,website_links,im_livechat,website_livechat,web_kanban_gauge,mass_mailing,website_form,barcodes,point_of_sale,website_mass_mailing,account_accountant,website_blog,sales_team,sale,event_sale,contacts,web_calendar,calendar,crm,website_crm,l10n_cn,website_theme_install,website_slides,note,web_settings_dashboard,website_sale,board,maintenance,document,sale_stock,base_import,stock,purchase,hr,hr_attendance,project,project_issue,hr_timesheet,mrp_repair,sale_crm,portal,gamification,fleet,website_forum,hr_expense,web_diagram,lunch,mrp,hr_recruitment,hr_holidays,survey,website_event_sale,payment_transfer,hr_gamification HTTP/1.1" 200 -
-2017-05-09 09:07:59,107 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:59] "POST /web/webclient/translations HTTP/1.1" 200 -
-2017-05-09 09:07:59,135 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:59] "GET /web/webclient/locale/zh_CN HTTP/1.1" 200 -
-2017-05-09 09:07:59,436 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:59] "POST /calendar/notify HTTP/1.1" 200 -
-2017-05-09 09:07:59,457 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:59] "GET /web/image?model=res.users&field=image_small&id=1 HTTP/1.1" 200 -
-2017-05-09 09:07:59,591 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:59] "POST /mail/client_action HTTP/1.1" 200 -
-2017-05-09 09:07:59,818 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:07:59] "POST /web/action/load HTTP/1.1" 200 -
-2017-05-09 09:08:00,332 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:00] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 -
-2017-05-09 09:08:00,351 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:00] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:08:00,549 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:00] "POST /web/dataset/call_kw/ir.module.module/fields_get HTTP/1.1" 200 -
-2017-05-09 09:08:00,631 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:00] "POST /web/menu/load_needaction HTTP/1.1" 200 -
-2017-05-09 09:08:00,644 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:00] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:08:01,285 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /crm/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,289 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /project/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,293 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /stock/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,296 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /sale/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,296 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /mrp/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,305 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /point_of_sale/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,305 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /hr_timesheet/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,311 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /mail/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,313 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /hr_holidays/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,315 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /account/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,319 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /account_accountant/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,321 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /project_issue/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,326 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /note/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,326 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /website/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,335 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /purchase/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,336 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /website_sale/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,342 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /hr/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,348 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /hr_attendance/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,348 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /hr_recruitment/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,351 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /hr_expense/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,357 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /board/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,362 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /contacts/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,364 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /survey/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,368 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /mass_mailing/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,374 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /maintenance/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,375 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /lunch/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,387 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /website_event/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,387 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /calendar/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,397 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /website_slides/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,398 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /website_blog/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,401 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /website_forum/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,403 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /fleet/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,407 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /im_livechat/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:01,410 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:01] "GET /mrp_repair/static/description/icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:08,312 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:08] "POST /web/action/load HTTP/1.1" 200 -
-2017-05-09 09:08:08,417 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:08] "POST /web/dataset/call_kw/mail.message/fields_view_get HTTP/1.1" 200 -
-2017-05-09 09:08:08,614 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:08] "POST /web/dataset/call_kw/ir.filters/get_filters HTTP/1.1" 200 -
-2017-05-09 09:08:08,815 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:08] "POST /web/dataset/call_kw/mail.message/message_fetch HTTP/1.1" 200 -
-2017-05-09 09:08:09,670 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:09] "GET /mail/static/src/img/email_icon.png HTTP/1.1" 200 -
-2017-05-09 09:08:09,786 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:09] "GET /web/image/res.partner/9/image_small HTTP/1.1" 200 -
-2017-05-09 09:08:09,790 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:09] "GET /web/image/res.partner/6/image_small HTTP/1.1" 200 -
-2017-05-09 09:08:09,806 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:09] "GET /web/image/res.partner/8/image_small HTTP/1.1" 200 -
-2017-05-09 09:08:09,811 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:09] "GET /web/static/src/img/mimetypes/document.png HTTP/1.1" 200 -
-2017-05-09 09:08:09,812 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:09] "GET /web/image/res.partner/10/image_small HTTP/1.1" 200 -
-2017-05-09 09:08:09,813 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:09] "GET /web/image/res.partner/7/image_small HTTP/1.1" 200 -
-2017-05-09 09:08:09,835 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:09] "POST /web/action/load HTTP/1.1" 200 -
-2017-05-09 09:08:15,289 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:15] "GET /mail/static/src/img/odoo_o.png HTTP/1.1" 200 -
-2017-05-09 09:08:21,030 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:21] "POST /web/action/load HTTP/1.1" 200 -
-2017-05-09 09:08:21,197 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:21] "POST /web/dataset/call_kw/calendar.event/load_views HTTP/1.1" 200 -
-2017-05-09 09:08:21,344 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:21] "POST /web/dataset/call_kw/calendar.event/check_access_rights HTTP/1.1" 200 -
-2017-05-09 09:08:21,345 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:21] "POST /web/dataset/call_kw/calendar.event/check_access_rights HTTP/1.1" 200 -
-2017-05-09 09:08:21,967 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:21] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:08:22,141 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:22] "GET /web/image/res.partner/3/image_small HTTP/1.1" 200 -
-2017-05-09 09:08:22,538 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:22] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:08:22,691 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:22] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:08:34,904 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:34] "POST /web/menu/load_needaction HTTP/1.1" 200 -
-2017-05-09 09:08:35,055 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:35] "POST /web/action/load HTTP/1.1" 200 -
-2017-05-09 09:08:35,770 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:35] "POST /web/dataset/call_kw/web.planner/render HTTP/1.1" 200 -
-2017-05-09 09:08:36,012 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:36] "GET /web_planner/static/src/img/odoo_logo.png HTTP/1.1" 200 -
-2017-05-09 09:08:36,013 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:08:36] "GET /web_planner/static/src/img/fabien_signature.png HTTP/1.1" 200 -
-2017-05-09 09:08:36,072 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:36] "POST /web/dataset/call_kw/crm.team/load_views HTTP/1.1" 200 -
-2017-05-09 09:08:36,190 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:36] "POST /web/dataset/call_kw/crm.team/fields_get HTTP/1.1" 200 -
-2017-05-09 09:08:36,263 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:36] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:08:36,332 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:36] "POST /web/dataset/call_kw/crm.lead/retrieve_sales_dashboard HTTP/1.1" 200 -
-2017-05-09 09:08:43,565 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:43] "POST /web/action/load HTTP/1.1" 200 -
-2017-05-09 09:08:43,723 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:43] "POST /web/action/run HTTP/1.1" 200 -
-2017-05-09 09:08:43,970 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:43] "POST /web/dataset/call_kw/crm.lead/load_views HTTP/1.1" 200 -
-2017-05-09 09:08:44,187 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:44] "POST /web/dataset/call_kw/crm.lead/read_group HTTP/1.1" 200 -
-2017-05-09 09:08:44,237 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:44] "POST /web/dataset/call_kw/crm.stage/read HTTP/1.1" 200 -
-2017-05-09 09:08:44,415 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:44] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:08:44,430 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:44] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:08:44,904 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:44] "POST /web/dataset/call_kw/crm.lead.tag/read HTTP/1.1" 200 -
-2017-05-09 09:08:44,921 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:44] "GET /web/image?model=res.users&field=image_small&id=1&unique=20170502085036 HTTP/1.1" 200 -
-2017-05-09 09:08:44,921 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:44] "GET /web/image?model=res.users&field=image_small&id=1&unique=20170318103044 HTTP/1.1" 200 -
-2017-05-09 09:08:49,746 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:08:49] "POST /longpolling/poll HTTP/1.1" 200 -
-2017-05-09 09:09:04,661 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:04] "POST /web/menu/load_needaction HTTP/1.1" 200 -
-2017-05-09 09:09:04,726 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:04] "POST /web/action/load HTTP/1.1" 200 -
-2017-05-09 09:09:04,940 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:04] "POST /web/dataset/call_kw/pos.config/load_views HTTP/1.1" 200 -
-2017-05-09 09:09:05,022 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:05] "POST /web/dataset/call_kw/pos.config/fields_get HTTP/1.1" 200 -
-2017-05-09 09:09:05,094 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:05] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:09:07,403 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:07] "POST /web/menu/load_needaction HTTP/1.1" 200 -
-2017-05-09 09:09:07,463 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:07] "POST /web/action/load HTTP/1.1" 200 -
-2017-05-09 09:09:07,776 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:07] "POST /web/dataset/call_kw/purchase.order/load_views HTTP/1.1" 200 -
-2017-05-09 09:09:08,017 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:08] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:09:10,819 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:10] "POST /web/menu/load_needaction HTTP/1.1" 200 -
-2017-05-09 09:09:10,882 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:10] "POST /web/action/load HTTP/1.1" 200 -
-2017-05-09 09:09:11,161 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:11] "POST /web/dataset/call_kw/mrp.production/load_views HTTP/1.1" 200 -
-2017-05-09 09:09:11,414 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:11] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:09:14,217 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:14] "POST /web/action/load HTTP/1.1" 200 -
-2017-05-09 09:09:14,424 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:14] "POST /web/dataset/call_kw/mrp.repair/load_views HTTP/1.1" 200 -
-2017-05-09 09:09:14,740 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:14] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:09:18,490 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:18] "POST /web/dataset/call_kw/mrp.repair/read HTTP/1.1" 200 -
-2017-05-09 09:09:18,930 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:09:18] "GET /web/static/src/img/form_sheetbg.png HTTP/1.1" 200 -
-2017-05-09 09:09:18,953 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:18] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:09:18,996 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:18] "POST /web/dataset/call_kw/mrp.repair.fee/fields_get HTTP/1.1" 200 -
-2017-05-09 09:09:19,009 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:19] "POST /web/dataset/call_kw/mrp.repair.line/fields_get HTTP/1.1" 200 -
-2017-05-09 09:09:19,023 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:19] "POST /mail/read_followers HTTP/1.1" 200 -
-2017-05-09 09:09:19,040 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:19] "POST /web/dataset/call_kw/mail.message/message_format HTTP/1.1" 200 -
-2017-05-09 09:09:19,306 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:19] "POST /web/dataset/call_kw/mrp.repair.fee/read HTTP/1.1" 200 -
-2017-05-09 09:09:19,434 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:19] "POST /web/dataset/call_kw/mrp.repair.line/read HTTP/1.1" 200 -
-2017-05-09 09:09:30,783 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:30] "POST /web/action/load HTTP/1.1" 200 -
-2017-05-09 09:09:30,881 20028 INFO ? werkzeug: 127.0.0.1 - - [09/May/2017 09:09:30] "GET /web/static/src/img/spin.png HTTP/1.1" 200 -
-2017-05-09 09:09:30,884 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:30] "POST /report/check_wkhtmltopdf HTTP/1.1" 200 -
-2017-05-09 09:09:31,683 20028 INFO demo odoo.addons.report.models.report: Generating PDF on Windows platform require DPI >= 96. Using 96 instead.
-2017-05-09 09:09:39,838 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:39] "POST /longpolling/poll HTTP/1.1" 200 -
-2017-05-09 09:09:41,618 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:41] "POST /report/download HTTP/1.1" 200 -
-2017-05-09 09:09:42,092 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:42] "POST /web/dataset/call_kw/mrp.repair/search_read HTTP/1.1" 200 -
-2017-05-09 09:09:42,306 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:42] "POST /web/dataset/search_read HTTP/1.1" 200 -
-2017-05-09 09:09:42,348 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:42] "POST /mail/read_followers HTTP/1.1" 200 -
-2017-05-09 09:09:42,392 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:42] "POST /web/dataset/call_kw/mrp.repair.line/read HTTP/1.1" 200 -
-2017-05-09 09:09:42,634 20028 INFO demo werkzeug: 127.0.0.1 - - [09/May/2017 09:09:42] "POST /web/dataset/call_kw/mrp.repair.fee/read HTTP/1.1" 200 -
-2017-05-09 09:09:52,395 20028 ERROR ? odoo.addons.bus.models.bus: Bus.loop error, sleep and retry
-Traceback (most recent call last):
-  File "C:\APP\Odoo\source\addons\bus\models\bus.py", line 170, in run
+  File "C:\APP\Odoo\odoo_win10\source\addons\bus\models\bus.py", line 170, in run
     self.loop()
-  File "C:\APP\Odoo\source\addons\bus\models\bus.py", line 156, in loop
+  File "C:\APP\Odoo\odoo_win10\source\addons\bus\models\bus.py", line 156, in loop
     conn.poll()
 OperationalError: server closed the connection unexpectedly
 	This probably means the server terminated abnormally
