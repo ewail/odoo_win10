@@ -18,7 +18,7 @@ wkhtmltopdf
 
 nginx：1.11.10版本
 
-node.js ：0.10.21版本
+node.js ：6.10.3版本
 
 ## 安装、使用
 
