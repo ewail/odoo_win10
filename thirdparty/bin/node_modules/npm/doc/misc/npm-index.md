@@ -65,6 +65,10 @@ Modify package distribution tags
 
 Docs for a package in a web browser maybe
 
+### npm-doctor(1)
+
+Check your environments
+
 ### npm-edit(1)
 
 Edit an installed package
@@ -159,7 +163,7 @@ Search for packages
 
 ### npm-shrinkwrap(1)
 
-Lock down dependency versions
+Lock down dependency versions for publication
 
 ### npm-star(1)
 
@@ -176,10 +180,6 @@ Start a package
 ### npm-stop(1)
 
 Stop a package
-
-### npm-tag(1)
-
-Tag a published version
 
 ### npm-team(1)
 
@@ -225,9 +225,21 @@ File system structures npm uses
 
 Folder Structures Used by npm
 
+### npm-package-locks(5)
+
+An explanation of npm lockfiles
+
+### npm-shrinkwrap.json(5)
+
+A publishable lockfile
+
 ### npmrc(5)
 
 The npm config files
+
+### package-lock.json(5)
+
+A manifestation of the manifest
 
 ### package.json(5)
 

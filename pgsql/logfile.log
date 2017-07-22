@@ -48,3 +48,57 @@ FATAL:  terminating connection due to administrator command
 LOG:  autovacuum launcher shutting down
 LOG:  shutting down
 LOG:  database system is shut down
+LOG:  database system was shut down at 2017-06-06 10:45:17 HKT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  received fast shutdown request
+LOG:  aborting any active transactions
+FATAL:  terminating connection due to administrator command
+FATAL:  terminating connection due to administrator command
+FATAL:  terminating connection due to administrator command
+LOG:  autovacuum launcher shutting down
+ERROR:  canceling statement due to user request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2017-07-22 17:35:40 HKT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  could not obtain lock on row in relation "ir_cron"
+STATEMENT:  SELECT *
+	                                   FROM ir_cron
+	                                   WHERE numbercall != 0
+	                                      AND active
+	                                      AND nextcall <= (now() at time zone 'UTC')
+	                                      AND id=9
+	                                   FOR UPDATE NOWAIT
+ERROR:  could not obtain lock on row in relation "ir_cron"
+STATEMENT:  SELECT *
+	                                   FROM ir_cron
+	                                   WHERE numbercall != 0
+	                                      AND active
+	                                      AND nextcall <= (now() at time zone 'UTC')
+	                                      AND id=2
+	                                   FOR UPDATE NOWAIT
+ERROR:  could not obtain lock on row in relation "ir_cron"
+STATEMENT:  SELECT *
+	                                   FROM ir_cron
+	                                   WHERE numbercall != 0
+	                                      AND active
+	                                      AND nextcall <= (now() at time zone 'UTC')
+	                                      AND id=7
+	                                   FOR UPDATE NOWAIT
+LOG:  received fast shutdown request
+LOG:  aborting any active transactions
+FATAL:  terminating connection due to administrator command
+FATAL:  terminating connection due to administrator command
+FATAL:  terminating connection due to administrator command
+FATAL:  terminating connection due to administrator command
+FATAL:  terminating connection due to administrator command
+FATAL:  terminating connection due to administrator command
+FATAL:  terminating connection due to administrator command
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down

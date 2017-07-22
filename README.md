@@ -8,17 +8,19 @@ odoo是一个基于python2.7开发的开源ERP系统，部分朋友打包下载�
 
 集成。
 
-本版本包含了odoo运行需要的所有环境，具体情况如下：
+本版本包含了odoo运行需要的所有环境，具体如下：
+
+odoo ： 10.0版本源代码
 
 python：2.7版本
 
 postgresql：9.6版本
 
-wkhtmltopdf
+wkhtmltopdf ：0.12.1.2版本
 
 nginx：1.11.10版本
 
-node.js ：6.10.3版本
+node.js ：8.1.3.0版本
 
 ## 安装、使用
 
@@ -42,11 +44,30 @@ node.js ：6.10.3版本
 
 6.加入自动配置脚本
 
-7.其他...
+7.其他细节修复
+
+8.默认安装了所有模板，你也可以通过`http://localhost/web/database/manager`进入数
+
+据库管理界面重新配置数据库
 
 
 ## 测试环境
 
+### 本程序在win10 最新版上测试，未出现任何异常，但不代表所有机器都可以成功，
+
+### 如果用于生产环境，请提前做好测试。
+
 本程序在windows 10 64位下测试完全正常访问，如果出现无法访问请查看是否被防火墙拦截。
 
-如果有其他bug请在issue中提出，看见我会尽快解决。
+如果有其他bug请在issue中提出，大家共同讨论。
+
+
+## 安装包下载
+
+### 以下为官方打包好的安装包，适合大多数电脑，如果是安装测试使用请下载官方安
+
+### 装包。
+
+官方安装包：[http://nightly.odoocdn.com/10.0/nightly/exe/odoo_10.0.latest.exe](http://nightly.odoocdn.com/10.0/nightly/exe/odoo_10.0.latest.exe "点我下载")
+
+官方安装文档：[https://www.odoo.com/documentation/10.0/setup/install.html#setup-install-packaged](https://www.odoo.com/documentation/10.0/setup/install.html#setup-install-packaged "安装文档")
