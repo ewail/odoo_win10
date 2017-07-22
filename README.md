@@ -48,8 +48,11 @@ node.js ：8.1.3.0版本
 
 8.默认安装了所有模板，你也可以通过`http://localhost/web/database/manager`进入数
 
-据库管理界面重新配置数据库
+据库管理界面重新配置数据库   
 
+9.数据库选择界面登录：`http://localhost/web/database/selector`
+
+10.多个数据库登陆时 `http://localhost/web/login?db=你想登录的数据库`
 
 ## 测试环境
 
