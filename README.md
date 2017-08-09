@@ -54,7 +54,7 @@ node.js ：8.1.3.0版本
 
 10.多个数据库登陆时 `http://localhost/web/login?db=你想登录的数据库`
 
-11.如果你需要全新自己手动安装请访问：[点我查看](https://github.com/bioinfo1992/odoo_win10/blob/master/%E5%85%A8%E6%96%B0win10%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C.pdf)
+11.如果你需要全新自己手动安装请访问：[点我查看](https://github.com/bioinfo1992/odoo_win10/blob/master/%E5%85%A8%E6%96%B0odoo_win10%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C.pdf)
 
 
 ## 测试环境
