@@ -65,7 +65,7 @@ node.js ：8.1.3.0版本
 
 本程序在windows 10 64位下测试完全正常访问，如果出现无法访问请查看是否被防火墙拦截。
 
-如果有其他bug请在issue中提出，大家共同讨论。
+如果有其他bug请[issue](https://github.com/bioinfo1992/odoo_win10/issues)中提出，大家共同讨论。
 
 
 ## 安装包下载
